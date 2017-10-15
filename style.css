@@ -1,0 +1,16 @@
+#icons span {
+    display: inline-block;
+    border: solid 10px red;
+    border-radius: 100%;
+
+}
+
+
+#icons span div {
+    color: red;
+    font-size: 50px;
+    padding: 50px;
+}
+
+
+
