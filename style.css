@@ -18,6 +18,7 @@ header {
     margin-left: auto;
 }
 
+
 .first-text {
     font-family: Open Sans, Sans Serif;
     font-weight: 400;
@@ -52,4 +53,20 @@ header {
     background-color: #FF0000;
     color: #FFF;
     cursor: pointer;
+}
+
+.product_icons {
+    height: 300px;
+    width: 300px;
+    padding: 50px;
+}
+
+#product_icons span {
+    display: inline-block;
+    background-color: black;
+    border-radius: 100%;
+}
+
+#product_icons {
+    background-color: brown;
 }
