@@ -1,16 +1,29 @@
 
+body {
+    background-color: white;
+
+}
+header {
+    background-image: url("images/header_background_car.jpg");
+    height: 600px;
+    width: 1200px;
+    background-repeat: no-repeat;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .first-text {
     font-family: Open Sans, Sans Serif;
-    font-weight: 100;
-    color: black;
+    font-weight: 400;
+    color: white;
     font-size: 70px;
     text-align: center;
 }
 
 .second-text {
     font-family: Open Sans, Sans Serif;
-    font-weight: 400;
-    color: black;
+    font-weight: bolder;
+    color: white;
     font-size: 100px;
     text-align: center;
 }
