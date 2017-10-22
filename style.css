@@ -1,3 +1,9 @@
+footer, input
+{
+    font-family: Open Sans, Arial;
+    font-weight: bold;
+    font-size: 25px;
+}
 
 body {
     background-color: white;
@@ -26,4 +32,24 @@ header {
     color: white;
     font-size: 100px;
     text-align: center;
+}
+
+.startup-sign-in {
+    margin: auto;
+    text-align: center;
+}
+
+.button {
+    background-color: #FFF;
+    color: #FF0000;
+    border: 1px solid #FF0000;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #000;
+    font-size: 20px;
+}
+
+.button:hover {
+    background-color: #FF0000;
+    color: #FFF;
+    cursor: pointer;
 }
