@@ -57,11 +57,13 @@ input.startup-sign-in, .button {
     margin: 2px 5px;
     font-size: 20px;
     text-shadow: none;
+    font-family: Open Sans, Arial, Sans Serif;
 }
 
 .button {
     background-color: #FF0000;
     color: #fff;
+    font-weight: bold;
 }
 
 .button:hover {
