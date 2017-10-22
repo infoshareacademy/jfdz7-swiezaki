@@ -1,14 +1,20 @@
-footer, input
-{
-    font-family: Open Sans, Arial;
-    font-weight: bold;
-    font-size: 25px;
-}
+/* Colors used on a web page
+black: #000000
+red: #FF0000
+white: #FFFFFF
 
+Font:
+Open Sans
+
+
+
+ */
 body {
     background-color: white;
+    font-family: Open Sans, Arial;
 
 }
+
 header {
     background-image: url("images/header_background_car.jpg");
     height: 600px;
@@ -19,7 +25,6 @@ header {
 }
 
 .first-text {
-    font-family: Open Sans, Sans Serif;
     font-weight: 400;
     color: white;
     font-size: 70px;
@@ -27,7 +32,6 @@ header {
 }
 
 .second-text {
-    font-family: Open Sans, Sans Serif;
     font-weight: bolder;
     color: white;
     font-size: 100px;
