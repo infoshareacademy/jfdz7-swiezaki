@@ -23,6 +23,7 @@ header {
     margin-left: auto;
 }
 
+
 .first-text {
     font-weight: 400;
     color: white;
@@ -71,6 +72,22 @@ input.startup-sign-in, .button {
     border: 1px solid #222;
     color: #FFF;
     cursor: pointer;
+}
+
+.product_icons {
+    height: 300px;
+    width: 300px;
+    padding: 50px;
+}
+
+#product_icons span {
+    display: inline-block;
+    background-color: black;
+    border-radius: 100%;
+}
+
+#product_icons {
+    background-color: brown;
 }
 
 input.startup-sign-in {
