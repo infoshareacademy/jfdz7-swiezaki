@@ -74,21 +74,39 @@ input.startup-sign-in, .button {
     cursor: pointer;
 }
 
-.product_icons {
-    height: 300px;
-    width: 300px;
-    padding: 50px;
-}
+/* Beginning of #product-icons-section */
 
-#product_icons span {
-    display: inline-block;
+#product-icons-section {
+    height: 600px;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
     background-color: black;
-    border-radius: 100%;
 }
 
-#product_icons {
-    background-color: brown;
+.product-icons {
+    height: 100px;
+    width: 100px;
+    padding: 50px;
+    border-radius: 100%;
+    background-color: red;
 }
+
+.icons-underlines {
+    font-family: 'Open Sans';
+    font-size: 20px;
+    font-weight: 700;
+    color: red;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#product-icons-section div {
+    display: inline-block;
+
+}
+
+/* End of #product_icons section */
 
 input.startup-sign-in {
     color: #222;
