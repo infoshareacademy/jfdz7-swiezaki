@@ -74,21 +74,43 @@ input.startup-sign-in, .button {
     cursor: pointer;
 }
 
-.product_icons {
-    height: 300px;
-    width: 300px;
-    padding: 50px;
-}
+/* Beginning of #product-icons-section */
 
-#product_icons span {
-    display: inline-block;
+#product-icons-section {
+    height: 400px;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
     background-color: black;
-    border-radius: 100%;
 }
 
-#product_icons {
-    background-color: brown;
+#product-icons-section div {
+    display: inline-block;
+    padding-left: 30px;
+    position: relative;
+    top: 60px;
+    left: 100px;
+
 }
+
+.product-icons {
+    height: 100px;
+    width: 100px;
+    padding: 50px;
+    background-color: red;
+}
+
+.icons-underlines {
+    font-family: 'Open Sans';
+    font-size: 20px;
+    font-weight: 700;
+    color: red;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 15px;
+}
+
+/* End of #product_icons section */
 
 input.startup-sign-in {
     color: #222;
