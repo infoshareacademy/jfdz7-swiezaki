@@ -77,18 +77,26 @@ input.startup-sign-in, .button {
 /* Beginning of #product-icons-section */
 
 #product-icons-section {
-    height: 600px;
+    height: 400px;
     width: 1200px;
     margin-left: auto;
     margin-right: auto;
     background-color: black;
 }
 
+#product-icons-section div {
+    display: inline-block;
+    padding-left: 30px;
+    position: relative;
+    top: 60px;
+    left: 100px;
+
+}
+
 .product-icons {
     height: 100px;
     width: 100px;
     padding: 50px;
-    border-radius: 100%;
     background-color: red;
 }
 
@@ -99,11 +107,7 @@ input.startup-sign-in, .button {
     color: red;
     text-transform: uppercase;
     text-align: center;
-}
-
-#product-icons-section div {
-    display: inline-block;
-
+    padding-top: 15px;
 }
 
 /* End of #product_icons section */
