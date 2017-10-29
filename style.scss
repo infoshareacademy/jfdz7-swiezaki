@@ -1,15 +1,13 @@
-/* Colors used on a web page
-black: #000000
-red: #FF0000
-white: #FFFFFF
+$red: #FF0000;
+$black: #000000;
+$white: #FFFFFF;
+$hover-black: #222222;
+$font-stack: Open Sans, Arial, Sans Serif;
 
-Font:
-Open Sans
 
- */
 body {
-    background-color: white;
-    font-family: Open Sans, Arial, Sans Serif;
+    background-color: $white;
+    font-family: $font-stack;
 }
 
 header {
@@ -31,20 +29,21 @@ header {
 nav {
     position: fixed;
     height: 50px;
-    background-color: red;
+
+    background-color: $red;
     width: 100%;
 }
 
 .first-text {
     font-weight: 400;
-    color: white;
+    color: $white;
     font-size: 70px;
     text-align: center;
 }
 
 .second-text {
     font-weight: bolder;
-    color: white;
+    color: $white;
     font-size: 100px;
     text-align: center;
 }
@@ -52,36 +51,36 @@ nav {
 .startup-sign-in {
     margin: auto;
     text-align: center;
-    color: #FFF;
-    text-shadow: 2px 2px 5px #000;
+    color: $white;
+    text-shadow: 2px 2px 5px $black;
     font-size: 27px;
     font-weight: bolder;
     padding: 70px 0px 0px;
 }
 
 input.startup-sign-in, .button {
-    background-color: #FFF;
-    color: #FF0000;
-    border: 1px solid #FF0000;
+    background-color: $white;
+    color: $red;
+    border: 1px solid $red;
     border-radius: 5px;
     box-shadow: 2px 2px 5px #000;
     padding: 2px 9px;
     margin: 2px 5px;
     font-size: 20px;
     text-shadow: none;
-    font-family: Open Sans, Arial, Sans Serif;
+    font-family: $font-stack;
 }
 
 .button {
-    background-color: #FF0000;
-    color: #fff;
+    background-color: $red;
+    color: $white;
     font-weight: bold;
 }
 
 .button:hover {
-    background-color: #222;
-    border: 1px solid #222;
-    color: #FFF;
+    background-color: $hover-black;
+    border: 1px solid $hover-black;
+    color: $white;
     cursor: pointer;
 }
 
@@ -92,7 +91,7 @@ input.startup-sign-in, .button {
     width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    background-color: black;
+    background-color: $black;
 }
 
 #product-icons-section div {
@@ -108,14 +107,14 @@ input.startup-sign-in, .button {
     height: 100px;
     width: 100px;
     padding: 50px;
-    background-color: red;
+    background-color: $red;
 }
 
 .icons-underlines {
-    font-family: 'Open Sans';
+    font-family: $font-stack;
     font-size: 20px;
     font-weight: 700;
-    color: red;
+    color: $red;
     text-transform: uppercase;
     text-align: center;
     padding-top: 15px;
@@ -124,7 +123,7 @@ input.startup-sign-in, .button {
 /* End of #product_icons section */
 
 input.startup-sign-in {
-    color: #222;
+    color: $hover-black;
     font-weight: normal;
 }
 
