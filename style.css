@@ -1,4 +1,7 @@
 body {
+    background-color: white;
+    font-family: Open Sans, Arial, Sans Serif;
+}
   background-color: #FFFFFF;
   font-family: Open Sans, Arial, Sans Serif; }
 
@@ -34,6 +37,14 @@ nav {
   text-align: center; }
 
 .startup-sign-in {
+    margin: auto;
+    text-align: center;
+    color: #FFF;
+    text-shadow: 2px 2px 5px #000;
+    font-size: 27px;
+    font-weight: bolder;
+    padding: 70px 0px 0px;
+}
   margin: auto;
   text-align: center;
   color: #FFFFFF;
@@ -42,6 +53,17 @@ nav {
   font-weight: bolder;
   padding: 70px 0px 0px; }
 
+input.startup-sign-in, .button {
+    background-color: #FFF;
+    color: #FF0000;
+    border: 1px solid #FF0000;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #000;
+    padding: 2px 9px;
+    margin: 2px 5px;
+    font-size: 20px;
+    text-shadow: none;
+}
 input.startup-sign-in, .button {
   background-color: #FFFFFF;
   color: #FF0000;
@@ -54,6 +76,27 @@ input.startup-sign-in, .button {
   text-shadow: none;
   font-family: Open Sans, Arial, Sans Serif; }
 
+.button {
+    background-color: #FF0000;
+    color: #fff;
+}
+
+.button:hover {
+    background-color: #222;
+    border: 1px solid #222;
+    color: #FFF;
+    cursor: pointer;
+}
+
+input.startup-sign-in {
+    color: #222;
+    font-weight: normal;
+}
+
+.startup-sign-in-info {
+    padding: 10px 0px 0px;
+    font-size: 15px;
+}
 .button {
   background-color: #FF0000;
   color: #FFFFFF;
