@@ -94,13 +94,29 @@ input.startup-sign-in, .button {
     background-color: $black;
 }
 
-#product-icons-section div {
+@media screen and (max-width: 950px) {
+    #product-icons-section {height: 800px}
+}
+
+@media screen and (max-width: 950px) {
+    .product-icons-line-break {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+#product-icons-flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-icons-line-break div {
     display: inline-block;
     padding-left: 30px;
     position: relative;
     top: 60px;
-    left: 100px;
-
 }
 
 .product-icons {
