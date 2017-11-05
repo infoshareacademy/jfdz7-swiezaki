@@ -9,7 +9,7 @@ body {
     font-family: $font-stack;
 }
 
-/* Begining of header and title section */
+/* Beginning of header and title section */
 
 header {
     background-image: url("images/header_background_car.jpg");
@@ -38,19 +38,27 @@ h2 {
 
 /* End of header and title section */
 
-/* Begining of navigation section */
+/* Beginning of navigation section */
+
+.logo {
+    position: absolute;
+    top: 10px; left: 10px;
+    font-size: 60px;
+}
 
 nav {
     position: relative;
-    height: 50px;
+    height: 90px;
     width:100%;
     max-width: 1200px;
+    background-color: $black;
+    //padding: 20px 0;
 }
 
 .menu
 {
     position: fixed;
-    height: 50px;
+    height: 90px;
     background-color: $black;
     width: 100%;
     max-width: 1200px;
