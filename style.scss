@@ -1,52 +1,92 @@
-$red: #FF0000;
-$black: #000000;
-$white: #FFFFFF;
+$red: #8C0000;
+$black: #171717;
+$white: #E8E8E8;
 $hover-black: #222222;
-
 $font-stack: Open Sans, Arial, Sans Serif;
-
 
 body {
     background-color: $white;
     font-family: $font-stack;
 }
 
+/* Begining of header and title section */
+
 header {
     background-image: url("images/header_background_car.jpg");
-    height: 600px;
-    width: 1200px;
+    width: 100%;
+    max-width: 1200px;
     background-repeat: no-repeat;
-    margin-right: auto;
-    margin-left: auto;
+    background-position: center;
+    margin: 0 auto;
+    position: relative;
 }
 
-.navigate
-{
+h1 {
+    font-weight: 400;
+    color: $white;
+    font-size: 60px;
+    text-align: center;
+    padding: 10px 0;
+}
+
+h2 {
+    font-weight: bolder;
+    color: $white;
+    font-size: 90px;
+    text-align: center;
+}
+
+/* End of header and title section */
+
+/* Begining of navigation section */
+
+nav {
     position: relative;
     height: 50px;
     width:100%;
+    max-width: 1200px;
 }
 
-nav {
+.menu
+{
     position: fixed;
     height: 50px;
-    background-color: $red;
+    background-color: $black;
     width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.first-text {
-    font-weight: 400;
+nav li {
+    display: inline;
     color: $white;
-    font-size: 70px;
-    text-align: center;
+    cursor: pointer;
+    padding: 0 20px;
+    font-size: 20px;
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
 }
 
-.second-text {
-    font-weight: bolder;
-    color: $white;
-    font-size: 100px;
-    text-align: center;
+nav li:hover {
+    color: $red;
+    a {
+        text-decoration: none;
+        color:inherit;
+    }
 }
+
+nav li:first-of-type:hover {
+    cursor: default;
+    color: $white;
+}
+
+/* End of navigation section */
+
+/* Begining of startup-sign-in section */
 
 .startup-sign-in {
     margin: auto;
@@ -55,7 +95,7 @@ nav {
     text-shadow: 2px 2px 5px $black;
     font-size: 27px;
     font-weight: bolder;
-    padding: 70px 0px 0px;
+    padding: 70px 0 20px;
 }
 
 input.startup-sign-in, .button {
@@ -84,50 +124,92 @@ input.startup-sign-in, .button {
     cursor: pointer;
 }
 
-/* Beginning of #product-icons-section */
-
-#product-icons-section {
-    height: 400px;
-    width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: $black;
-}
-
-#product-icons-section div {
-    display: inline-block;
-    padding-left: 30px;
-    position: relative;
-    top: 60px;
-    left: 100px;
-
-}
-
-.product-icons {
-    height: 100px;
-    width: 100px;
-    padding: 50px;
-    background-color: $red;
-}
-
-.icons-underlines {
-    font-family: $font-stack;
-    font-size: 20px;
-    font-weight: 700;
-    color: $red;
-    text-transform: uppercase;
-    text-align: center;
-    padding-top: 15px;
-}
-
-/* End of #product_icons section */
-
 input.startup-sign-in {
     color: $hover-black;
     font-weight: normal;
 }
 
 .startup-sign-in-info {
-    padding: 10px 0px 0px;
+    padding: 10px 0 0;
     font-size: 15px;
 }
+
+.startup-sign-in-agreement {
+    font-size: 11px;
+    padding: 3px 0;
+    line-height: 14px;
+}
+
+/* End of startup-sign-in-section */
+
+/* Beginning of #product-icons-section */
+
+#product-icons-section {
+    height: 400px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: $black;
+} //describes whole section
+
+// Media screens below //
+
+@media screen and (min-width: 861px) {
+    .icons-flex-container {
+        position: relative;
+        top: 25px;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    #product-icons-section {
+        height: 630px;
+    }
+    .icons-860 {
+        width: 100%;
+    }
+    .icons-flex-container {
+        position: relative;
+        top: 5px;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    #product-icons-section {
+        height: 1240px;
+    }
+
+}
+
+// End of media screens //
+
+.icons-flex-container {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+} //centers items using flex
+
+.icons-display-container {
+    display: inline-block;
+} //used to wrap .svg + text in one div
+
+.icons-images {
+    height: 100px;
+    width: 100px;
+    padding: 50px;
+    background-color: $red;
+    margin-left: 15px;
+    margin-top: 15px;
+} //describes only .svg files
+
+.icons-text {
+    font-family: $font-stack;
+    font-size: 20px;
+    font-weight: 700;
+    color: $red;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+} //describes only text under .svg files
+
+/* End of #product_icons section */
