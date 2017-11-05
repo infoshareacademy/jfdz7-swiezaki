@@ -1,73 +1,79 @@
-
 body {
-    background-color: white;
-    font-family: Open Sans, Arial, Sans Serif;
-}
   background-color: #FFFFFF;
-
   font-family: Open Sans, Arial, Sans Serif; }
 
+/* Begining of header and title section */
 header {
   background-image: url("images/header_background_car.jpg");
-  height: 600px;
-  width: 1200px;
+  width: 100%;
+  max-width: 1200px;
   background-repeat: no-repeat;
-  margin-right: auto;
-  margin-left: auto; }
+  background-position: center;
+  margin: 0 auto;
+  position: relative; }
 
-.navigate {
-  position: relative;
-  height: 50px;
-  width: 100%; }
-
-nav {
-  position: fixed;
-  height: 50px;
-
-  background-color: #FF0000;
-  width: 100%; }
-
-.first-text {
+h1 {
   font-weight: 400;
   color: #FFFFFF;
-  font-size: 70px;
-  text-align: center; }
+  font-size: 60px;
+  text-align: center;
+  padding: 10px 0; }
 
-.second-text {
+h2 {
   font-weight: bolder;
   color: #FFFFFF;
-  font-size: 100px;
+  font-size: 90px;
   text-align: center; }
 
+/* End of header and title section */
+/* Begining of navigation section */
+nav {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  max-width: 1200px; }
+
+.menu {
+  position: fixed;
+  height: 50px;
+  background-color: #000000;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+nav li {
+  display: inline;
+  color: #FFFFFF;
+  cursor: pointer;
+  padding: 0 20px;
+  font-size: 20px; }
+  nav li a {
+    color: inherit;
+    text-decoration: none; }
+
+nav li:hover {
+  color: #FF0000; }
+  nav li:hover a {
+    text-decoration: none;
+    color: inherit; }
+
+nav li:first-of-type:hover {
+  cursor: default;
+  color: #FFFFFF; }
+
+/* End of navigation section */
+/* Begining of startup-sign-in section */
 .startup-sign-in {
-    margin: auto;
-    text-align: center;
-    color: #FFF;
-    text-shadow: 2px 2px 5px #000;
-    font-size: 27px;
-    font-weight: bolder;
-    padding: 70px 0px 0px;
-}
   margin: auto;
   text-align: center;
   color: #FFFFFF;
   text-shadow: 2px 2px 5px #000000;
-
   font-size: 27px;
   font-weight: bolder;
-  padding: 70px 0px 0px; }
+  padding: 70px 0 20px; }
 
-input.startup-sign-in, .button {
-    background-color: #FFF;
-    color: #FF0000;
-    border: 1px solid #FF0000;
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px #000;
-    padding: 2px 9px;
-    margin: 2px 5px;
-    font-size: 20px;
-    text-shadow: none;
-}
 input.startup-sign-in, .button {
   background-color: #FFFFFF;
   color: #FF0000;
@@ -82,56 +88,6 @@ input.startup-sign-in, .button {
 
 .button {
   background-color: #FF0000;
-  color: #fff;
-  font-weight: bold; }
-
-.button:hover {
-  background-color: #222;
-  border: 1px solid #222;
-  color: #FFF;
-  cursor: pointer; }
-
-/* Beginning of #product-icons-section */
-#product-icons-section {
-  height: 400px;
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: black; }
-
-#product-icons-section div {
-  display: inline-block;
-  padding-left: 30px;
-  position: relative;
-  top: 60px;
-  left: 100px; }
-
-.product-icons {
-  height: 100px;
-  width: 100px;
-  padding: 50px;
-  background-color: red; }
-
-.icons-underlines {
-  font-family: 'Open Sans';
-  font-size: 20px;
-  font-weight: 700;
-  color: red;
-  text-transform: uppercase;
-  text-align: center;
-  padding-top: 15px; }
-
-/* End of #product_icons section */
-input.startup-sign-in {
-  color: #222;
-  font-weight: normal; }
-
-.startup-sign-in-info {
-    padding: 10px 0px 0px;
-    font-size: 15px;
-}
-.button {
-  background-color: #FF0000;
   color: #FFFFFF;
   font-weight: bold; }
 
@@ -141,43 +97,70 @@ input.startup-sign-in {
   color: #FFFFFF;
   cursor: pointer; }
 
+input.startup-sign-in {
+  color: #222222;
+  font-weight: normal; }
+
+.startup-sign-in-info {
+  padding: 10px 0 0;
+  font-size: 15px; }
+
+.startup-sign-in-agreement {
+  font-size: 11px;
+  padding: 3px 0;
+  line-height: 14px; }
+
+/* End of startup-sign-in-section */
 /* Beginning of #product-icons-section */
 #product-icons-section {
   height: 400px;
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 1200px;
+  margin: 0 auto;
   background-color: #000000; }
 
-#product-icons-section div {
-  display: inline-block;
-  padding-left: 30px;
-  position: relative;
-  top: 60px;
-  left: 100px; }
+@media screen and (min-width: 861px) {
+  .icons-flex-container {
+    position: relative;
+    top: 25px; } }
+@media screen and (max-width: 860px) {
+  #product-icons-section {
+    height: 630px; }
 
-.product-icons {
+  .icons-860 {
+    width: 100%; }
+
+  .icons-flex-container {
+    position: relative;
+    top: 5px; } }
+@media screen and (max-width: 440px) {
+  #product-icons-section {
+    height: 1240px; } }
+.icons-flex-container {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center; }
+
+.icons-display-container {
+  display: inline-block; }
+
+.icons-images {
   height: 100px;
   width: 100px;
   padding: 50px;
-  background-color: #FF0000; }
+  background-color: #FF0000;
+  margin-left: 15px;
+  margin-top: 15px; }
 
-.icons-underlines {
+.icons-text {
   font-family: Open Sans, Arial, Sans Serif;
   font-size: 20px;
   font-weight: 700;
   color: #FF0000;
   text-transform: uppercase;
   text-align: center;
-  padding-top: 15px; }
+  margin-top: 15px;
+  margin-bottom: 15px; }
 
 /* End of #product_icons section */
-input.startup-sign-in {
-  color: #222222;
-  font-weight: normal; }
-
-.startup-sign-in-info {
-  padding: 10px 0px 0px;
-  font-size: 15px; }
 
 /*# sourceMappingURL=style.css.map */
