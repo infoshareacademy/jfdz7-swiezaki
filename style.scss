@@ -1,3 +1,11 @@
+/*Resolutions*/
+
+/*Large devices: >= 1200px
+Medium devices: >= 992px
+Small devices: >= 768px
+Very small devices <768px
+ */
+
 $red: #8C0000;
 $black: #171717;
 $white: #E8E8E8;
@@ -221,3 +229,76 @@ input.startup-sign-in {
 } //describes only text under .svg files
 
 /* End of #product_icons section */
+
+/*Beginning of about-us section */
+
+#about-us {
+    height: 400px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: darkcyan;
+} //describes whole section
+
+// Media screens below //
+
+@media screen and (min-width: 861px) {
+    .about-us-flex-container {
+        position: relative;
+        top: 25px;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    #product-icons-section {
+        height: 630px;
+    }
+    .icons-860 {
+        width: 100%;
+    }
+    .about-us-flex-container {
+        position: relative;
+        top: 5px;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    #product-icons-section {
+        height: 1240px;
+    }
+
+}
+
+// End of media screens //
+
+.about-us-flex-container {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+} //centers items using flex
+
+.about-us-display-container {
+    display: inline-block;
+} //used to wrap .svg + text in one div
+
+.about-us-images {
+    height: 200px;
+    width: 200px;
+    padding: 10px;
+    background-color: $red;
+    margin-left: 15px;
+    margin-top: 15px;
+    border-radius: 100%;
+} //describes only .svg files
+
+.about-us-text {
+    font-family: $font-stack;
+    font-size: 20px;
+    font-weight: 700;
+    color: $red;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+} //describes only text under .svg files
+
+/*End of about-us section */
