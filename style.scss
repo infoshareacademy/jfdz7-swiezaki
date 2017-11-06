@@ -138,14 +138,10 @@ nav li:hover {
     padding: 0 5px;
 }
 
-.menu-short span:nth-child(2) {
-    margin: 0;
-}
-
 .chkbox-menu {
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
-    z-index: 2;
+    z-index: 1;
     width: 100%;
     height: 90%;
     cursor: pointer;
@@ -157,20 +153,19 @@ input.chkbox-menu {
 
 .menu-short-collapse {
     position: fixed;
-    right: -120px;
-    top: 90px;
-    width: 120px;
+    right: -160px;
+    top: 89px;
+    width: 160px;
     color: $white;
     background-color: $black;
-    transition: right 2s;
-    -webkit-transition: right 2s;
-    border-bottom-left-radius: 10px;
+    transition: right 2s; // transition effect for short menu
+    -webkit-transition: right 2s; // transition effect for short menu
     padding-bottom: 10px;
     opacity: 0.9;
 
     span.menu-short-list {
-        padding: 10px 0 10px 10px;
-        text-align: right;
+        padding: 10px 0 10px 25px;
+        border-bottom: 4px solid $red;
     }
 
     span.menu-short-list a {
@@ -244,6 +239,8 @@ input.startup-sign-in {
     font-size: 10px;
     padding: 3px 0;
     line-height: 14px;
+    width:80%;
+    margin: 0 auto;
 }
 
 /* End of startup-sign-in-section */
