@@ -1,8 +1,15 @@
+/*Resolutions*/
+/*
+Large devices: >= 1200px
+Medium devices: >= 992px
+Small devices: >= 768px
+Very small devices <768px
+ */
 body {
-  background-color: #FFFFFF;
+  background-color: #E8E8E8;
   font-family: Open Sans, Arial, Sans Serif; }
 
-/* Begining of header and title section */
+/* Beginning of header and title section */
 header {
   background-image: url("images/header_background_car.jpg");
   width: 100%;
@@ -14,70 +21,147 @@ header {
 
 h1 {
   font-weight: 400;
-  color: #FFFFFF;
+  color: #E8E8E8;
   font-size: 60px;
   text-align: center;
   padding: 10px 0; }
 
 h2 {
   font-weight: bolder;
-  color: #FFFFFF;
+  color: #E8E8E8;
   font-size: 90px;
   text-align: center; }
 
 /* End of header and title section */
-/* Begining of navigation section */
+/* Beginning of navigation section */
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 25px;
+  font-size: 60px;
+  color: #E8E8E8; }
+
+i {
+  color: #E8E8E8; }
+
+.logo i:hover {
+  color: #8C0000;
+  cursor: pointer; }
+
 nav {
   position: relative;
-  height: 50px;
+  height: 90px;
   width: 100%;
-  max-width: 1200px; }
+  background-color: #171717;
+  z-index: 1; }
 
 .menu {
   position: fixed;
-  height: 50px;
-  background-color: #000000;
+  height: 90px;
+  background-color: #171717;
   width: 100%;
   max-width: 1200px;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: flex-end; }
 
 nav li {
   display: inline;
-  color: #FFFFFF;
+  color: #E8E8E8;
   cursor: pointer;
-  padding: 0 20px;
-  font-size: 20px; }
+  padding: 0 15px;
+  font-size: 18px;
+  font-weight: bold; }
   nav li a {
     color: inherit;
     text-decoration: none; }
 
+nav li:last-of-type {
+  padding-right: 30px; }
+
 nav li:hover {
-  color: #FF0000; }
+  color: #8C0000; }
   nav li:hover a {
     text-decoration: none;
     color: inherit; }
 
-nav li:first-of-type:hover {
-  cursor: default;
-  color: #FFFFFF; }
+.menu ul {
+  display: none; }
+
+.menu-short, .menu-short a {
+  background-color: #E8E8E8;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 0 20px 0 0;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 0 5px;
+  position: relative; }
+
+.menu-short span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  border-radius: 1px;
+  background-color: #171717;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  padding: 0 5px; }
+
+.chkbox-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 90%;
+  cursor: pointer; }
+
+input.chkbox-menu {
+  opacity: 0; }
+
+.menu-short-collapse {
+  position: fixed;
+  right: -160px;
+  top: 89px;
+  width: 160px;
+  color: #E8E8E8;
+  background-color: #171717;
+  transition: right 2s;
+  -webkit-transition: right 2s;
+  padding-bottom: 10px;
+  opacity: 0.9; }
+  .menu-short-collapse span.menu-short-list {
+    padding: 10px 0 10px 25px;
+    border-bottom: 4px solid #8C0000; }
+  .menu-short-collapse span.menu-short-list a {
+    color: #E8E8E8;
+    background: #171717; }
+  .menu-short-collapse span.menu-short-list a:hover {
+    color: #8C0000;
+    background-color: #171717; }
+
+.menu-short input:checked ~ .menu-short-collapse {
+  right: 0; }
 
 /* End of navigation section */
 /* Begining of startup-sign-in section */
 .startup-sign-in {
   margin: auto;
   text-align: center;
-  color: #FFFFFF;
-  text-shadow: 2px 2px 5px #000000;
+  color: #E8E8E8;
+  text-shadow: 2px 2px 5px #171717;
   font-size: 27px;
   font-weight: bolder;
   padding: 70px 0 20px; }
 
 input.startup-sign-in, .button {
-  background-color: #FFFFFF;
-  color: #FF0000;
-  border: 1px solid #FF0000;
+  background-color: #E8E8E8;
+  color: #8C0000;
+  border: 1px solid #8C0000;
   border-radius: 5px;
   box-shadow: 2px 2px 5px #000;
   padding: 2px 9px;
@@ -87,28 +171,31 @@ input.startup-sign-in, .button {
   font-family: Open Sans, Arial, Sans Serif; }
 
 .button {
-  background-color: #FF0000;
-  color: #FFFFFF;
+  background-color: #8C0000;
+  color: #E8E8E8;
   font-weight: bold; }
 
 .button:hover {
   background-color: #222222;
   border: 1px solid #222222;
-  color: #FFFFFF;
+  color: #E8E8E8;
   cursor: pointer; }
 
 input.startup-sign-in {
   color: #222222;
-  font-weight: normal; }
+  font-weight: normal;
+  line-height: 30px; }
 
 .startup-sign-in-info {
   padding: 10px 0 0;
-  font-size: 15px; }
+  font-size: 14px; }
 
 .startup-sign-in-agreement {
-  font-size: 11px;
+  font-size: 10px;
   padding: 3px 0;
-  line-height: 14px; }
+  line-height: 14px;
+  width: 80%;
+  margin: 0 auto; }
 
 /* End of startup-sign-in-section */
 /* Beginning of #product-icons-section */
@@ -116,7 +203,7 @@ input.startup-sign-in {
   height: 400px;
   max-width: 1200px;
   margin: 0 auto;
-  background-color: #000000; }
+  background-color: #171717; }
 
 @media screen and (min-width: 861px) {
   .icons-flex-container {
@@ -147,7 +234,7 @@ input.startup-sign-in {
   height: 100px;
   width: 100px;
   padding: 50px;
-  background-color: #FF0000;
+  background-color: #8C0000;
   margin-left: 15px;
   margin-top: 15px; }
 
@@ -155,12 +242,70 @@ input.startup-sign-in {
   font-family: Open Sans, Arial, Sans Serif;
   font-size: 20px;
   font-weight: 700;
-  color: #FF0000;
+  color: #8C0000;
   text-transform: uppercase;
   text-align: center;
   margin-top: 15px;
   margin-bottom: 15px; }
 
 /* End of #product_icons section */
+/*Beginning of about-us section */
+#about-us {
+  height: 400px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: darkcyan; }
+
+.about-us-flex-container {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center; }
+
+.about-us-display-container {
+  display: inline-block; }
+
+.about-us-images {
+  height: 200px;
+  width: 200px;
+  padding: 10px;
+  background-color: #8C0000;
+  margin-left: 15px;
+  margin-top: 15px;
+  border-radius: 100%; }
+
+.about-us-text {
+  font-family: Open Sans, Arial, Sans Serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #8C0000;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px; }
+
+/*End of about-us section */
+@media screen and (min-width: 861px) {
+  .about-us-flex-container {
+    position: relative;
+    top: 25px; } }
+@media screen and (max-width: 860px) {
+  #product-icons-section {
+    height: 630px; }
+
+  .icons-860 {
+    width: 100%; }
+
+  .about-us-flex-container {
+    position: relative;
+    top: 5px; } }
+@media screen and (max-width: 440px) {
+  #product-icons-section {
+    height: 1240px; } }
+@media (min-width: 576px) {
+  .menu ul {
+    display: block; }
+
+  .menu-short {
+    display: none; } }
 
 /*# sourceMappingURL=style.css.map */

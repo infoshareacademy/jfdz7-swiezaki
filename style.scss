@@ -21,7 +21,7 @@ body {
 /* Beginning of header and title section */
 
 header {
-    background-image: url("images/header_background_car.jpg");
+    background-image: url("images/header_background_car.jpg"); // background image for header
     width: 100%;
     max-width: 1200px;
     background-repeat: no-repeat;
@@ -30,7 +30,7 @@ header {
     position: relative;
 }
 
-h1 {
+h1 { // Title in header section
     font-weight: 400;
     color: $white;
     font-size: 60px;
@@ -38,7 +38,7 @@ h1 {
     padding: 10px 0;
 }
 
-h2 {
+h2 { // Subtitle in header section
     font-weight: bolder;
     color: $white;
     font-size: 90px;
