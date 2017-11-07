@@ -1,9 +1,10 @@
-/*Resolutions*/
-/*
-Large devices: >= 1200px
-Medium devices: >= 992px
-Small devices: >= 768px
-Very small devices <768px
+/* Resolutions
+
+Very large devices >= 1200px
+Large devices: >= 992px
+Medium devices: >= 768px
+Small devices: >= 576px
+Very small devices <576px
  */
 /* Beginning of global classes */
 .flex-container-center {
@@ -18,33 +19,31 @@ body {
 
 /* Beginning of header and title section */
 header {
-  background-image: url("images/header_background_car.jpg");
+  background: url("images/header_background_car.jpg") no-repeat center;
   width: 100%;
   max-width: 1200px;
-  background-repeat: no-repeat;
-  background-position: center;
   margin: 0 auto;
   position: relative; }
 
 h1 {
   font-weight: 400;
   color: #E8E8E8;
-  font-size: 60px;
+  font-size: 30px;
   text-align: center;
   padding: 10px 0; }
 
 h2 {
   font-weight: bolder;
   color: #E8E8E8;
-  font-size: 90px;
+  font-size: 60px;
   text-align: center; }
 
 /* End of header and title section */
 /* Beginning of navigation section */
 .logo {
   position: absolute;
-  top: 10px;
-  left: 25px;
+  top: -5px;
+  left: 15px;
   font-size: 60px;
   color: #E8E8E8; }
 
@@ -59,6 +58,7 @@ nav {
   position: relative;
   height: 90px;
   width: 100%;
+  max-width: 1200px;
   background-color: #171717;
   z-index: 1; }
 
@@ -155,13 +155,18 @@ input.chkbox-menu {
   right: 0; }
 
 /* End of navigation section */
+main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; }
+
 /* Begining of startup-sign-in section */
 .startup-sign-in {
   margin: auto;
   text-align: center;
   color: #E8E8E8;
   text-shadow: 2px 2px 5px #171717;
-  font-size: 27px;
+  font-size: 25px;
   font-weight: bolder;
   padding: 70px 0 20px; }
 
@@ -209,7 +214,7 @@ input.startup-sign-in {
 #product-icons-section {
   background-color: #171717;
   max-width: 1200px;
-  padding: 50px 0px; }
+  padding: 50px 0; }
 
 .icons-display-container {
   display: inline-block;
@@ -238,7 +243,7 @@ input.startup-sign-in {
   background-color: #171717;
   max-width: 1200px;
   margin-top: 50px;
-  padding: 50px 0px; }
+  padding: 50px 0; }
 
 .about-us-display-container {
   display: inline-block;
@@ -266,11 +271,22 @@ input.startup-sign-in {
   margin: 10px 5px; }
 
 /*End of about-us section */
+footer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; }
+
 @media (min-width: 576px) {
   .menu ul {
     display: block; }
 
   .menu-short {
-    display: none; } }
+    display: none; }
+
+  h1 {
+    font-size: 60px; }
+
+  h2 {
+    font-size: 90px; } }
 
 /*# sourceMappingURL=style.css.map */
