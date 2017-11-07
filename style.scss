@@ -13,6 +13,16 @@ $white: #E8E8E8;
 $hover-black: #222222;
 $font-stack: Open Sans, Arial, Sans Serif;
 
+/* Beginning of global classes */
+
+.flex-container-center {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+} //centers items using flex
+
+/* End of global classes */
+
 body {
     background-color: $white;
     font-family: $font-stack;
@@ -248,51 +258,14 @@ input.startup-sign-in {
 /* Beginning of #product-icons-section */
 
 #product-icons-section {
-    height: 400px;
-    max-width: 1200px;
-    margin: 0 auto;
     background-color: $black;
+    max-width: 1200px;
+    padding: 50px 0px;
 } //describes whole section
-
-// Media screens below //
-
-@media screen and (min-width: 861px) {
-    .icons-flex-container {
-        position: relative;
-        top: 25px;
-    }
-}
-
-@media screen and (max-width: 860px) {
-    #product-icons-section {
-        height: 630px;
-    }
-    .icons-860 {
-        width: 100%;
-    }
-    .icons-flex-container {
-        position: relative;
-        top: 5px;
-    }
-}
-
-@media screen and (max-width: 440px) {
-    #product-icons-section {
-        height: 1240px;
-    }
-
-}
-
-// End of media screens //
-
-.icons-flex-container {
-    display: flex;
-    flex-flow: wrap;
-    justify-content: center;
-} //centers items using flex
 
 .icons-display-container {
     display: inline-block;
+    margin: 10px 20px;
 } //used to wrap .svg + text in one div
 
 .icons-images {
@@ -300,19 +273,19 @@ input.startup-sign-in {
     width: 100px;
     padding: 50px;
     background-color: $red;
-    margin-left: 15px;
-    margin-top: 15px;
+    margin-bottom: 5px;
+    border: 5px solid $white;
+    border-radius: 10%;
+
 } //describes only .svg files
 
 .icons-text {
     font-family: $font-stack;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
-    color: $red;
+    color: $white;
     text-transform: uppercase;
     text-align: center;
-    margin-top: 15px;
-    margin-bottom: 15px;
 } //describes only text under .svg files
 
 /* End of #product_icons section */
@@ -320,74 +293,44 @@ input.startup-sign-in {
 /*Beginning of about-us section */
 
 #about-us {
-    height: 400px;
+    background-color: $black;
     max-width: 1200px;
-    margin: 0 auto;
-    background-color: darkcyan;
+    margin-top: 50px; //temporary
+    padding: 50px 0px;
 } //describes whole section
-
-
-.about-us-flex-container {
-    display: flex;
-    flex-flow: wrap;
-    justify-content: center;
-} //centers items using flex
 
 .about-us-display-container {
     display: inline-block;
+    margin: 10px 20px;
 } //used to wrap .svg + text in one div
 
 .about-us-images {
     height: 200px;
     width: 200px;
+    background-color: $white;
     padding: 10px;
-    background-color: $red;
-    margin-left: 15px;
-    margin-top: 15px;
+    margin-bottom: 10px;
     border-radius: 100%;
 } //describes only .svg files
 
 .about-us-text {
     font-family: $font-stack;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 700;
-    color: $red;
+    color: $white;
     text-transform: uppercase;
     text-align: center;
-    margin-top: 15px;
-    margin-bottom: 15px;
 } //describes only text under .svg files
+
+#about-us a > img {
+    max-width: 40px;
+    max-height: 40px;
+    margin: 10px 5px;
+} //describes social icons
 
 /*End of about-us section */
 
 // Media screens below //
-
-@media screen and (min-width: 861px) {
-    .about-us-flex-container {
-        position: relative;
-        top: 25px;
-    }
-}
-
-@media screen and (max-width: 860px) {
-    #product-icons-section {
-        height: 630px;
-    }
-    .icons-860 {
-        width: 100%;
-    }
-    .about-us-flex-container {
-        position: relative;
-        top: 5px;
-    }
-
-}
-
-@media screen and (max-width: 440px) {
-    #product-icons-section {
-        height: 1240px;
-    }
-}
 
 @media (min-width: 576px) {
     .menu ul {
