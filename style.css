@@ -5,6 +5,13 @@ Medium devices: >= 992px
 Small devices: >= 768px
 Very small devices <768px
  */
+/* Beginning of global classes */
+.flex-container-center {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center; }
+
+/* End of global classes */
 body {
   background-color: #E8E8E8;
   font-family: Open Sans, Arial, Sans Serif; }
@@ -200,107 +207,65 @@ input.startup-sign-in {
 /* End of startup-sign-in-section */
 /* Beginning of #product-icons-section */
 #product-icons-section {
-  height: 400px;
+  background-color: #171717;
   max-width: 1200px;
-  margin: 0 auto;
-  background-color: #171717; }
-
-@media screen and (min-width: 861px) {
-  .icons-flex-container {
-    position: relative;
-    top: 25px; } }
-@media screen and (max-width: 860px) {
-  #product-icons-section {
-    height: 630px; }
-
-  .icons-860 {
-    width: 100%; }
-
-  .icons-flex-container {
-    position: relative;
-    top: 5px; } }
-@media screen and (max-width: 440px) {
-  #product-icons-section {
-    height: 1240px; } }
-.icons-flex-container {
-  display: flex;
-  flex-flow: wrap;
-  justify-content: center; }
+  padding: 50px 0px; }
 
 .icons-display-container {
-  display: inline-block; }
+  display: inline-block;
+  margin: 10px 20px; }
 
 .icons-images {
   height: 100px;
   width: 100px;
   padding: 50px;
   background-color: #8C0000;
-  margin-left: 15px;
-  margin-top: 15px; }
+  margin-bottom: 5px;
+  border: 5px solid #E8E8E8;
+  border-radius: 10%; }
 
 .icons-text {
   font-family: Open Sans, Arial, Sans Serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
-  color: #8C0000;
+  color: #E8E8E8;
   text-transform: uppercase;
-  text-align: center;
-  margin-top: 15px;
-  margin-bottom: 15px; }
+  text-align: center; }
 
 /* End of #product_icons section */
 /*Beginning of about-us section */
 #about-us {
-  height: 400px;
+  background-color: #171717;
   max-width: 1200px;
-  margin: 0 auto;
-  background-color: darkcyan; }
-
-.about-us-flex-container {
-  display: flex;
-  flex-flow: wrap;
-  justify-content: center; }
+  margin-top: 50px;
+  padding: 50px 0px; }
 
 .about-us-display-container {
-  display: inline-block; }
+  display: inline-block;
+  margin: 10px 20px; }
 
 .about-us-images {
   height: 200px;
   width: 200px;
+  background-color: #E8E8E8;
   padding: 10px;
-  background-color: #8C0000;
-  margin-left: 15px;
-  margin-top: 15px;
+  margin-bottom: 10px;
   border-radius: 100%; }
 
 .about-us-text {
   font-family: Open Sans, Arial, Sans Serif;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
-  color: #8C0000;
+  color: #E8E8E8;
   text-transform: uppercase;
-  text-align: center;
-  margin-top: 15px;
-  margin-bottom: 15px; }
+  text-align: center; }
+
+#about-us a > img {
+  max-width: 40px;
+  max-height: 40px;
+  margin: 10px 5px; }
 
 /*End of about-us section */
-@media screen and (min-width: 861px) {
-  .about-us-flex-container {
-    position: relative;
-    top: 25px; } }
-@media screen and (max-width: 860px) {
-  #product-icons-section {
-    height: 630px; }
-
-  .icons-860 {
-    width: 100%; }
-
-  .about-us-flex-container {
-    position: relative;
-    top: 5px; } }
-@media screen and (max-width: 440px) {
-  #product-icons-section {
-    height: 1240px; } }
 @media (min-width: 576px) {
   .menu ul {
     display: block; }
