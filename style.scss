@@ -263,6 +263,7 @@ input.startup-sign-in {
 
 #product-icons-section {
   background-color: $black;
+  margin: 0 auto;
   max-width: 1200px;
   padding: 50px 0;
 } //describes whole section
@@ -294,14 +295,50 @@ input.startup-sign-in {
 
 /* End of #product_icons section */
 
+/* Beginning of parallax effect in main */
+
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#parallax-01 {
+  background-image: url("images/fiat-parallax-background.jpg");
+  min-height: 350px;
+}
+
+#parallax-02 {
+  background-image: url("images/czerwona_terenowka-parallax-bg.jpg");
+  min-height: 350px;
+}
+
+/*End of parallax effect*/
+
+/*Beginning of #app-functonality section*/
+
+#app-functonality {
+  background-color: $black;
+  min-height: 500px;
+}
+
+/*End of #app-functonality section */
+
 /*Beginning of about-us section */
 
 #about-us {
   background-color: $black;
+  margin: 0 auto;
   max-width: 1200px;
-  margin-top: 50px; //temporary
   padding: 50px 0;
 } //describes whole section
+
+#about-us > h2 {
+  text-transform: uppercase;
+  font-size: 40px;
+  margin-bottom: 50px;
+}
 
 .about-us-display-container {
   display: inline-block;
