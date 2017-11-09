@@ -14,7 +14,6 @@ Very small devices <576px
 
 /* End of global classes */
 body {
-  background-color: #E8E8E8;
   font-family: Open Sans, Arial, Sans Serif; }
 
 /* Beginning of header and title section */
@@ -271,11 +270,61 @@ input.startup-sign-in {
   margin: 10px 5px; }
 
 /*End of about-us section */
-footer {
+/*Beginning of contact section */
+h3 {
+  font-weight: bolder;
+  text-align: center;
+  margin-bottom: 5px; }
+
+#contact {
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 20px 0;
+  color: #E8E8E8;
+  background-color: #171717;
+  font-family: Open Sans, Arial, Sans Serif; }
 
+.contact-form {
+  width: 260px;
+  margin: 0 auto;
+  background-color: #171717;
+  border: 5px solid #E8E8E8;
+  border-radius: 10px;
+  padding: 20px; }
+  .contact-form label {
+    display: block;
+    margin-bottom: 2px;
+    color: #E8E8E8;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase; }
+  .contact-form .form-area {
+    width: 100%;
+    border-radius: 2px;
+    margin-bottom: 5px;
+    background-color: #171717;
+    color: #E8E8E8; }
+  .contact-form .button {
+    display: block;
+    font-size: 13px; }
+
+.links {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0; }
+  .links li {
+    display: inline; }
+    .links li a {
+      color: #E8E8E8;
+      text-decoration-line: none; }
+    .links li a:hover {
+      color: #8C0000; }
+
+.copyright {
+  text-align: center; }
+
+/*End of contact section */
 @media (min-width: 576px) {
   .menu ul {
     display: block; }
