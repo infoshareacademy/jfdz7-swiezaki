@@ -2,77 +2,249 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Części Samochodowe - wyszukiwarka codeVIN</title>
     <link rel="stylesheet" type="text/css" href="reset.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
-
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon.ico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon.ico/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon.ico/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon.ico/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon.ico/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon.ico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon.ico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon.ico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon.ico/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favicon.ico/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon.ico/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.ico/favicon-16x16.png">
+    <link rel="manifest" href="favicon.ico/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <script src="https://use.fontawesome.com/0331aa16a6.js"></script>
 </head>
 <body>
-    <div class="navigate">
-
+<header>
     <nav>
-       ggdfgdfg
-    </nav>
-    </div>
-        <header>
-        <h1 class="first-text">WYSZUKIWARKA CZĘŚCI SAMOCHODOWYCH</h1>
-        <p class="second-text">codeVIN</p>
-        <div class="startup-sign-in">
-            <form action="">
-            Zapisz się na premierę:
-            <input type="text" size="30" placeholder="Wpisz swój adres e-mail"
-            class="startup-sign-in"><input type="submit" value="Wyślij" class="button">
-            </form>
-            <p class="startup-sign-in-info">Otrzymasz dokładnie jedną wiadomość mailową
-                w momencie uruchomienia pełnej funkcjonalności strony.</p>
+        <div class="menu">
+            <div class="logo">
+                <a href="#"><img src="images/icons/logo.png"></a>
+            </div>
+            <ul>
+                <li><a href="#product-icons-section">OPIS</a></li>
+                <li><a href="#about-us">ZESPÓŁ</a></li>
+                <li>FUNKCJE</li>
+                <li><a href="#contact">KONTAKT</a></li>
+            </ul>
+            <div class="menu-short">
+                <span></span>
+                <span></span>
+                <span></span>
+                <div class="chkbox-menu">
+                    <input type="checkbox" class="chkbox-menu" title="menu">
+                    <div class="menu-short-collapse">
+                        <span class="menu-short-list"><a href="#product-icons-section">OPIS</a></span>
+                        <span class="menu-short-list"><a href="#about-us">ZESPÓŁ</a></span>
+                        <span class="menu-short-list"><a>FUNKCJE</a></span>
+                        <span class="menu-short-list"><a href="#contact">KONTAKT</a></span>
+                    </div>
+                </div>
+            </div>
         </div>
-    </header>
-    <main>
-        
-        <section id="product-icons-section">
+    </nav>
 
-            <!-- krótki opis funkcjonalności produktu -->
+    <h1>WYSZUKIWARKA CZĘŚCI SAMOCHODOWYCH</h1>
+    <h2>codeVIN</h2>
+    <div class="startup-sign-in">
+        <form action="#">
+            Zapisz się na premierę:
+            <input type="text" size="20" placeholder="Wpisz swój adres e-mail"
+                   class="startup-sign-in"><input type="submit" value="Wyślij" class="button">
+        </form>
+        <p class="startup-sign-in-info">Otrzymasz dokładnie jedną wiadomość mailową
+            w momencie uruchomienia pełnej funkcjonalności strony.</p>
+        <p class="startup-sign-in-agreement">Wyrażam zgodę na wykorzystanie i przetwarzanie
+            moich danych osobowych przez Części Samochodowe - codeVIN z siedzibą w Gdańsku (O4),
+            w celu komunikacji związanej z użytkowaniem serwisu www.swiezaki.jfdz7.is-academy.pl. Dane będą
+            chronione zgodnie z ustawą o ochronie danych osobowych (DzU nr 133 poz. 833 z 1997 r. z późniejszymi
+            zmianami).</p>
+    </div>
+</header>
+<main>
+    <section id="product-icons-section">
+        <!-- krótki opis funkcjonalności produktu -->
+
+        <div class="flex-container-center">
+            <div>
+                <div class="flex-container-center">
+                    <div class="icons-display-container">
+                        <img class="icons-images" src="images/icons/car-mechanic.svg" alt="car icon">
+                        <h2 class="icons-text">Tysiące części<br>dla każdego<br>samochodu</h2>
+                    </div>
+                    <div class="icons-display-container">
+                        <img class="icons-images" src="images/icons/give-money.svg" alt="car icon">
+                        <h2 class="icons-text">Oszczędzasz<br>twój czas<br>i pieniądze</h2>
+                    </div>
+                </div>
+            </div>
 
             <div>
-                
-                <img src="images/icons/car-mechanic.svg" alt="car icon" class="product-icons">
-                <h2 class="icons-underlines">Tysiące części<br>dla każdego<br>samochodu</h2>
-                
+                <div class="flex-container-center">
+                    <div class="icons-display-container">
+                        <img class="icons-images" src="images/icons/medal.svg" alt="car icon">
+                        <h2 class="icons-text">Gwarancja<br>produktów w<br>najwyższej jakości</h2>
+                    </div>
+                    <div class="icons-display-container">
+                        <img class="icons-images" src="images/icons/delivery-truck-with-circular-clock.svg"
+                             alt="car icon">
+                        <h2 class="icons-text">Komfort<br> szybkiej i sprawnej<br>dostawy</h2>
+                    </div>
+                </div>
             </div>
-            
+        </div>
+
+    </section>
+
+    <div id="parallax-01" class="parallax"></div>
+
+    <section id="app-functonality">
+        <!-- opis funkcjonalności rozbudowany -->
+
+        <h1>Dodatkowe informacje o produkcie</h1>
+
+    </section>
+
+    <div id="parallax-02" class="parallax"></div>
+
+    <section id="about-us">
+        <!-- opis zespołu -->
+
+        <h2>Poznaj nasz zespół!</h2>
+
+        <div class="flex-container-center">
             <div>
-                
-                <img src="images/icons/give-money.svg" alt="car icon" class="product-icons">
-                <h2 class="icons-underlines">Oszczędzasz<br>twój czas<br>i pieniądze</h2>
-                
-            </div>
-            
-            <div>
-                
-                <img src="images/icons/medal.svg" alt="car icon" class="product-icons">
-                <h2 class="icons-underlines">Gwarancja <br> produktów w<br>najwyższej jakości</h2>
-                
-            </div>
-            
-            <div>
-                
-                <img src="images/icons/delivery-truck-with-circular-clock.svg" alt="car icon" class="product-icons">
-                <h2 class="icons-underlines">Komfort<br> szybkiej i sprawnej<br>dostawy</h2>
-                
+                <div class="flex-container-center">
+
+                    <!--Kamila Kisiel-->
+                    <div class="about-us-display-container">
+                        <img class="about-us-images" src="images/team/kamila-kisiel.png" alt="Kamila Kisiel">
+                        <h2 class="about-us-text">Kamila Kisiel</h2>
+                        <!-- social icons container-->
+                        <div class="flex-container-center">
+                            <a href="https://kamilakisiel.github.io"
+                               target="_blank">
+                                <img src="images/icons/home.svg"
+                                     alt="Kamila Kisiel Portfolio">
+                            </a>
+                            <a href="https://pl.linkedin.com/in/kamila-kisiel-75bb45136"
+                               target="_blank">
+                                <img src="images/icons/linkedin-logo.png"
+                                     alt="Radek Rocławski Linkedin">
+                            </a>
+                        </div>
+                        <!--end of social icons container-->
+                    </div>
+
+                    <!--Radek Rocławski-->
+                    <div class="about-us-display-container">
+                        <img class="about-us-images" src="images/team/radek-ro.jpg" alt="Radek Rocławski">
+                        <h2 class="about-us-text">Radek Rocławski</h2>
+                        <!-- social icons container-->
+                        <div class="flex-container-center">
+                            <a href="https://radekro.github.io"
+                               target="_blank">
+                                <img src="images/icons/home.svg"
+                                     alt="Radek Rocławski Portfolio">
+                            </a>
+                            <a href="https://www.linkedin.com/in/rados%C5%82aw-roc%C5%82awski-844ba578/"
+                               target="_blank">
+                                <img src="images/icons/linkedin-logo.png"
+                                     alt="Radek Rocławski Linkedin">
+                            </a>
+                        </div>
+                        <!--end of social icons container-->
+                    </div>
+                </div>
             </div>
 
-        </section>
-        
-        <section>
-            <!-- opis zespołu -->
-        </section>
-        <section>
-            <!-- opis funkcjonalności rozbudowany -->
-        </section>
-    </main>
-    <footer>
-        <!-- stopka, linki, copyrighty, etc. -->
-    </footer>
+            <div>
+                <div class="flex-container-center">
+
+                    <!--Bartosz Złotucha-->
+                    <div class="about-us-display-container">
+                        <img class="about-us-images" src="images/team/bartosz-zlotucha.png" alt="Bartosz Złotucha">
+                        <h2 class="about-us-text">Bartosz Złotucha</h2>
+                        <!-- social icons container-->
+                        <div class="flex-container-center">
+                            <a href="https://zlotucha.github.io"
+                               target="_blank">
+                                <img src="images/icons/home.svg"
+                                     alt="Bartosz Złotucha Portfolio">
+                            </a>
+                            <a href="https://pl.linkedin.com/in/bartosz-z%C5%82otucha-18763214a"
+                               target="_blank">
+                                <img src="images/icons/linkedin-logo.png"
+                                     alt="Bartosz Złotucha Linkedin">
+                            </a>
+                        </div>
+                        <!--end of social icons container-->
+                    </div>
+
+                    <!--Jarek Sopiński-->
+                    <div class="about-us-display-container">
+                        <img class="about-us-images" src="images/team/jarek-sopinski.JPG" alt="Jarek Sopiński">
+                        <h2 class="about-us-text">Jarek Sopiński</h2>
+                        <!-- social icons container-->
+                        <div class="flex-container-center">
+                            <a href="https://jareksopinski.github.io/"
+                               target="_blank">
+                                <img src="images/icons/home.svg"
+                                     alt="Jarek Sopiński Portfolio">
+                            </a>
+                            <a href="https://pl.linkedin.com/in/jaros%C5%82aw-sopi%C5%84ski-a67472100"
+                               target="_blank">
+                                <img src="images/icons/linkedin-logo.png"
+                                     alt="Jarek Sopiński Linkedin">
+                            </a>
+                        </div>
+                        <!--end of social icons container-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</main>
+<footer>
+    <section id="contact">
+        <h3>NAPISZ DO NAS</h3>
+     <div class="contact-form">
+        <form>
+            <label>Imię i nazwisko</label>
+            <input name="name" class="form-area">
+
+            <label>Email</label>
+            <input name="email" type="email" class="form-area">
+
+            <label>Wiadomość</label>
+            <textarea name="message" class="form-area"></textarea>
+
+            <input name="submit" class="button" type="submit" value="Wyślij">
+
+        </form>
+     </div>
+     <div class="links">
+        <ul>
+            <li><a href="https://www.google.pl/maps/search/grunwaldyka+472+b,+gda%7Dsk/@54.4029342,18.5697099,18z/data=!3m1!4b1?hl=pl" target="_blank">O4, Al. Grunwaldzka 472B, Gdańsk, PL&ensp;|&ensp;</a></li>
+            <li><a href="https://github.com/infoshareacademy/jfdz7-swiezaki" target="_blank">Github</a></li>
+        </ul>
+    </div>
+        <div class="copyright">Copyright &copy;2017, Świeżaki</div>
+    </section>
+</footer>
 </body>
 </html>
