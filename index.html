@@ -223,17 +223,19 @@
     <section id="contact">
         <h3>NAPISZ DO NAS</h3>
      <div class="contact-form">
-        <form>
-            <label>Imię i nazwisko</label>
-            <input name="name" class="form-area">
+        <form role="form">
+            <div class="flex-container-center">
+                <div class="form-group"><label>Imię i nazwisko<span class="starRequired">&nbsp;*</span></label>
+                    <input class="form-area" type="text" name="name" required="required">
+                </div>
+                <div class="form-group"><label>Email<span class="starRequired">&nbsp;*</span></label>
+                    <input class="form-area" type="email" name="email" required="required">
+                </div>
+            </div>
+            <label>Wiadomość<span class="starRequired">&nbsp;*</span></label>
+            <textarea class="form-area" type="text" name="message" required="required" rows="6" cols="20"></textarea>
 
-            <label>Email</label>
-            <input name="email" type="email" class="form-area">
-
-            <label>Wiadomość</label>
-            <textarea name="message" class="form-area"></textarea>
-
-            <input name="submit" class="button" type="submit" value="Wyślij">
+            <input class="button" type="submit" name="submit" value="Wyślij">
 
         </form>
      </div>
