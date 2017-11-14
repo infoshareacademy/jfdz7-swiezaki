@@ -299,8 +299,12 @@ input.startup-sign-in {
 
 /*End of about-us section */
 /*Beginning of contact section */
+footer {
+  margin-top: 10px; }
+
 h3 {
   font-weight: bolder;
+  font-size: 20px;
   text-align: center;
   margin-bottom: 5px; }
 
@@ -313,29 +317,42 @@ h3 {
   background-color: #171717;
   font-family: Open Sans, Arial, Sans Serif; }
 
+.starRequired {
+  color: #8C0000; }
+
 .contact-form {
-  width: 260px;
+  width: 60%;
   margin: 0 auto;
   background-color: #171717;
   border: 5px solid #E8E8E8;
   border-radius: 10px;
-  padding: 20px; }
+  padding: 30px; }
+  .contact-form form {
+    padding: 0 10px; }
   .contact-form label {
     display: block;
-    margin-bottom: 2px;
+    padding: 8px 0;
     color: #E8E8E8;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 18px;
     text-transform: uppercase; }
+  .contact-form .form-group {
+    display: inline-block;
+    width: 47%;
+    margin-right: 12px; }
   .contact-form .form-area {
-    width: 100%;
+    width: 98%;
+    border: 2px solid #E8E8E8;
     border-radius: 2px;
-    margin-bottom: 5px;
     background-color: #171717;
     color: #E8E8E8; }
   .contact-form .button {
     display: block;
-    font-size: 13px; }
+    position: relative;
+    top: 60%;
+    left: 80%;
+    font-size: 13px;
+    margin-top: 10px; }
 
 .links {
   display: flex;
