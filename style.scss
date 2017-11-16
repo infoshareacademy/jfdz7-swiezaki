@@ -223,6 +223,13 @@ main {
   }
 }
 
+
+.startup-sign-in-short-pos {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+}
+
 input.startup-sign-in, .button {
   background-color: $white;
   color: $red;

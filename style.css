@@ -178,6 +178,11 @@ main {
     color: #E8E8E8;
     line-height: 30px; }
 
+.startup-sign-in-short-pos {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0; }
+
 input.startup-sign-in, .button {
   background-color: #E8E8E8;
   color: #8C0000;
