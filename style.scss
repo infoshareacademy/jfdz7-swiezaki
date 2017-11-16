@@ -21,6 +21,11 @@ $font-stack: Open Sans, Arial, Sans Serif;
     justify-content: center;
 } //centers items using flex
 
+i {
+  margin: 0 15px 0 0;
+  color: $white;
+}
+
 /* End of global classes */
 
 body {
@@ -60,10 +65,6 @@ h2 { // Subtitle in header section
   position: absolute;
   top: -5px; left: 15px;
   font-size: 60px;
-  color: $white;
-}
-
-i {
   color: $white;
 }
 
@@ -209,6 +210,17 @@ main {
   font-size: 25px;
   font-weight: bolder;
   padding: 70px 0 20px;
+}
+
+.startup-sign-in-short {
+  width: 30%;
+  text-align: center;
+
+  a {
+    text-decoration: none;
+    color: $white;
+    line-height: 30px;
+  }
 }
 
 input.startup-sign-in, .button {
