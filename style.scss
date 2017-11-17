@@ -21,6 +21,13 @@ $font-stack: Open Sans, Arial, Sans Serif;
     justify-content: center;
 } //centers items using flex
 
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} //used to create parallax bg
+
 i {
   margin: 0 15px 0 0;
   color: $white;
@@ -202,6 +209,11 @@ main {
 
 /* Begining of startup-sign-in section */
 
+#startup-sign-in {
+  background-image: url("images/fiat-parallax-background.jpg");
+  min-height: 350px;
+}
+
 .startup-sign-in {
   margin: auto;
   text-align: center;
@@ -312,36 +324,6 @@ input.startup-sign-in {
 } //describes only text under .svg files
 
 /* End of #product_icons section */
-
-/* Beginning of parallax effect in main */
-
-.parallax {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#parallax-01 {
-  background-image: url("images/fiat-parallax-background.jpg");
-  min-height: 350px;
-}
-
-#parallax-02 {
-  background-image: url("images/czerwona_terenowka-parallax-bg.jpg");
-  min-height: 350px;
-}
-
-/*End of parallax effect*/
-
-/*Beginning of #app-functonality section*/
-
-#app-functonality {
-  background-color: $black;
-  min-height: 500px;
-}
-
-/*End of #app-functonality section */
 
 /*Beginning of about-us section */
 
