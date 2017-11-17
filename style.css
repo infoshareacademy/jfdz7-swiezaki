@@ -22,6 +22,9 @@ i {
   margin: 0 15px 0 0;
   color: #E8E8E8; }
 
+.marker {
+  color: yellow; }
+
 /* End of global classes */
 body {
   font-family: Open Sans, Arial, Sans Serif; }
@@ -45,6 +48,13 @@ h2 {
   font-weight: bolder;
   color: #E8E8E8;
   font-size: 60px;
+  text-align: center; }
+
+h4 {
+  font-size: 20px;
+  color: #E8E8E8;
+  font-style: italic;
+  padding-top: 20px;
   text-align: center; }
 
 /* End of header and title section */
@@ -168,8 +178,7 @@ main {
 
 /* Begining of startup-sign-in section */
 #startup-sign-in {
-  background-image: url("images/fiat-parallax-background.jpg");
-  min-height: 350px; }
+  background-image: url("images/fiat-parallax-background.jpg"); }
 
 .startup-sign-in {
   margin: auto;
@@ -178,20 +187,17 @@ main {
   text-shadow: 2px 2px 5px #171717;
   font-size: 25px;
   font-weight: bolder;
-  padding: 70px 0 20px; }
+  padding: 110px 0; }
 
-.startup-sign-in-short {
-  width: 30%;
-  text-align: center; }
-  .startup-sign-in-short a {
-    text-decoration: none;
-    color: #E8E8E8;
-    line-height: 30px; }
+.startup-sign-in-short a {
+  text-decoration: none;
+  color: #E8E8E8;
+  line-height: 40px; }
 
 .startup-sign-in-short-pos {
   display: flex;
   justify-content: center;
-  padding: 30px 0; }
+  padding: 10px 0 40px; }
 
 input.startup-sign-in, .button {
   background-color: #E8E8E8;
@@ -380,9 +386,12 @@ h3 {
     display: none; }
 
   h1 {
-    font-size: 60px; }
+    font-size: 50px; }
 
   h2 {
-    font-size: 90px; } }
+    font-size: 70px; }
+
+  h4 {
+    font-size: 25px; } }
 
 /*# sourceMappingURL=style.css.map */
