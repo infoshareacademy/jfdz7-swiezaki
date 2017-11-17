@@ -12,6 +12,12 @@ Very small devices <576px
   flex-flow: wrap;
   justify-content: center; }
 
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
 i {
   margin: 0 15px 0 0;
   color: #E8E8E8; }
@@ -161,6 +167,10 @@ main {
   margin: 0 auto; }
 
 /* Begining of startup-sign-in section */
+#startup-sign-in {
+  background-image: url("images/fiat-parallax-background.jpg");
+  min-height: 350px; }
+
 .startup-sign-in {
   margin: auto;
   text-align: center;
@@ -252,28 +262,6 @@ input.startup-sign-in {
   text-align: center; }
 
 /* End of #product_icons section */
-/* Beginning of parallax effect in main */
-.parallax {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; }
-
-#parallax-01 {
-  background-image: url("images/fiat-parallax-background.jpg");
-  min-height: 350px; }
-
-#parallax-02 {
-  background-image: url("images/czerwona_terenowka-parallax-bg.jpg");
-  min-height: 350px; }
-
-/*End of parallax effect*/
-/*Beginning of #app-functonality section*/
-#app-functonality {
-  background-color: #171717;
-  min-height: 500px; }
-
-/*End of #app-functonality section */
 /*Beginning of about-us section */
 #about-us {
   background-color: #171717;
