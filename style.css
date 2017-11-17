@@ -168,8 +168,7 @@ main {
 
 /* Begining of startup-sign-in section */
 #startup-sign-in {
-  background-image: url("images/fiat-parallax-background.jpg");
-  min-height: 350px; }
+  background-image: url("images/fiat-parallax-background.jpg"); }
 
 .startup-sign-in {
   margin: auto;
@@ -178,20 +177,17 @@ main {
   text-shadow: 2px 2px 5px #171717;
   font-size: 25px;
   font-weight: bolder;
-  padding: 70px 0 20px; }
+  padding: 110px 0; }
 
-.startup-sign-in-short {
-  width: 30%;
-  text-align: center; }
-  .startup-sign-in-short a {
-    text-decoration: none;
-    color: #E8E8E8;
-    line-height: 30px; }
+.startup-sign-in-short a {
+  text-decoration: none;
+  color: #E8E8E8;
+  line-height: 40px; }
 
 .startup-sign-in-short-pos {
   display: flex;
   justify-content: center;
-  padding: 30px 0; }
+  padding: 40px 0; }
 
 input.startup-sign-in, .button {
   background-color: #E8E8E8;
