@@ -22,6 +22,9 @@ i {
   margin: 0 15px 0 0;
   color: #E8E8E8; }
 
+.marker {
+  color: yellow; }
+
 /* End of global classes */
 body {
   font-family: Open Sans, Arial, Sans Serif; }
@@ -45,6 +48,13 @@ h2 {
   font-weight: bolder;
   color: #E8E8E8;
   font-size: 60px;
+  text-align: center; }
+
+h4 {
+  font-size: 20px;
+  color: #E8E8E8;
+  font-style: italic;
+  padding-top: 20px;
   text-align: center; }
 
 /* End of header and title section */
@@ -187,7 +197,7 @@ main {
 .startup-sign-in-short-pos {
   display: flex;
   justify-content: center;
-  padding: 40px 0; }
+  padding: 10px 0 40px; }
 
 input.startup-sign-in, .button {
   background-color: #E8E8E8;
@@ -376,9 +386,12 @@ h3 {
     display: none; }
 
   h1 {
-    font-size: 60px; }
+    font-size: 50px; }
 
   h2 {
-    font-size: 90px; } }
+    font-size: 70px; }
+
+  h4 {
+    font-size: 25px; } }
 
 /*# sourceMappingURL=style.css.map */

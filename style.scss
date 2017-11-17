@@ -10,6 +10,7 @@ Very small devices <576px
 $red: #8C0000;
 $black: #171717;
 $white: #E8E8E8;
+$marker: yellow;
 $hover-black: #222222;
 $font-stack: Open Sans, Arial, Sans Serif;
 
@@ -31,6 +32,10 @@ $font-stack: Open Sans, Arial, Sans Serif;
 i {
   margin: 0 15px 0 0;
   color: $white;
+}
+
+.marker {
+  color: $marker;
 }
 
 /* End of global classes */
@@ -61,6 +66,14 @@ h2 { // Subtitle in header section
   font-weight: bolder;
   color: $white;
   font-size: 60px;
+  text-align: center;
+}
+
+h4 { // Short description of page in header section
+  font-size: 20px;
+  color: $white;
+  font-style: italic;
+  padding-top: 20px;
   text-align: center;
 }
 
@@ -211,7 +224,6 @@ main {
 
 #startup-sign-in {
   background-image: url("images/fiat-parallax-background.jpg");
-  //min-height: 350px;
 }
 
 .startup-sign-in {
@@ -236,7 +248,7 @@ main {
 .startup-sign-in-short-pos {
   display: flex;
   justify-content: center;
-  padding: 40px 0;
+  padding: 10px 0 40px;
 }
 
 input.startup-sign-in, .button {
@@ -459,10 +471,13 @@ h3 {
         display: none;
       }
       h1 {
-        font-size:60px;
+        font-size:50px;
       }
       h2 {
-        font-size: 90px;
+        font-size: 70px;
+      }
+      h4 {
+        font-size: 25px;
       }
     }
 
