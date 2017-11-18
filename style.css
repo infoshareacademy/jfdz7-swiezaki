@@ -340,6 +340,8 @@ h3 {
     display: inline-block;
     width: 47%;
     margin-right: 12px; }
+  .contact-form .form-group:last-of-type {
+    margin-right: 0px; }
   .contact-form .form-area {
     width: 98%;
     border: 2px solid #E8E8E8;
@@ -355,8 +357,6 @@ h3 {
     margin-top: 10px; }
 
 .links {
-  display: flex;
-  justify-content: center;
   margin: 40px 0; }
   .links li {
     display: inline; }
@@ -382,5 +382,9 @@ h3 {
 
   h2 {
     font-size: 90px; } }
+@media (max-width: 768px) {
+  .contact-form .form-group {
+    width: 100%;
+    margin-right: 0; } }
 
 /*# sourceMappingURL=style.css.map */
