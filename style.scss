@@ -10,6 +10,7 @@ Very small devices <576px
 $red: #8C0000;
 $black: #171717;
 $white: #E8E8E8;
+$marker: yellow;
 $hover-black: #222222;
 $font-stack: Open Sans, Arial, Sans Serif;
 
@@ -20,6 +21,22 @@ $font-stack: Open Sans, Arial, Sans Serif;
     flex-flow: wrap;
     justify-content: center;
 } //centers items using flex
+
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} //used to create parallax bg
+
+i {
+  margin: 0 15px 0 0;
+  color: $white;
+}
+
+.marker {
+  color: $marker;
+}
 
 /* End of global classes */
 
@@ -52,6 +69,14 @@ h2 { // Subtitle in header section
   text-align: center;
 }
 
+h4 { // Short description of page in header section
+  font-size: 20px;
+  color: $white;
+  font-style: italic;
+  padding-top: 20px;
+  text-align: center;
+}
+
 /* End of header and title section */
 
 /* Beginning of navigation section */
@@ -60,10 +85,6 @@ h2 { // Subtitle in header section
   position: absolute;
   top: -5px; left: 15px;
   font-size: 60px;
-  color: $white;
-}
-
-i {
   color: $white;
 }
 
@@ -201,6 +222,10 @@ main {
 
 /* Begining of startup-sign-in section */
 
+#startup-sign-in {
+  background-image: url("images/fiat-parallax-background.jpg");
+}
+
 .startup-sign-in {
   margin: auto;
   text-align: center;
@@ -208,7 +233,22 @@ main {
   text-shadow: 2px 2px 5px $black;
   font-size: 25px;
   font-weight: bolder;
-  padding: 70px 0 20px;
+  padding: 110px 0;
+}
+
+.startup-sign-in-short {
+  a {
+    text-decoration: none;
+    color: $white;
+    line-height: 40px;
+  }
+}
+
+
+.startup-sign-in-short-pos {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0 40px;
 }
 
 input.startup-sign-in, .button {
@@ -293,36 +333,6 @@ input.startup-sign-in {
 } //describes only text under .svg files
 
 /* End of #product_icons section */
-
-/* Beginning of parallax effect in main */
-
-.parallax {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#parallax-01 {
-  background-image: url("images/fiat-parallax-background.jpg");
-  min-height: 350px;
-}
-
-#parallax-02 {
-  background-image: url("images/czerwona_terenowka-parallax-bg.jpg");
-  min-height: 350px;
-}
-
-/*End of parallax effect*/
-
-/*Beginning of #app-functonality section*/
-
-#app-functonality {
-  background-color: $black;
-  min-height: 500px;
-}
-
-/*End of #app-functonality section */
 
 /*Beginning of about-us section */
 
@@ -462,10 +472,13 @@ h3 {
         display: none;
       }
       h1 {
-        font-size:60px;
+        font-size:50px;
       }
       h2 {
-        font-size: 90px;
+        font-size: 70px;
+      }
+      h4 {
+        font-size: 25px;
       }
     }
 @media (max-width: 768px) {
