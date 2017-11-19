@@ -43,14 +43,15 @@ i {
 
 body {
     font-family: $font-stack;
+    background-color: $black;
 }
 
 /* Beginning of header and title section */
 
 header {
   background: url("images/header_background_car.jpg") no-repeat center; // background image for header
+  background-size: cover;
   width: 100%;
-  max-width: 1200px;
   margin: 0 auto;
   position: relative;
 }
@@ -227,7 +228,6 @@ input.chkbox-menu {
 
 main {
   width: 100%;
-  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -245,6 +245,7 @@ main {
   font-size: 25px;
   font-weight: bolder;
   padding: 110px 0;
+  max-width: 1200px;
 }
 
 .startup-sign-in-short {
