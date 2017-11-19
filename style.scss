@@ -425,6 +425,9 @@ h3 {
     width: 47%;
     margin-right: 12px;
   }
+  .form-group:last-of-type {
+    margin-right: 0px;
+  }
   .form-area {
     width: 98%;
     border: 2px solid $white;
@@ -442,8 +445,6 @@ h3 {
   }
 }
 .links {
-  display: flex;
-  justify-content: center;
   margin: 40px 0;
     li {
       display: inline;
@@ -480,6 +481,12 @@ h3 {
         font-size: 25px;
       }
     }
+@media (max-width: 768px) {
+  .contact-form .form-group {
+    width: 100%;
+    margin-right: 0;
+  }
+}
 
 
 
