@@ -12,6 +12,7 @@ $black: #171717;
 $white: #E8E8E8;
 $marker: yellow;
 $hover-black: #222222;
+$inprogress: #555;
 $font-stack: Open Sans, Arial, Sans Serif;
 
 /* Beginning of global classes */
@@ -59,7 +60,6 @@ h1 { // Title in header section
   color: $white;
   font-size: 30px;
   text-align: center;
-  padding: 10px 0;
 }
 
 h2 { // Subtitle in header section
@@ -67,13 +67,14 @@ h2 { // Subtitle in header section
   color: $white;
   font-size: 60px;
   text-align: center;
+  padding: 100px 0 10px;
 }
 
 h4 { // Short description of page in header section
   font-size: 20px;
   color: $white;
   font-style: italic;
-  padding-top: 20px;
+  padding-top: 50px;
   text-align: center;
 }
 
@@ -137,6 +138,16 @@ nav li:hover {
     text-decoration: none;
     color:inherit;
   }
+}
+
+nav li.in-progress {
+  color: $inprogress;
+  cursor: none;
+}
+
+.menu-short-collapse span.menu-short-list a.in-progress {
+  color: $inprogress;
+  cursor: none;
 }
 
 .menu ul {
@@ -240,7 +251,6 @@ main {
   a {
     text-decoration: none;
     color: $white;
-    line-height: 40px;
   }
 }
 
@@ -248,7 +258,7 @@ main {
 .startup-sign-in-short-pos {
   display: flex;
   justify-content: center;
-  padding: 10px 0 40px;
+  padding: 10px 0 100px;
 }
 
 input.startup-sign-in, .button {

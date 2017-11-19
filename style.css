@@ -41,20 +41,20 @@ h1 {
   font-weight: 400;
   color: #E8E8E8;
   font-size: 30px;
-  text-align: center;
-  padding: 10px 0; }
+  text-align: center; }
 
 h2 {
   font-weight: bolder;
   color: #E8E8E8;
   font-size: 60px;
-  text-align: center; }
+  text-align: center;
+  padding: 100px 0 10px; }
 
 h4 {
   font-size: 20px;
   color: #E8E8E8;
   font-style: italic;
-  padding-top: 20px;
+  padding-top: 50px;
   text-align: center; }
 
 /* End of header and title section */
@@ -107,6 +107,14 @@ nav li:hover {
   nav li:hover a {
     text-decoration: none;
     color: inherit; }
+
+nav li.in-progress {
+  color: #555;
+  cursor: none; }
+
+.menu-short-collapse span.menu-short-list a.in-progress {
+  color: #555;
+  cursor: none; }
 
 .menu ul {
   display: none; }
@@ -191,13 +199,12 @@ main {
 
 .startup-sign-in-short a {
   text-decoration: none;
-  color: #E8E8E8;
-  line-height: 40px; }
+  color: #E8E8E8; }
 
 .startup-sign-in-short-pos {
   display: flex;
   justify-content: center;
-  padding: 10px 0 40px; }
+  padding: 10px 0 100px; }
 
 input.startup-sign-in, .button {
   background-color: #E8E8E8;
@@ -389,14 +396,13 @@ h3 {
     font-size: 50px; }
 
   h2 {
-    font-size: 80px; } }
+    font-size: 70px; }
 
+  h4 {
+    font-size: 25px; } }
 @media (max-width: 768px) {
   .contact-form .form-group {
     width: 100%;
-    margin-right: 0; }
-h4 {
-    font-size: 25px; } 
-}
+    margin-right: 0; } }
 
 /*# sourceMappingURL=style.css.map */
