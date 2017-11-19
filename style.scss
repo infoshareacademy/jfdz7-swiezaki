@@ -12,7 +12,7 @@ $black: #171717;
 $white: #E8E8E8;
 $marker: yellow;
 $hover-black: #222222;
-$inprogress: #555;
+$dark: #000;
 $font-stack: Open Sans, Arial, Sans Serif;
 
 /* Beginning of global classes */
@@ -31,12 +31,16 @@ $font-stack: Open Sans, Arial, Sans Serif;
 } //used to create parallax bg
 
 i {
-  margin: 0 15px 0 0;
+  margin-right: 15px;
   color: $white;
-}
+} // adding auto margin to awesome icons
 
 .marker {
   color: $marker;
+} // class for exposing important words
+
+h1, h2, h3, h4, h5 {
+  color: $white;
 }
 
 /* End of global classes */
@@ -53,32 +57,33 @@ header {
   background-size: cover;
   width: 100%;
   margin: 0 auto;
-  position: relative;
-}
 
-h1 { // Title in header section
-  font-weight: 400;
-  color: $white;
-  font-size: 30px;
-  text-align: center;
-}
+  h1 { // Main title
+    font-weight: bolder;
+    font-size: 37px;
+    text-align: center;
+    padding: 70px 0 0;
+    text-shadow: -2px -2px 0 #444, 2px -2px 0 #444, -2px 2px 0 #444, 2px 2px 0 #444;
+  }
 
-h2 { // Subtitle in header section
-  font-weight: bolder;
-  color: $white;
-  font-size: 60px;
-  text-align: center;
-  padding: 100px 0 10px;
-}
+  h2 { // Subtitle
+    font-weight: 400;
+    font-size: 27px;
+    text-align: center;
+  }
 
-h4 { // Short description of page in header section
-  font-size: 20px;
-  color: $white;
-  font-style: italic;
-  padding-top: 50px;
-  text-align: center;
-}
+  h3 { // Slogan
+    font-size: 18px;
+    font-style: italic;
+    font-weight: normal;
+    padding-top: 50px;
+    text-align: center;
+  }
+  h3:last-of-type {
+    padding-top: 20px;
+  }
 
+}
 /* End of header and title section */
 
 /* Beginning of navigation section */
@@ -86,8 +91,11 @@ h4 { // Short description of page in header section
 .logo { // logo
   position: absolute;
   top: -5px; left: 15px;
-  font-size: 60px;
-  color: $white;
+  background-color: $dark;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
 }
 
 .logo i:hover {
@@ -97,20 +105,17 @@ h4 { // Short description of page in header section
 
 nav {
   position: relative;
-  height: 90px;
+  height: 50px;
   width: 100%;
-  max-width: 1200px;
-  background-color: $black;
   z-index: 1;
 }
 
 .menu
 {
   position: fixed;
-  height: 90px;
+  height: 50px;
   background-color: $black;
   width: 100%;
-  max-width: 1200px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -139,16 +144,6 @@ nav li:hover {
     text-decoration: none;
     color:inherit;
   }
-}
-
-nav li.in-progress {
-  color: $inprogress;
-  cursor: none;
-}
-
-.menu-short-collapse span.menu-short-list a.in-progress {
-  color: $inprogress;
-  cursor: none;
 }
 
 .menu ul {
@@ -194,7 +189,7 @@ input.chkbox-menu {
 .menu-short-collapse {
   position: fixed;
   right: -160px;
-  top: 89px;
+  top: 49px;
   width: 160px;
   color: $white;
   background-color: $black;
@@ -480,15 +475,21 @@ h3 {
       .menu-short {
         display: none;
       }
-      h1 {
-        font-size:50px;
-      }
-      h2 {
-        font-size: 70px;
-      }
-      h4 {
-        font-size: 25px;
-      }
+
+      header {
+
+        h1 { // Main title
+          font-size: 60px;
+        }
+
+        h2 { // Subtitle
+          font-size: 36px;
+        }
+
+        h3 { // Slogan
+          font-size: 20px;
+        }
+    }
     }
 @media (max-width: 768px) {
   .contact-form .form-group {
