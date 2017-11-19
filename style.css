@@ -27,13 +27,14 @@ i {
 
 /* End of global classes */
 body {
-  font-family: Open Sans, Arial, Sans Serif; }
+  font-family: Open Sans, Arial, Sans Serif;
+  background-color: #171717; }
 
 /* Beginning of header and title section */
 header {
   background: url("images/header_background_car.jpg") no-repeat center;
+  background-size: cover;
   width: 100%;
-  max-width: 1200px;
   margin: 0 auto;
   position: relative; }
 
@@ -181,7 +182,6 @@ input.chkbox-menu {
 /* End of navigation section */
 main {
   width: 100%;
-  max-width: 1200px;
   margin: 0 auto; }
 
 /* Begining of startup-sign-in section */
@@ -195,7 +195,8 @@ main {
   text-shadow: 2px 2px 5px #171717;
   font-size: 25px;
   font-weight: bolder;
-  padding: 110px 0; }
+  padding: 110px 0;
+  max-width: 1200px; }
 
 .startup-sign-in-short a {
   text-decoration: none;
