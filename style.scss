@@ -12,73 +12,83 @@ $black: #171717;
 $white: #E8E8E8;
 $marker: yellow;
 $hover-black: #222222;
-$dark: #000;
+$dark: #000000;
 $font-stack: Open Sans, Arial, Sans Serif;
 
-/* Beginning of global classes */
+/* Beginning of global styling */
 
-.flex-container-center {
-    display: flex;
-    flex-flow: wrap;
-    justify-content: center;
-} //centers items using flex
-
-.parallax {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-} //used to create parallax bg
+body {
+  font-family: $font-stack;
+  background-color: $black;
+}
 
 i {
   margin-right: 15px;
   color: $white;
 } // adding auto margin to awesome icons
 
+h1, h2, h3, h4 {
+  color: $white;
+  text-align: center;
+} // standard classed for all h titles
+
+h1 {
+  font-weight: bolder;
+  font-size: 37px;
+}
+h2 {
+  font-weight: bold;
+  font-size: 27px;
+}
+h3 {
+  font-weight: normal;
+  font-size: 18px;
+}
+h4 {
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.flex-container-center {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+} // centers items using flex
+
+.parallax {
+  background: fixed, center, no-repeat;
+  background-size: cover;
+} // used to create parallax bg
+
+
 .marker {
   color: $marker;
 } // class for exposing important words
 
-h1, h2, h3, h4, h5 {
-  color: $white;
-}
+.shadow {
+  text-shadow: 1px 2px $dark;
+} // class for shadow effect
 
 /* End of global classes */
 
-body {
-    font-family: $font-stack;
-    background-color: $black;
-}
-
-/* Beginning of header and title section */
+/* Beginning of header section */
 
 header {
-  background: url("images/header_background_car.jpg") no-repeat center; // background image for header
+  background: url("images/cars-header-background.jpg") no-repeat center; // background image for header
   background-size: cover;
   width: 100%;
   margin: 0 auto;
 
   h1 { // Main title
-    font-weight: bolder;
-    font-size: 37px;
-    text-align: center;
     padding: 70px 0 0;
-    text-shadow: -2px -2px 0 #444, 2px -2px 0 #444, -2px 2px 0 #444, 2px 2px 0 #444;
-  }
-
-  h2 { // Subtitle
-    font-weight: 400;
-    font-size: 27px;
-    text-align: center;
+    text-shadow: -1px -1px 0 $black, 1px -1px 0 $black, -1px 1px 0 $black, 1px 1px 0 $black;
   }
 
   h3 { // Slogan
-    font-size: 18px;
     font-style: italic;
-    font-weight: normal;
     padding-top: 50px;
-    text-align: center;
-  }
+   }
+
   h3:last-of-type {
     padding-top: 20px;
   }
@@ -241,6 +251,12 @@ main {
   font-weight: bolder;
   padding: 110px 0;
   max-width: 1200px;
+
+  input[type=checkbox] {
+    width: 15px;
+    height: 15px;
+    background: $black;
+  }
 }
 
 .startup-sign-in-short {
@@ -295,11 +311,16 @@ input.startup-sign-in {
 }
 
 .startup-sign-in-agreement {
-  font-size: 10px;
+  font-size: 12px;
   padding: 3px 0;
   line-height: 14px;
   width:80%;
   margin: 0 auto;
+
+  .marker {
+    color: $white;
+    font-size: 15px;
+  }
 }
 
 /* End of startup-sign-in-section */
@@ -388,12 +409,7 @@ input.startup-sign-in {
 
 /*Beginning of contact section */
 
-h3 {
-  font-weight: bolder;
-  font-size: 20px;
-  text-align: center;
-  margin-bottom: 5px;
-}
+
 #contact {
   width: 100%;
   max-width: 1200px;
@@ -402,6 +418,13 @@ h3 {
   color: $white;
   background-color: $black;
   font-family: $font-stack;
+
+  h3 {
+    font-weight: bolder;
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+
 }
 .starRequired {
   color: $red;
@@ -430,7 +453,7 @@ h3 {
     margin-right: 12px;
   }
   .form-group:last-of-type {
-    margin-right: 0px;
+    margin-right: 0;
   }
   .form-area {
     width: 98%;
@@ -479,15 +502,15 @@ h3 {
       header {
 
         h1 { // Main title
-          font-size: 60px;
+          font-size: 62px;
         }
 
         h2 { // Subtitle
-          font-size: 36px;
+          font-size: 38px;
         }
 
         h3 { // Slogan
-          font-size: 20px;
+          font-size: 22px;
         }
     }
     }
