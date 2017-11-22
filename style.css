@@ -303,7 +303,7 @@ input.startup-sign-in {
   height: 200px;
   width: 200px;
   background-color: #E8E8E8;
-  padding: 10px;
+  padding: 5px;
   margin-bottom: 10px;
   border-radius: 100%; }
 
@@ -369,9 +369,10 @@ input.startup-sign-in {
   .contact-form .button {
     display: block;
     position: relative;
+    padding: 2px 9px;
     top: 60%;
-    left: 80%;
-    font-size: 13px;
+    left: 70%;
+    font-size: 20px;
     margin-top: 10px; }
 
 .links {
@@ -401,6 +402,11 @@ input.startup-sign-in {
     font-size: 38px; }
   header h3 {
     font-size: 22px; } }
+@media (max-width: 576px) {
+  .links li a:last-of-type {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; } }
 @media (max-width: 768px) {
   .contact-form .form-group {
     width: 100%;
