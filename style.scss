@@ -439,6 +439,10 @@ input.startup-sign-in {
   form {
     padding: 0 10px;
   }
+  .flex-container-center {
+
+
+  }
   label {
     display: block;
     padding: 8px 0;
@@ -465,9 +469,10 @@ input.startup-sign-in {
   .button {
     display: block;
     position: relative;
+    padding: 2px 9px;
     top: 60%;
-    left: 80%;
-    font-size: 13px;
+    left: 70%;
+    font-size: 20px;
     margin-top: 10px;
   }
 }
@@ -514,12 +519,20 @@ input.startup-sign-in {
         }
     }
     }
+@media (max-width: 576px) {
+  .links li a:last-of-type {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+}
 @media (max-width: 768px) {
   .contact-form .form-group {
     width: 100%;
     margin-right: 0;
   }
 }
+
 
 
 
