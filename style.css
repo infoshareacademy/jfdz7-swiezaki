@@ -53,7 +53,7 @@ h4 {
 /* End of global classes */
 /* Beginning of header section */
 header {
-  background: url("images/cars-header-background.jpg") no-repeat center;
+  background: url("images/header-background.jpg") no-repeat center;
   background-size: cover;
   width: 100%;
   margin: 0 auto; }
