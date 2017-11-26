@@ -283,6 +283,20 @@ input.startup-sign-in {
   text-align: center; }
 
 /* End of #product_icons section */
+/*Beginning of description section */
+.description-box {
+  display: inline-block;
+  margin: 10px 20px;
+  background-color: #8C0000;
+  border: 5px solid #E8E8E8;
+  height: 300px;
+  width: 400px; }
+
+#description p {
+  font-size: 30px;
+  color: #E8E8E8; }
+
+/*End of description section */
 /*Beginning of about-us section */
 #about-us {
   background-color: #171717;
