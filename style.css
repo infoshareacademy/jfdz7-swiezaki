@@ -284,17 +284,40 @@ input.startup-sign-in {
 
 /* End of #product_icons section */
 /*Beginning of description section */
+#description {
+  background-color: #171717;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 0px; }
+  #description img {
+    display: block;
+    max-width: 80%;
+    height: auto;
+    margin: auto;
+    border: 5px solid #E8E8E8;
+    border-radius: 10%;
+    box-shadow: 10px 10px 5px #888888; }
+  #description h2 {
+    font-size: 22px;
+    margin: 40px 10px 20px 10px; }
+  #description ul {
+    font-family: #description ul font-stack;
+    color: #E8E8E8;
+    font-size: 16px;
+    text-align: center;
+    margin: 20px 20px 0px 20px; }
+  #description li {
+    margin-bottom: 10px; }
+
 .description-box {
   display: inline-block;
-  margin: 10px 20px;
   background-color: #8C0000;
+  max-width: 450px;
+  min-height: 450px;
+  margin: 20px;
+  padding: 20px 0px;
   border: 5px solid #E8E8E8;
-  height: 300px;
-  width: 400px; }
-
-#description p {
-  font-size: 30px;
-  color: #E8E8E8; }
+  border-radius: 10%; }
 
 /*End of description section */
 /*Beginning of about-us section */
@@ -425,5 +448,14 @@ input.startup-sign-in {
   .contact-form .form-group {
     width: 100%;
     margin-right: 0; } }
+@media (min-width: 576px) {
+  #description img {
+    max-width: 60%; }
+
+  #description li {
+    font-size: 18px; }
+
+  #description h2 {
+    font-size: 27px; } }
 
 /*# sourceMappingURL=style.css.map */

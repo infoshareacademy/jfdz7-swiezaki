@@ -332,12 +332,12 @@ input.startup-sign-in {
   margin: 0 auto;
   max-width: 1200px;
   padding: 50px 0;
-} //describes whole section
+}
 
 .icons-display-container {
   display: inline-block;
   margin: 10px 20px;
-} //used to wrap .svg + text in one div
+}
 
 .icons-images {
   height: 100px;
@@ -348,7 +348,7 @@ input.startup-sign-in {
   border: 5px solid $white;
   border-radius: 10%;
 
-} //describes only .svg files
+}
 
 .icons-text {
   font-family: $font-stack;
@@ -357,26 +357,56 @@ input.startup-sign-in {
   color: $white;
   text-transform: uppercase;
   text-align: center;
-} //describes only text under .svg files
+}
 
 /* End of #product_icons section */
 
 /*Beginning of description section */
 
+#description {
+  background-color: $black;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 0px;
+
+  img {
+    display: block;
+    max-width: 80%;
+    height: auto;
+    margin: auto;
+    border: 5px solid $white;
+    border-radius: 10%;
+    box-shadow: 10px 10px 5px #888888;
+  }
+
+  h2 {
+    font-size: 22px;
+    margin: 40px 10px 20px 10px;
+  }
+
+  ul {
+    font-family: &font-stack;
+    color: $white;
+    font-size: 16px;
+    text-align: center;
+    margin: 20px 20px 0px 20px;
+  }
+
+  li {
+    margin-bottom: 10px;
+  }
+}
+
 .description-box {
   display: inline-block;
-  margin: 10px 20px;
   background-color: $red;
+  max-width: 450px;
+  min-height: 450px;
+  margin: 20px;
+  padding: 20px 0px;
   border: 5px solid $white;
-  height: 300px;
-  width: 400px;
+  border-radius: 10%;
 }
-
-#description p {
-  font-size: 30px;
-  color: #E8E8E8;
-}
-
 
 /*End of description section */
 
@@ -387,7 +417,7 @@ input.startup-sign-in {
   margin: 0 auto;
   max-width: 1200px;
   padding: 50px 0;
-} //describes whole section
+}
 
 #about-us > h2 {
   text-transform: uppercase;
@@ -398,7 +428,7 @@ input.startup-sign-in {
 .about-us-display-container {
   display: inline-block;
   margin: 10px 20px;
-} //used to wrap .svg + text in one div
+}
 
 .about-us-images {
   height: 200px;
@@ -407,7 +437,7 @@ input.startup-sign-in {
   padding: 5px;
   margin-bottom: 10px;
   border-radius: 100%;
-} //describes only .svg files
+}
 
 .about-us-text {
   font-family: $font-stack;
@@ -416,13 +446,13 @@ input.startup-sign-in {
   color: $white;
   text-transform: uppercase;
   text-align: center;
-} //describes only text under .svg files
+}
 
 #about-us a > img {
   max-width: 40px;
   max-height: 40px;
   margin: 10px 5px;
-} //describes social icons
+}
 
 /*End of about-us section */
 
@@ -552,7 +582,16 @@ input.startup-sign-in {
   }
 }
 
-
-
+@media (min-width: 576px) {
+  #description img {
+    max-width: 60%;
+  }
+  #description li {
+    font-size: 18px;
+  }
+  #description h2 {
+    font-size: 27px;
+  }
+}
 
 // End of media screens
