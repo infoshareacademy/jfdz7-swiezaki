@@ -1,11 +1,3 @@
-/* Resolutions
-
-Very large devices >= 1200px
-Large devices: >= 992px
-Medium devices: >= 768px
-Small devices: >= 576px
-Very small devices <576px
- */
 /* Beginning of global styling */
 body {
   font-family: Open Sans, Arial, Sans Serif;
@@ -50,7 +42,13 @@ h4 {
 .shadow {
   text-shadow: 1px 2px #000000; }
 
-/* End of global classes */
+.section {
+  background-color: #171717;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 50px 0; }
+
+/* End of global styling */
 /* Beginning of header section */
 header {
   background: url("images/header-background.jpg") no-repeat center;
@@ -254,14 +252,8 @@ input.startup-sign-in {
     font-size: 15px; }
 
 /* End of startup-sign-in-section */
-/* Beginning of #product-icons-section */
-#product-icons-section {
-  background-color: #171717;
-  margin: 0 auto;
-  max-width: 1200px;
-  padding: 50px 0; }
-
-.icons-display-container {
+/* Beginning of #icons section */
+.icons-container {
   display: inline-block;
   margin: 10px 20px; }
 
@@ -274,40 +266,31 @@ input.startup-sign-in {
   border: 5px solid #E8E8E8;
   border-radius: 10%; }
 
-.icons-text {
-  font-family: Open Sans, Arial, Sans Serif;
+#icons h2 {
   font-size: 18px;
-  font-weight: 700;
-  color: #E8E8E8;
-  text-transform: uppercase;
-  text-align: center; }
+  text-transform: uppercase; }
 
-/* End of #product_icons section */
+/* End of #icons section */
 /*Beginning of description section */
-#description {
-  background-color: #171717;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 50px 0px; }
-  #description img {
-    display: block;
-    max-width: 80%;
-    height: auto;
-    margin: auto;
-    border: 5px solid #E8E8E8;
-    border-radius: 10%;
-    box-shadow: 10px 10px 5px #888888; }
-  #description h2 {
-    font-size: 22px;
-    margin: 40px 10px 20px 10px; }
-  #description ul {
-    font-family: #description ul font-stack;
-    color: #E8E8E8;
-    font-size: 16px;
-    text-align: center;
-    margin: 20px 20px 0px 20px; }
-  #description li {
-    margin-bottom: 10px; }
+#description img {
+  display: block;
+  max-width: 80%;
+  height: auto;
+  margin: auto;
+  border: 5px solid #E8E8E8;
+  border-radius: 10%;
+  box-shadow: 10px 10px 5px #888888; }
+#description h2 {
+  font-size: 22px;
+  margin: 40px 10px 20px 10px; }
+#description ul {
+  font-family: #description ul font-stack;
+  color: #E8E8E8;
+  font-size: 16px;
+  text-align: center;
+  margin: 20px 20px 0px 20px; }
+#description li {
+  margin-bottom: 10px; }
 
 .description-box {
   display: inline-block;
@@ -321,18 +304,18 @@ input.startup-sign-in {
 
 /*End of description section */
 /*Beginning of about-us section */
-#about-us {
-  background-color: #171717;
-  margin: 0 auto;
-  max-width: 1200px;
-  padding: 50px 0; }
-
-#about-us > h2 {
+#about-us h1 {
   text-transform: uppercase;
-  font-size: 40px;
   margin-bottom: 50px; }
+#about-us h2 {
+  font-size: 22px;
+  text-transform: uppercase; }
+#about-us a > img {
+  max-width: 40px;
+  max-height: 40px;
+  margin: 10px 5px; }
 
-.about-us-display-container {
+.about-us-container {
   display: inline-block;
   margin: 10px 20px; }
 
@@ -344,28 +327,12 @@ input.startup-sign-in {
   margin-bottom: 10px;
   border-radius: 100%; }
 
-.about-us-text {
-  font-family: Open Sans, Arial, Sans Serif;
-  font-size: 22px;
-  font-weight: 700;
-  color: #E8E8E8;
-  text-transform: uppercase;
-  text-align: center; }
-
-#about-us a > img {
-  max-width: 40px;
-  max-height: 40px;
-  margin: 10px 5px; }
-
 /*End of about-us section */
 /*Beginning of contact section */
 #contact {
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
   padding: 20px 0;
   color: #E8E8E8;
-  background-color: #171717;
   font-family: Open Sans, Arial, Sans Serif; }
   #contact h3 {
     font-weight: bolder;

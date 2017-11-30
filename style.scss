@@ -1,12 +1,3 @@
-/* Resolutions
-
-Very large devices >= 1200px
-Large devices: >= 992px
-Medium devices: >= 768px
-Small devices: >= 576px
-Very small devices <576px
- */
-
 $red: #8C0000;
 $black: #171717;
 $white: #E8E8E8;
@@ -69,7 +60,14 @@ h4 {
   text-shadow: 1px 2px $dark;
 } // class for shadow effect
 
-/* End of global classes */
+.section {
+  background-color: $black;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 50px 0;
+} //main settings for every section in body, excluding those with .parallax class
+
+/* End of global styling */
 
 /* Beginning of header section */
 
@@ -325,16 +323,9 @@ input.startup-sign-in {
 
 /* End of startup-sign-in-section */
 
-/* Beginning of #product-icons-section */
+/* Beginning of #icons section */
 
-#product-icons-section {
-  background-color: $black;
-  margin: 0 auto;
-  max-width: 1200px;
-  padding: 50px 0;
-}
-
-.icons-display-container {
+.icons-container {
   display: inline-block;
   margin: 10px 20px;
 }
@@ -350,25 +341,16 @@ input.startup-sign-in {
 
 }
 
-.icons-text {
-  font-family: $font-stack;
+#icons h2 {
   font-size: 18px;
-  font-weight: 700;
-  color: $white;
   text-transform: uppercase;
-  text-align: center;
 }
 
-/* End of #product_icons section */
+/* End of #icons section */
 
 /*Beginning of description section */
 
 #description {
-  background-color: $black;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 50px 0px;
-
   img {
     display: block;
     max-width: 80%;
@@ -413,19 +395,22 @@ input.startup-sign-in {
 /*Beginning of about-us section */
 
 #about-us {
-  background-color: $black;
-  margin: 0 auto;
-  max-width: 1200px;
-  padding: 50px 0;
+  h1 {
+    text-transform: uppercase;
+    margin-bottom: 50px;
+  }
+  h2 {
+    font-size: 22px;
+    text-transform: uppercase;
+  }
+  a > img {
+    max-width: 40px;
+    max-height: 40px;
+    margin: 10px 5px;
+  }
 }
 
-#about-us > h2 {
-  text-transform: uppercase;
-  font-size: 40px;
-  margin-bottom: 50px;
-}
-
-.about-us-display-container {
+.about-us-container {
   display: inline-block;
   margin: 10px 20px;
 }
@@ -439,21 +424,6 @@ input.startup-sign-in {
   border-radius: 100%;
 }
 
-.about-us-text {
-  font-family: $font-stack;
-  font-size: 22px;
-  font-weight: 700;
-  color: $white;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-#about-us a > img {
-  max-width: 40px;
-  max-height: 40px;
-  margin: 10px 5px;
-}
-
 /*End of about-us section */
 
 /*Beginning of contact section */
@@ -461,11 +431,8 @@ input.startup-sign-in {
 
 #contact {
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
   padding: 20px 0;
   color: $white;
-  background-color: $black;
   font-family: $font-stack;
 
   h3 {
