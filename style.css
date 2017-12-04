@@ -17,7 +17,8 @@ h1 {
 
 h2 {
   font-weight: bold;
-  font-size: 27px; }
+  font-size: 27px;
+  line-height: 27px; }
 
 h3 {
   font-weight: normal;
@@ -294,13 +295,14 @@ input.startup-sign-in {
 
 .description-box {
   display: inline-block;
-  background-color: #8C0000;
   max-width: 450px;
-  min-height: 450px;
-  margin: 20px;
-  padding: 20px 0px;
-  border: 5px solid #E8E8E8;
-  border-radius: 10%; }
+  margin: 20px; }
+  .description-box h2 {
+    background-color: #8C0000;
+    padding: 12px 0;
+    border-bottom: 5px solid #E8E8E8; }
+  .description-box li {
+    line-height: 21px; }
 
 /*End of description section */
 /*Beginning of about-us section */
