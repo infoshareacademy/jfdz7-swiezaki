@@ -30,6 +30,7 @@ h1 {
 h2 {
   font-weight: bold;
   font-size: 27px;
+  line-height: 27px;
 }
 h3 {
   font-weight: normal;
@@ -381,13 +382,18 @@ input.startup-sign-in {
 
 .description-box {
   display: inline-block;
-  background-color: $red;
   max-width: 450px;
-  min-height: 450px;
   margin: 20px;
-  padding: 20px 0px;
-  border: 5px solid $white;
-  border-radius: 10%;
+
+  h2 {
+    background-color: $red;
+    padding: 12px 0;
+    border-bottom: 5px solid $white;
+  }
+
+  li {
+    line-height: 21px;
+  }
 }
 
 /*End of description section */
