@@ -3,10 +3,6 @@ body {
   font-family: Open Sans, Arial, Sans Serif;
   background-color: #171717; }
 
-i {
-  margin-right: 15px;
-  color: #E8E8E8; }
-
 h1, h2, h3, h4 {
   color: #E8E8E8;
   text-align: center; }
@@ -28,26 +24,30 @@ h4 {
   font-weight: normal;
   font-size: 16px; }
 
+i {
+  margin-right: 15px;
+  color: #E8E8E8; }
+
 .flex-container-center {
   display: flex;
   flex-flow: wrap;
   justify-content: center; }
 
-.parallax {
-  background: fixed, center, no-repeat;
-  background-size: cover; }
-
 .marker {
   color: yellow; }
 
-.shadow {
-  text-shadow: 1px 2px #000000; }
+.parallax {
+  background: fixed, center, no-repeat;
+  background-size: cover; }
 
 .section {
   background-color: #171717;
   margin: 0 auto;
   max-width: 1200px;
   padding: 50px 0; }
+
+.shadow {
+  text-shadow: 1px 2px #000000; }
 
 /* End of global styling */
 /* Beginning of header section */
@@ -273,36 +273,24 @@ input.startup-sign-in {
 
 /* End of #icons section */
 /*Beginning of description section */
-#description img {
-  display: block;
-  max-width: 80%;
-  height: auto;
-  margin: auto;
-  border: 5px solid #E8E8E8;
-  border-radius: 10%;
-  box-shadow: 10px 10px 5px #888888; }
 #description h2 {
   font-size: 22px;
-  margin: 40px 10px 20px 10px; }
-#description ul {
-  font-family: #description ul font-stack;
+  margin: 40px 10px 20px 10px;
+  background-color: #8C0000;
+  padding: 12px 0;
+  border-bottom: 5px solid #E8E8E8; }
+
+.description-container {
+  display: block;
+  max-width: 450px;
+  margin: 20px;
   color: #E8E8E8;
   font-size: 16px;
   text-align: center;
-  margin: 20px 20px 0px 20px; }
-#description li {
-  margin-bottom: 10px; }
+  line-height: 21px; }
 
-.description-box {
-  display: inline-block;
-  max-width: 450px;
-  margin: 20px; }
-  .description-box h2 {
-    background-color: #8C0000;
-    padding: 12px 0;
-    border-bottom: 5px solid #E8E8E8; }
-  .description-box li {
-    line-height: 21px; }
+.description-container-text {
+  padding: 10px 20px 0 20px; }
 
 /*End of description section */
 /*Beginning of about-us section */

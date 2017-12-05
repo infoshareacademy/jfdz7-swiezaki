@@ -13,11 +13,6 @@ body {
   background-color: $black;
 }
 
-i {
-  margin-right: 15px;
-  color: $white;
-} // adding auto margin to awesome icons
-
 h1, h2, h3, h4 {
   color: $white;
   text-align: center;
@@ -27,19 +22,27 @@ h1 {
   font-weight: bolder;
   font-size: 37px;
 }
+
 h2 {
   font-weight: bold;
   font-size: 27px;
   line-height: 27px;
 }
+
 h3 {
   font-weight: normal;
   font-size: 18px;
 }
+
 h4 {
   font-weight: normal;
   font-size: 16px;
 }
+
+i {
+  margin-right: 15px;
+  color: $white;
+} // adding auto margin to awesome icons
 
 .flex-container-center {
   display: flex;
@@ -47,19 +50,14 @@ h4 {
   justify-content: center;
 } // centers items using flex
 
-.parallax {
-  background: fixed, center, no-repeat;
-  background-size: cover;
-} // used to create parallax bg
-
-
 .marker {
   color: $marker;
 } // class for exposing important words
 
-.shadow {
-  text-shadow: 1px 2px $dark;
-} // class for shadow effect
+.parallax {
+  background: fixed, center, no-repeat;
+  background-size: cover;
+} // used to create parallax bg
 
 .section {
   background-color: $black;
@@ -67,6 +65,10 @@ h4 {
   max-width: 1200px;
   padding: 50px 0;
 } //main settings for every section in body, excluding those with .parallax class
+
+.shadow {
+  text-shadow: 1px 2px $dark;
+} // class for shadow effect
 
 /* End of global styling */
 
@@ -265,7 +267,6 @@ main {
   }
 }
 
-
 .startup-sign-in-short-pos {
   display: flex;
   justify-content: center;
@@ -352,48 +353,29 @@ input.startup-sign-in {
 /*Beginning of description section */
 
 #description {
-  img {
-    display: block;
-    max-width: 80%;
-    height: auto;
-    margin: auto;
-    border: 5px solid $white;
-    border-radius: 10%;
-    box-shadow: 10px 10px 5px #888888;
-  }
 
   h2 {
     font-size: 22px;
     margin: 40px 10px 20px 10px;
-  }
-
-  ul {
-    font-family: &font-stack;
-    color: $white;
-    font-size: 16px;
-    text-align: center;
-    margin: 20px 20px 0px 20px;
-  }
-
-  li {
-    margin-bottom: 10px;
-  }
-}
-
-.description-box {
-  display: inline-block;
-  max-width: 450px;
-  margin: 20px;
-
-  h2 {
     background-color: $red;
     padding: 12px 0;
     border-bottom: 5px solid $white;
   }
 
-  li {
-    line-height: 21px;
-  }
+}
+
+.description-container {
+  display: block;
+  max-width: 450px;
+  margin: 20px;
+  color: $white;
+  font-size: 16px;
+  text-align: center;
+  line-height: 21px;
+}
+
+.description-container-text {
+  padding: 10px 20px 0 20px;
 }
 
 /*End of description section */
