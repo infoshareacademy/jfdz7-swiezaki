@@ -443,10 +443,6 @@ input.startup-sign-in {
   form {
     padding: 0 10px;
   }
-  .flex-container-center {
-
-
-  }
   label {
     display: block;
     padding: 8px 0;
@@ -457,9 +453,11 @@ input.startup-sign-in {
   }
   .form-group {
     display: inline-block;
-    width: 47%;
-    margin-right: 12px;
+    width: 49%;
+    margin-right: 3px;
+    margin-bottom: 10px;
   }
+
   .form-group:last-of-type {
     margin-right: 0;
   }
@@ -469,14 +467,16 @@ input.startup-sign-in {
     border-radius: 2px;
     background-color: $black;
     color: $white;
+    line-height: 20px;
+    font-size: 25px;
+    font-family: $font-stack;
   }
   .button {
     display: block;
     position: relative;
-    padding: 2px 9px;
-    top: 60%;
+    padding: 3px 9px;
     left: 70%;
-    font-size: 20px;
+    font-size: 30px;
     margin-top: 10px;
   }
 }
@@ -523,17 +523,23 @@ input.startup-sign-in {
         }
     }
     }
+@media (max-width: 768px) {
+  .contact-form .form-group {
+    width: 100%;
+    margin-right: 0;
+  }
+  .contact-form .button {
+    left: 60%;
+  }
+}
 @media (max-width: 576px) {
   .links li a:last-of-type {
     display: flex;
     justify-content: center;
     margin-top: 10px;
   }
-}
-@media (max-width: 768px) {
-  .contact-form .form-group {
-    width: 100%;
-    margin-right: 0;
+  .contact-form .button {
+    left: 30%;
   }
 }
 
