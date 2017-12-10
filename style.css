@@ -28,6 +28,10 @@ i {
   margin-right: 15px;
   color: #E8E8E8; }
 
+p {
+  color: #E8E8E8;
+  text-align: center; }
+
 .flex-container-center {
   display: flex;
   flex-flow: wrap;
@@ -39,6 +43,14 @@ i {
 .parallax {
   background: fixed, center, no-repeat;
   background-size: cover; }
+
+.parallax-text {
+  margin: auto;
+  text-shadow: 2px 2px 5px #171717;
+  font-size: 25px;
+  font-weight: bolder;
+  padding: 110px 0;
+  max-width: 1200px; }
 
 .section {
   background-color: #171717;
@@ -293,6 +305,10 @@ input.startup-sign-in {
   padding: 10px 20px 0 20px; }
 
 /*End of description section */
+/* Update counter section */
+.update-counter {
+  background-image: url("images/backgrounds/counter-background.png"); }
+
 /*Beginning of about-us section */
 #about-us h1 {
   text-transform: uppercase;
@@ -348,13 +364,15 @@ input.startup-sign-in {
     font-weight: bold;
     font-size: 18px;
     text-transform: uppercase; }
+  .contact-form .contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
   .contact-form .form-group {
     display: inline-block;
     width: 49%;
     margin-right: 3px;
     margin-bottom: 10px; }
-  .contact-form .form-group:last-of-type {
-    margin-right: 0; }
   .contact-form .form-area {
     width: 98%;
     border: 2px solid #E8E8E8;

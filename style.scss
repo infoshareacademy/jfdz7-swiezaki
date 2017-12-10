@@ -393,7 +393,9 @@ input.startup-sign-in {
 }
 
 /*End of description section */
-#update-counter {
+/* Update counter section */
+
+.update-counter {
   background-image: url("images/backgrounds/counter-background.png");
 }
 
@@ -468,6 +470,11 @@ input.startup-sign-in {
     font-size: 18px;
     text-transform: uppercase;
   }
+  .contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
   .form-group {
     display: inline-block;
     width: 49%;
@@ -475,9 +482,9 @@ input.startup-sign-in {
     margin-bottom: 10px;
   }
 
-  .form-group:last-of-type {
-    margin-right: 0;
-  }
+  //.form-group:last-of-type {
+  //  margin-right: 0;
+  //}
   .form-area {
     width: 98%;
     border: 2px solid $white;
