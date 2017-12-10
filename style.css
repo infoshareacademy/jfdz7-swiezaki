@@ -28,6 +28,10 @@ i {
   margin-right: 15px;
   color: #E8E8E8; }
 
+p {
+  color: #E8E8E8;
+  text-align: center; }
+
 .flex-container-center {
   display: flex;
   flex-flow: wrap;
@@ -39,6 +43,14 @@ i {
 .parallax {
   background: fixed, center, no-repeat;
   background-size: cover; }
+
+.parallax-text {
+  margin: auto;
+  text-shadow: 2px 2px 5px #171717;
+  font-size: 25px;
+  font-weight: bolder;
+  padding: 110px 0;
+  max-width: 1200px; }
 
 .section {
   background-color: #171717;
@@ -293,6 +305,9 @@ input.startup-sign-in {
   padding: 10px 20px 0 20px; }
 
 /*End of description section */
+#update-counter {
+  background-image: url("images/backgrounds/counter-background.png"); }
+
 /*Beginning of about-us section */
 #about-us h1 {
   text-transform: uppercase;
