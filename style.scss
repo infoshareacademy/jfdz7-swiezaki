@@ -44,6 +44,11 @@ i {
   color: $white;
 } // adding auto margin to awesome icons
 
+p {
+  color: $white;
+  text-align: center;
+}
+
 .flex-container-center {
   display: flex;
   flex-flow: wrap;
@@ -57,7 +62,16 @@ i {
 .parallax {
   background: fixed, center, no-repeat;
   background-size: cover;
-} // used to create parallax bg
+}// used to create parallax bg
+
+.parallax-text {
+  margin: auto;
+  text-shadow: 2px 2px 5px $black;
+  font-size: 25px;
+  font-weight: bolder;
+  padding: 110px 0;
+  max-width: 1200px;
+}
 
 .section {
   background-color: $black;
@@ -379,6 +393,9 @@ input.startup-sign-in {
 }
 
 /*End of description section */
+#update-counter {
+  background-image: url("images/backgrounds/counter-background.png");
+}
 
 /*Beginning of about-us section */
 
