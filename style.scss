@@ -346,7 +346,7 @@ input.startup-sign-in {
   margin: 10px;
 }
 
-.icons-images {
+.icons-container img {
   display: block;
   height: 100px;
   width: 100px;
@@ -357,7 +357,7 @@ input.startup-sign-in {
   border-radius: 10%;
 }
 
-#icons h2 {
+.icons-container h2 {
   margin-top: 5px;
   font-size: 18px;
   text-transform: uppercase;
@@ -367,7 +367,14 @@ input.startup-sign-in {
 
 /*Beginning of description section */
 
-#description {
+.description-container {
+  display: block;
+  width: 90%;
+  margin: auto 20px;
+  color: $white;
+  font-size: 16px;
+  text-align: center;
+  line-height: 21px;
 
   h2 {
     font-size: 22px;
@@ -377,59 +384,48 @@ input.startup-sign-in {
     border-bottom: 5px solid $white;
   }
 
-}
+  p {
+    padding: 10px 20px 0 20px;
+  }
 
-.description-container {
-  display: block;
-  width: 90%;
-  margin: auto 20px;
-  color: $white;
-  font-size: 16px;
-  text-align: center;
-  line-height: 21px;
-}
-
-.description-container-text {
-  padding: 10px 20px 0 20px;
 }
 
 /*End of description section */
+
 #update-counter {
   background-image: url("images/backgrounds/counter-background.png");
 }
 
 /*Beginning of about-us section */
 
-#about-us {
-  h1 {
+.about-us h1 {
     text-transform: uppercase;
     margin: 0 30px 50px 30px;
   }
-  h2 {
-    margin-top: 10px;
-    font-size: 22px;
-    text-transform: uppercase;
-  }
-  a > img {
-    max-width: 40px;
-    max-height: 40px;
-    margin: 10px 5px;
-  }
-}
 
 .about-us-container {
-  width: 100%;
-  margin-bottom: 10px;
-}
+    width: 100%;
+    margin-bottom: 10px;
 
-.about-us-images {
-  display: block;
-  height: 200px;
-  width: 200px;
-  margin: auto;
-  background-color: $white;
-  padding: 5px;
-  border-radius: 100%;
+    h2 {
+      margin-top: 10px;
+      font-size: 22px;
+      text-transform: uppercase;
+    }
+    > img {
+      display: block;
+      height: 200px;
+      width: 200px;
+      margin: auto;
+      background-color: $white;
+      padding: 5px;
+      border-radius: 100%;
+    }
+    a > img {
+      max-width: 40px;
+      max-height: 40px;
+      margin: 10px 5px;
+    }
 }
 
 /*End of about-us section */
