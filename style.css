@@ -296,8 +296,8 @@ input.startup-sign-in {
 
 .description-container {
   display: block;
-  max-width: 450px;
-  margin: 20px;
+  width: 90%;
+  margin: auto 20px;
   color: #E8E8E8;
   font-size: 16px;
   text-align: center;
@@ -436,12 +436,22 @@ input.startup-sign-in {
     font-size: 27px; } }
 @media (min-width: 576px) {
   .icons-container {
-    width: 40%; } }
+    width: 40%; }
+
+  .description-container {
+    width: 75%; } }
 @media (min-width: 768px) {
   .icons-container {
-    width: 32%; } }
+    width: 32%; }
+
+  .description-container {
+    width: 65%; } }
 @media (min-width: 1200px) {
   .icons-container {
-    width: 23%; } }
+    width: 23%; }
+
+  .description-container {
+    width: 40%;
+    min-height: 250px; } }
 
 /*# sourceMappingURL=style.css.map */
