@@ -342,22 +342,23 @@ input.startup-sign-in {
 /* Beginning of #icons section */
 
 .icons-container {
-  display: inline-block;
-  margin: 10px 20px;
+  width: 100%;
+  margin: 10px;
 }
 
 .icons-images {
+  display: block;
   height: 100px;
   width: 100px;
+  margin: auto;
   padding: 50px;
   background-color: $red;
-  margin-bottom: 5px;
   border: 5px solid $white;
   border-radius: 10%;
-
 }
 
 #icons h2 {
+  margin-top: 5px;
   font-size: 18px;
   text-transform: uppercase;
 }
@@ -563,6 +564,20 @@ input.startup-sign-in {
 @media (min-width: 576px) {
   #description h2 {
     font-size: 27px;
+  }
+}
+
+// media queries for grid system
+
+@media (min-width: 768px) {
+  .icons-container {
+    width: 32%;
+  }
+}
+
+@media (min-width: 992px) {
+  .icons-container {
+    width: 23%;
   }
 }
 
