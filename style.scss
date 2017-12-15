@@ -569,13 +569,19 @@ input.startup-sign-in {
 
 // media queries for grid system
 
+@media (min-width: 576px) {
+  .icons-container {
+    width: 40%;
+  }
+}
+
 @media (min-width: 768px) {
   .icons-container {
     width: 32%;
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .icons-container {
     width: 23%;
   }

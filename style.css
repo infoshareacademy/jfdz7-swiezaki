@@ -434,10 +434,13 @@ input.startup-sign-in {
 @media (min-width: 576px) {
   #description h2 {
     font-size: 27px; } }
+@media (min-width: 576px) {
+  .icons-container {
+    width: 40%; } }
 @media (min-width: 768px) {
   .icons-container {
     width: 32%; } }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .icons-container {
     width: 23%; } }
 
