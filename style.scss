@@ -403,9 +403,10 @@ input.startup-sign-in {
 #about-us {
   h1 {
     text-transform: uppercase;
-    margin-bottom: 50px;
+    margin: 0 30px 50px 30px;
   }
   h2 {
+    margin-top: 10px;
     font-size: 22px;
     text-transform: uppercase;
   }
@@ -417,16 +418,17 @@ input.startup-sign-in {
 }
 
 .about-us-container {
-  display: inline-block;
-  margin: 10px 20px;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 .about-us-images {
+  display: block;
   height: 200px;
   width: 200px;
+  margin: auto;
   background-color: $white;
   padding: 5px;
-  margin-bottom: 10px;
   border-radius: 100%;
 }
 
@@ -576,6 +578,10 @@ input.startup-sign-in {
   .description-container {
     width: 75%;
   }
+  .about-us-container {
+    width: 39%;
+    margin: 0 20px 10px 20px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -587,13 +593,22 @@ input.startup-sign-in {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .icons-container {
-    width: 23%;
+    width: 22%;
   }
   .description-container {
-    width: 40%;
+    width: 45%;
     min-height: 250px;
+  }
+  .about-us-container {
+    width: 25%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .about-us-container {
+    width: 20%;
   }
 }
 

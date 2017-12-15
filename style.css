@@ -313,8 +313,9 @@ input.startup-sign-in {
 /*Beginning of about-us section */
 #about-us h1 {
   text-transform: uppercase;
-  margin-bottom: 50px; }
+  margin: 0 30px 50px 30px; }
 #about-us h2 {
+  margin-top: 10px;
   font-size: 22px;
   text-transform: uppercase; }
 #about-us a > img {
@@ -323,15 +324,16 @@ input.startup-sign-in {
   margin: 10px 5px; }
 
 .about-us-container {
-  display: inline-block;
-  margin: 10px 20px; }
+  width: 100%;
+  margin-bottom: 10px; }
 
 .about-us-images {
+  display: block;
   height: 200px;
   width: 200px;
+  margin: auto;
   background-color: #E8E8E8;
   padding: 5px;
-  margin-bottom: 10px;
   border-radius: 100%; }
 
 /*End of about-us section */
@@ -439,19 +441,29 @@ input.startup-sign-in {
     width: 40%; }
 
   .description-container {
-    width: 75%; } }
+    width: 75%; }
+
+  .about-us-container {
+    width: 39%;
+    margin: 0 20px 10px 20px; } }
 @media (min-width: 768px) {
   .icons-container {
     width: 32%; }
 
   .description-container {
     width: 65%; } }
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .icons-container {
-    width: 23%; }
+    width: 22%; }
 
   .description-container {
-    width: 40%;
-    min-height: 250px; } }
+    width: 45%;
+    min-height: 250px; }
+
+  .about-us-container {
+    width: 25%; } }
+@media (min-width: 1200px) {
+  .about-us-container {
+    width: 20%; } }
 
 /*# sourceMappingURL=style.css.map */
