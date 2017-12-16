@@ -267,70 +267,71 @@ input.startup-sign-in {
 /* End of startup-sign-in-section */
 /* Beginning of #icons section */
 .icons-container {
-  display: inline-block;
-  margin: 10px 20px; }
+  width: 100%;
+  margin: 10px; }
 
-.icons-images {
+.icons-container img {
+  display: block;
   height: 100px;
   width: 100px;
+  margin: auto;
   padding: 50px;
   background-color: #8C0000;
-  margin-bottom: 5px;
   border: 5px solid #E8E8E8;
   border-radius: 10%; }
 
-#icons h2 {
+.icons-container h2 {
+  margin-top: 5px;
   font-size: 18px;
   text-transform: uppercase; }
 
 /* End of #icons section */
 /*Beginning of description section */
-#description h2 {
-  font-size: 22px;
-  margin: 40px 10px 20px 10px;
-  background-color: #8C0000;
-  padding: 12px 0;
-  border-bottom: 5px solid #E8E8E8; }
-
 .description-container {
   display: block;
-  max-width: 450px;
-  margin: 20px;
+  width: 90%;
+  margin: auto 20px;
   color: #E8E8E8;
   font-size: 16px;
   text-align: center;
   line-height: 21px; }
-
-.description-container-text {
-  padding: 10px 20px 0 20px; }
+  .description-container h2 {
+    font-size: 22px;
+    margin: 40px 10px 20px 10px;
+    background-color: #8C0000;
+    padding: 12px 0;
+    border-bottom: 5px solid #E8E8E8; }
+  .description-container p {
+    padding: 10px 20px 0 20px; }
 
 /*End of description section */
 #update-counter {
   background-image: url("images/backgrounds/counter-background.png"); }
 
 /*Beginning of about-us section */
-#about-us h1 {
+.about-us h1 {
   text-transform: uppercase;
-  margin-bottom: 50px; }
-#about-us h2 {
-  font-size: 22px;
-  text-transform: uppercase; }
-#about-us a > img {
-  max-width: 40px;
-  max-height: 40px;
-  margin: 10px 5px; }
+  margin: 0 30px 50px 30px; }
 
 .about-us-container {
-  display: inline-block;
-  margin: 10px 20px; }
-
-.about-us-images {
-  height: 200px;
-  width: 200px;
-  background-color: #E8E8E8;
-  padding: 5px;
-  margin-bottom: 10px;
-  border-radius: 100%; }
+  width: 100%;
+  margin-bottom: 10px; }
+  .about-us-container h2 {
+    margin-top: 10px;
+    font-size: 22px;
+    text-transform: uppercase; }
+  .about-us-container > img {
+    display: block;
+    height: 200px;
+    width: 200px;
+    margin: auto;
+    background-color: #E8E8E8;
+    padding: 5px;
+    border-radius: 100%; }
+  .about-us-container a > img {
+    max-width: 40px;
+    max-height: 40px;
+    margin: 10px 5px; }
 
 /*End of about-us section */
 /*Beginning of contact section */
@@ -432,5 +433,34 @@ input.startup-sign-in {
 @media (min-width: 576px) {
   #description h2 {
     font-size: 27px; } }
+@media (min-width: 576px) {
+  .icons-container {
+    width: 40%; }
+
+  .description-container {
+    width: 75%; }
+
+  .about-us-container {
+    width: 39%;
+    margin: 0 20px 10px 20px; } }
+@media (min-width: 768px) {
+  .icons-container {
+    width: 32%; }
+
+  .description-container {
+    width: 65%; } }
+@media (min-width: 992px) {
+  .icons-container {
+    width: 22%; }
+
+  .description-container {
+    width: 45%;
+    min-height: 250px; }
+
+  .about-us-container {
+    width: 25%; } }
+@media (min-width: 1200px) {
+  .about-us-container {
+    width: 20%; } }
 
 /*# sourceMappingURL=style.css.map */
