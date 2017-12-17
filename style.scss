@@ -44,6 +44,11 @@ i {
   color: $white;
 } // adding auto margin to awesome icons
 
+p {
+  color: $white;
+  text-align: center;
+}
+
 .flex-container-center {
   display: flex;
   flex-flow: wrap;
@@ -57,7 +62,16 @@ i {
 .parallax {
   background: fixed, center, no-repeat;
   background-size: cover;
-} // used to create parallax bg
+}// used to create parallax bg
+
+.parallax-text {
+  margin: auto;
+  text-shadow: 2px 2px 5px $black;
+  font-size: 25px;
+  font-weight: bolder;
+  padding: 110px 0;
+  max-width: 1200px;
+}
 
 .section {
   background-color: $black;
@@ -75,10 +89,16 @@ i {
 /* Beginning of header section */
 
 header {
-  background: url("images/header-background.jpg") no-repeat center; // background image for header
+  background: url("images/backgrounds/header-background.jpg") no-repeat center; // background image for header
   background-size: cover;
   width: 100%;
+  height: 100vh;
   margin: 0 auto;
+
+  .header-text-container {
+    position: relative;
+    top: 25vh;
+  }
 
   h1 { // Main title
     padding: 70px 0 0;
@@ -240,7 +260,7 @@ main {
 /* Begining of startup-sign-in section */
 
 #startup-sign-in {
-  background-image: url("images/fiat-parallax-background.jpg");
+  background-image: url("images/backgrounds/sign-up-background.jpg");
 }
 
 .startup-sign-in {
@@ -328,22 +348,23 @@ input.startup-sign-in {
 /* Beginning of #icons section */
 
 .icons-container {
-  display: inline-block;
-  margin: 10px 20px;
+  width: 100%;
+  margin: 10px;
 }
 
-.icons-images {
+.icons-container img {
+  display: block;
   height: 100px;
   width: 100px;
+  margin: auto;
   padding: 50px;
   background-color: $red;
-  margin-bottom: 5px;
   border: 5px solid $white;
   border-radius: 10%;
-
 }
 
-#icons h2 {
+.icons-container h2 {
+  margin-top: 5px;
   font-size: 18px;
   text-transform: uppercase;
 }
@@ -352,7 +373,14 @@ input.startup-sign-in {
 
 /*Beginning of description section */
 
-#description {
+.description-container {
+  display: block;
+  width: 90%;
+  margin: auto 20px;
+  color: $white;
+  font-size: 16px;
+  text-align: center;
+  line-height: 21px;
 
   h2 {
     font-size: 22px;
@@ -362,54 +390,48 @@ input.startup-sign-in {
     border-bottom: 5px solid $white;
   }
 
-}
+  p {
+    padding: 10px 20px 0 20px;
+  }
 
-.description-container {
-  display: block;
-  max-width: 450px;
-  margin: 20px;
-  color: $white;
-  font-size: 16px;
-  text-align: center;
-  line-height: 21px;
-}
-
-.description-container-text {
-  padding: 10px 20px 0 20px;
 }
 
 /*End of description section */
 
+#update-counter {
+  background-image: url("images/backgrounds/counter-background.png");
+}
+
 /*Beginning of about-us section */
 
-#about-us {
-  h1 {
+.about-us h1 {
     text-transform: uppercase;
-    margin-bottom: 50px;
+    margin: 0 30px 50px 30px;
   }
-  h2 {
-    font-size: 22px;
-    text-transform: uppercase;
-  }
-  a > img {
-    max-width: 40px;
-    max-height: 40px;
-    margin: 10px 5px;
-  }
-}
 
 .about-us-container {
-  display: inline-block;
-  margin: 10px 20px;
-}
+    width: 100%;
+    margin-bottom: 10px;
 
-.about-us-images {
-  height: 200px;
-  width: 200px;
-  background-color: $white;
-  padding: 5px;
-  margin-bottom: 10px;
-  border-radius: 100%;
+    h2 {
+      margin-top: 10px;
+      font-size: 22px;
+      text-transform: uppercase;
+    }
+    > img {
+      display: block;
+      height: 200px;
+      width: 200px;
+      margin: auto;
+      background-color: $white;
+      padding: 5px;
+      border-radius: 100%;
+    }
+    a > img {
+      max-width: 40px;
+      max-height: 40px;
+      margin: 10px 5px;
+    }
 }
 
 /*End of about-us section */
@@ -443,10 +465,6 @@ input.startup-sign-in {
   form {
     padding: 0 10px;
   }
-  .flex-container-center {
-
-
-  }
   label {
     display: block;
     padding: 8px 0;
@@ -457,9 +475,11 @@ input.startup-sign-in {
   }
   .form-group {
     display: inline-block;
-    width: 47%;
-    margin-right: 12px;
+    width: 49%;
+    margin-right: 3px;
+    margin-bottom: 10px;
   }
+
   .form-group:last-of-type {
     margin-right: 0;
   }
@@ -469,14 +489,16 @@ input.startup-sign-in {
     border-radius: 2px;
     background-color: $black;
     color: $white;
+    line-height: 20px;
+    font-size: 25px;
+    font-family: $font-stack;
   }
   .button {
     display: block;
     position: relative;
-    padding: 2px 9px;
-    top: 60%;
+    padding: 3px 9px;
     left: 70%;
-    font-size: 20px;
+    font-size: 30px;
     margin-top: 10px;
   }
 }
@@ -523,23 +545,72 @@ input.startup-sign-in {
         }
     }
     }
+@media (max-width: 768px) {
+  .contact-form .form-group {
+    width: 100%;
+    margin-right: 0;
+  }
+  .contact-form .button {
+    left: 60%;
+  }
+}
 @media (max-width: 576px) {
   .links li a:last-of-type {
     display: flex;
     justify-content: center;
     margin-top: 10px;
   }
-}
-@media (max-width: 768px) {
-  .contact-form .form-group {
-    width: 100%;
-    margin-right: 0;
+  .contact-form .button {
+    left: 30%;
   }
 }
 
 @media (min-width: 576px) {
   #description h2 {
     font-size: 27px;
+  }
+}
+
+// media queries for grid system
+
+@media (min-width: 576px) {
+  .icons-container {
+    width: 40%;
+  }
+  .description-container {
+    width: 75%;
+  }
+  .about-us-container {
+    width: 39%;
+    margin: 0 20px 10px 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .icons-container {
+    width: 32%;
+  }
+  .description-container {
+    width: 65%;
+  }
+}
+
+@media (min-width: 992px) {
+  .icons-container {
+    width: 22%;
+  }
+  .description-container {
+    width: 45%;
+    min-height: 250px;
+  }
+  .about-us-container {
+    width: 25%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .about-us-container {
+    width: 20%;
   }
 }
 

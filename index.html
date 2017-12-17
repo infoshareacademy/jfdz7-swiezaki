@@ -7,19 +7,17 @@
     <link rel="stylesheet" type="text/css" href="reset.css">
     <link href="https://fonts.googleapis.com/css?family=Faster+One|Open+Sans" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="shortcut icon" href="favicon.ico/logo_pic.ico" type="image/x-icon">
-    <link rel="manifest" href="favicon.ico/manifest.json">
+    <link rel="shortcut icon" href="images/icons/logo_pic.ico" type="image/x-icon">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <script src="https://use.fontawesome.com/0331aa16a6.js"></script>
 </head>
 <body>
 <header>
-    <nav>
+    <nav id="top">
         <div class="menu">
             <div class="logo">
-                <a href="#"><img src="images/icons/CSlogo.png"></a>
+                <a href="#top"><img src="images/icons/CSlogo.png"></a>
             </div>
             <ul>
                 <li><a href="#description">OPIS</a></li>
@@ -41,42 +39,49 @@
             </div>
         </div>
     </nav>
-    <h1>WYSZUKIWARKA</h1>
-    <h2 class="shadow">CZĘŚCI SAMOCHODOWYCH</h2>
-    <h3 class="shadow">Pomożemy Ci znaleźć <a class="marker">każdą część</a> do Twojego samochodu,<br/>a jako <a class="marker">BONUS</a> wskażemy Ci najbliższy
-    warsztat!</h3>
-    <h3 class="shadow">Startujemy już wkrótce!</h3>
 
-    <div class="startup-sign-in-short-pos">
-        <div class="startup-sign-in-short button"><a href="#startup-sign-in">
-        <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Zapisz się na premierę
-        </a></div>
+    <div class="header-text-container">
+        <h1>WYSZUKIWARKA</h1>
+        <h2 class="shadow">CZĘŚCI SAMOCHODOWYCH</h2>
+        <h3 class="shadow">Pomożemy Ci znaleźć <a class="marker">każdą część</a> do Twojego samochodu,<br/>a jako <a class="marker">BONUS</a> wskażemy Ci najbliższy
+        warsztat!</h3>
+        <h3 class="shadow">Startujemy już wkrótce!</h3>
+
+        <div class="startup-sign-in-short-pos">
+            <div class="startup-sign-in-short button"><a href="#startup-sign-in">
+            <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Zapisz się na premierę
+            </a></div>
+        </div>
     </div>
+
 </header>
 <main>
     <section id="icons" class="flex-container-center section">
-        <div class="flex-container-center">
+
             <div class="icons-container">
-                <img class="icons-images" src="images/icons/car-small.png" alt="Samochody osobowe">
+                <img src="images/icons/car-small.png"
+                     alt="Samochody osobowe">
                 <h2>Samochody<br>osobowe</h2>
             </div>
+
             <div class="icons-container">
-                <img class="icons-images" src="images/icons/delivery-truck.png" alt="Samochody ciężarowe">
+                <img src="images/icons/delivery-truck.png"
+                     alt="Samochody ciężarowe">
                 <h2>Samochody<br>ciężarowe</h2>
             </div>
-        </div>
 
-        <div class="flex-container-center">
             <div class="icons-container">
-                <img class="icons-images" src="images/icons/new_car.png" alt="Części nowe">
+                <img src="images/icons/new_car.png"
+                     alt="Części nowe">
                 <h2>Części<br>nowe</h2>
             </div>
+
             <div class="icons-container">
-                <img class="icons-images" src="images/icons/network.png"
+                <img src="images/icons/network.png"
                              alt="Części używane">
                 <h2>Części<br>używane</h2>
             </div>
-        </div>
+
     </section>
 
     <section id="startup-sign-in" class="parallax">
@@ -87,9 +92,9 @@
                 <input type="text" size="20" placeholder="Wpisz swój adres e-mail"
                        class="startup-sign-in" name="email" id="sign-in-info">
                 <input type="submit" value="Wyślij" class="button">
-            <p class="startup-sign-in-info">Otrzymasz dokładnie jedną wiadomość mailową
+                <p class="startup-sign-in-info">Otrzymasz dokładnie jedną wiadomość mailową
                 w momencie uruchomienia pełnej funkcjonalności strony.</p>
-            <p class="startup-sign-in-agreement">
+                <p class="startup-sign-in-agreement">
                 <input type="checkbox" name="agreed" value="yes" id="sign-in-agreement">
                 <label for="sign-in-agreement"><a class="marker">Wyrażam zgodę *</a><br>na wykorzystanie i przetwarzanie
                 moich danych osobowych przez Części Samochodowe - codeVIN z siedzibą w Gdańsku (O4),
@@ -101,78 +106,85 @@
     </section>
 
     <section id="description" class="flex-container-center section">
+
         <div class="description-container">
             <h2 class="shadow"><i class="fa fa-list-alt" aria-hidden="true"></i> VIN</h2>
-            <div class="description-container-text shadow">Dajemy Ci do ręki wspaniałe narzędzie. Korzystając
+            <p class="shadow">Dajemy Ci do ręki wspaniałe narzędzie. Korzystając
                 wyłącznie ze swojego numeru VIN (Vehicle Identification Number) znajdziesz
                 każdą część do swojego samochodu. Potrzebujesz tylko dowodu rejestracyjnego,
-                z którego przepiszesz kod - nic więcej!</div>
+                z którego przepiszesz kod - nic więcej!</p>
         </div>
 
         <div class="description-container">
             <h2 class="shadow"><i class="fa fa-pie-chart" aria-hidden="true"></i> Różnorodność</h2>
-            <div class="description-container-text shadow">Jako jedyni na rynku oferujemy kompletny wachlarz
+            <p class="shadow">Jako jedyni na rynku oferujemy kompletny wachlarz
                 możliwości wyszukiwania. Szukasz części nowej, czy używanej? Chciałbyś
                 ograniczyć wyszukiwanie do konkretnego rejonu? Samochód osobowy, a
-                może ciężarówka? Wszystko, czego potrzebujesz w jednym miejscu.</div>
+                może ciężarówka? Wszystko, czego potrzebujesz w jednym miejscu.</p>
         </div>
 
         <div class="description-container">
             <h2 class="shadow"><i class="fa fa-shield" aria-hidden="true"></i> Bezpieczeństwo</h2>
-            <div class="description-container-text shadow">Oferujemy części wyłącznie od rzetelnych
+            <p class="shadow">Oferujemy części wyłącznie od rzetelnych
                 sprzedawców. Śledzimy opinie i usuwamy tych z najgorszymi, aby
                 móc Ci zaoferować naprawdę sprawdzonych dostawców. Twoje bezpieczeństwo
-                cenimy sobie przede wszystkim. Zaraz za wygodą.</div>
+                cenimy sobie przede wszystkim. Zaraz za wygodą.</p>
         </div>
 
         <div class="description-container">
             <h2 class="shadow"><i class="fa fa-money" aria-hidden="true"></i>Oszczędność</h2>
-            <div class="description-container-text shadow">Żadnych zbędnych fajerwerków. Same konkrety.
+            <p class="shadow">Żadnych zbędnych fajerwerków. Same konkrety.
                 Oszczędzasz swój czas i pieniądze. Znajdziesz części szybko i wygodnie,
                 a dzięki dostępnym filtrom wyszukiwania - od razu odrzucisz niechciane
-                oferty.</div>
+                oferty.</p>
         </div>
 
         <div class="description-container">
             <h2 class="shadow"><i class="fa fa-map-marker" aria-hidden="true"></i> Wsparcie</h2>
-            <div class="description-container-text shadow">Dzięki geolokalizacji znajdziesz najbliższy warsztat,
+            <p class="shadow">Dzięki geolokalizacji znajdziesz najbliższy warsztat,
                 w którym możesz zamontować swoje części. Warsztat to za mało? Znajdziemy
-                Ci najbliższy ASO. Takie wsparcie kierowcy w potrzebie - tylko u nas!</div>
+                Ci najbliższy ASO. Takie wsparcie kierowcy w potrzebie - tylko u nas!</p>
         </div>
 
         <div class="description-container">
             <h2 class="shadow"><i class="fa fa-rss" aria-hidden="true"></i> Aktualność</h2>
-            <div class="description-container-text shadow">Dzieki najnowocześniejszym rozwiązaniom w
+            <p class="shadow">Dzieki najnowocześniejszym rozwiązaniom w
                 zakresie silnika wyszukiwarki - oferty są aktualizowane na bieżąco.
                 U nas nie znajdziesz żadnych nieaktualnych ogłoszeń. Będziesz w 100% pewny,
-                że znalazłeś część, której szukasz.</div>
+                że znalazłeś część, której szukasz.</p>
         </div>
 
         <div class="description-container">
             <h2 class="shadow"><i class="fa fa-mobile" aria-hidden="true"></i> Mobilność</h2>
-            <div class="description-container-text shadow">Nasza wyszukiwarka dostępna jest na wszystkich urządzeniach,
+            <p class="shadow">Nasza wyszukiwarka dostępna jest na wszystkich urządzeniach,
                 w tym: smartfonach, tabletach, desktopach... Szukaj części gdziekolwiek jesteś,
-                 przez całą dobę. </div>
+                 przez całą dobę. </p>
         </div>
 
         <div class="description-container">
             <h2 class="shadow"><i class="fa fa-coffee" aria-hidden="true"></i> Satysfakcja</h2>
-            <div class="description-container-text shadow">Skorzystasz raz - będziesz wracać częściej. Nikt
+            <p class="shadow">Skorzystasz raz - będziesz wracać częściej. Nikt
             nie zaoferuje Ci tak kompleksowego rozwiązania. Docenisz jego możliwości
-            od razu. Jesteśmy tego pewni!</div>
+            od razu. Jesteśmy tego pewni!</p>
         </div>
 
     </section>
 
-    <section id="about-us" class="flex-container-center section">
+    <section id="update-counter" class="parallax">
+        <div class="parallax-text">
+            <h2>Ostatnia aktualizacja</h2>
+        </div>
+    </section>
+
+    <section id="about-us" class="about-us section">
         <h1>Poznaj nasz zespół!</h1>
         <div class="flex-container-center">
-                <div class="flex-container-center">
 
                     <!--Kamila Kisiel-->
                     <div class="about-us-container">
-                        <img class="about-us-images" src="images/team/kamila-kisiel.png" alt="Kamila Kisiel">
-                        <h2 class="about-us-text">Kamila<br>Kisiel</h2 class="about-us-text">
+                        <img src="images/team/kamila-kisiel.png"
+                             alt="Kamila Kisiel">
+                        <h2>Kamila<br>Kisiel</h2>
                         <div class="flex-container-center">
                             <a href="https://kamilakisiel.github.io"
                                target="_blank">
@@ -182,15 +194,16 @@
                             <a href="https://pl.linkedin.com/in/kamila-kisiel-75bb45136"
                                target="_blank">
                                 <img src="images/icons/linkedin-logo.png"
-                                     alt="Radek Rocławski Linkedin">
+                                     alt="Kamila Kisiel Linkedin">
                             </a>
                         </div>
                     </div>
 
                     <!--Radek Rocławski-->
                     <div class="about-us-container">
-                        <img class="about-us-images" src="images/team/radek-ro.jpg" alt="Radek Rocławski">
-                        <h2 class="about-us-text">Radek<br>Rocławski</h2>
+                        <img src="images/team/radek-ro.jpg"
+                             alt="Radek Rocławski">
+                        <h2>Radek<br>Rocławski</h2>
                         <div class="flex-container-center">
                             <a href="https://radekro.github.io"
                                target="_blank">
@@ -204,32 +217,12 @@
                             </a>
                         </div>
                     </div>
-                </div>
-
-                <div class="flex-container-center">
-
-                    <!--Bartosz Złotucha-->
-                    <div class="about-us-container">
-                        <img class="about-us-images" src="images/team/bartosz-zlotucha.png" alt="Bartosz Złotucha">
-                        <h2 class="about-us-text">Bartosz<br>Złotucha</h2>
-                        <div class="flex-container-center">
-                            <a href="https://zlotucha.github.io"
-                               target="_blank">
-                                <img src="images/icons/home.svg"
-                                     alt="Bartosz Złotucha Portfolio">
-                            </a>
-                            <a href="https://pl.linkedin.com/in/bartosz-z%C5%82otucha-18763214a"
-                               target="_blank">
-                                <img src="images/icons/linkedin-logo.png"
-                                     alt="Bartosz Złotucha Linkedin">
-                            </a>
-                        </div>
-                    </div>
 
                     <!--Jarek Sopiński-->
                     <div class="about-us-container">
-                        <img class="about-us-images" src="images/team/jarek-sopinski.JPG" alt="Jarek Sopiński">
-                        <h2 class="about-us-text">Jarek<br>Sopiński</h2>
+                        <img src="images/team/jarek-sopinski.JPG"
+                             alt="Jarek Sopiński">
+                        <h2>Jarek<br>Sopiński</h2>
                         <div class="flex-container-center">
                             <a href="https://jareksopinski.github.io/"
                                target="_blank">
@@ -243,7 +236,6 @@
                             </a>
                         </div>
                     </div>
-                </div>
             </div>
 
     </section>
@@ -278,5 +270,8 @@
         <div class="copyright">Copyright &copy;2017, Świeżaki</div>
     </section>
 </footer>
+<script src="https://use.fontawesome.com/0331aa16a6.js"></script>
+<script src="external/jquery-3.2.1.min.js"></script>
+<script src="js/scroll.js"></script>
 </body>
 </html>
