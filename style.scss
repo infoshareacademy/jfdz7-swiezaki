@@ -92,7 +92,13 @@ header {
   background: url("images/backgrounds/header-background.jpg") no-repeat center; // background image for header
   background-size: cover;
   width: 100%;
+  height: 100vh;
   margin: 0 auto;
+
+  .header-text-container {
+    position: relative;
+    top: 25vh;
+  }
 
   h1 { // Main title
     padding: 70px 0 0;
