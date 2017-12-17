@@ -1,2 +1,4 @@
 .idea/
 style.css.map
+*.map
+*.css.map
