@@ -6,7 +6,7 @@ $hover-black: #222222;
 $dark: #000000;
 $font-stack: Open Sans, Arial, Sans Serif;
 
-/* Beginning of global styling */
+//GLOBAL CLASSES
 
 body {
   font-family: $font-stack;
@@ -44,7 +44,7 @@ i {
   color: $white;
 } // adding auto margin to awesome icons
 
-p {
+p, label, a {
   color: $white;
   text-align: center;
 }
@@ -84,9 +84,7 @@ p {
   text-shadow: 1px 2px $dark;
 } // class for shadow effect
 
-/* End of global styling */
-
-/* Beginning of header section */
+//HEADER
 
 header {
   background: url("images/backgrounds/header-background.jpg") no-repeat center; // background image for header
@@ -115,9 +113,7 @@ header {
   }
 
 }
-/* End of header and title section */
-
-/* Beginning of navigation section */
+//NAVIGATION
 
 .logo { // logo
   position: absolute;
@@ -250,28 +246,21 @@ input.chkbox-menu {
 }
 
 
-/* End of navigation section */
+//MAIN
 
 main {
   width: 100%;
   margin: 0 auto;
 }
 
-/* Begining of startup-sign-in section */
+//STARTUP SIGN-IN
 
 #startup-sign-in {
   background-image: url("images/backgrounds/sign-up-background.jpg");
 }
 
 .startup-sign-in {
-  margin: auto;
   text-align: center;
-  color: $white;
-  text-shadow: 2px 2px 5px $black;
-  font-size: 25px;
-  font-weight: bolder;
-  padding: 110px 0;
-  max-width: 1200px;
 
   input[type=checkbox] {
     width: 15px;
@@ -283,7 +272,6 @@ main {
 .startup-sign-in-short {
   a {
     text-decoration: none;
-    color: $white;
   }
 }
 
@@ -343,9 +331,7 @@ input.startup-sign-in {
   }
 }
 
-/* End of startup-sign-in-section */
-
-/* Beginning of #icons section */
+//ICONS
 
 .icons-container {
   width: 100%;
@@ -369,9 +355,7 @@ input.startup-sign-in {
   text-transform: uppercase;
 }
 
-/* End of #icons section */
-
-/*Beginning of description section */
+//DESCRIPTION
 
 .description-container {
   display: block;
@@ -396,13 +380,13 @@ input.startup-sign-in {
 
 }
 
-/*End of description section */
+//UPDATE COUNTER
 
 #update-counter {
   background-image: url("images/backgrounds/counter-background.png");
 }
 
-/*Beginning of about-us section */
+//ABOUT-US
 
 .about-us h1 {
     text-transform: uppercase;
@@ -434,9 +418,7 @@ input.startup-sign-in {
     }
 }
 
-/*End of about-us section */
-
-/*Beginning of contact section */
+//CONTACT
 
 
 #contact {
@@ -518,9 +500,8 @@ input.startup-sign-in {
 .copyright {
   text-align: center;
     }
-/*End of contact section */
 
-    // Media screens below //
+//MEDIA
 
     @media (min-width: 576px) {
       .menu ul {
@@ -613,5 +594,3 @@ input.startup-sign-in {
     width: 20%;
   }
 }
-
-// End of media screens
