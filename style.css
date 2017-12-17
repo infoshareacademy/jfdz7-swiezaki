@@ -1,4 +1,3 @@
-/* Beginning of global styling */
 body {
   font-family: Open Sans, Arial, Sans Serif;
   background-color: #171717; }
@@ -28,7 +27,7 @@ i {
   margin-right: 15px;
   color: #E8E8E8; }
 
-p {
+p, label, a {
   color: #E8E8E8;
   text-align: center; }
 
@@ -61,8 +60,6 @@ p {
 .shadow {
   text-shadow: 1px 2px #000000; }
 
-/* End of global styling */
-/* Beginning of header section */
 header {
   background: url("images/backgrounds/header-background.jpg") no-repeat center;
   background-size: cover;
@@ -81,8 +78,6 @@ header {
   header h3:last-of-type {
     padding-top: 20px; }
 
-/* End of header and title section */
-/* Beginning of navigation section */
 .logo {
   position: absolute;
   top: -5px;
@@ -194,32 +189,22 @@ input.chkbox-menu {
 .menu-short input:checked ~ .menu-short-collapse {
   right: 0; }
 
-/* End of navigation section */
 main {
   width: 100%;
   margin: 0 auto; }
 
-/* Begining of startup-sign-in section */
 #startup-sign-in {
   background-image: url("images/backgrounds/sign-up-background.jpg"); }
 
 .startup-sign-in {
-  margin: auto;
-  text-align: center;
-  color: #E8E8E8;
-  text-shadow: 2px 2px 5px #171717;
-  font-size: 25px;
-  font-weight: bolder;
-  padding: 110px 0;
-  max-width: 1200px; }
+  text-align: center; }
   .startup-sign-in input[type=checkbox] {
     width: 15px;
     height: 15px;
     background: #171717; }
 
 .startup-sign-in-short a {
-  text-decoration: none;
-  color: #E8E8E8; }
+  text-decoration: none; }
 
 .startup-sign-in-short-pos {
   display: flex;
@@ -268,8 +253,6 @@ input.startup-sign-in {
     color: #E8E8E8;
     font-size: 15px; }
 
-/* End of startup-sign-in-section */
-/* Beginning of #icons section */
 .icons-container {
   width: 100%;
   margin: 10px; }
@@ -289,8 +272,6 @@ input.startup-sign-in {
   font-size: 18px;
   text-transform: uppercase; }
 
-/* End of #icons section */
-/*Beginning of description section */
 .description-container {
   display: block;
   width: 90%;
@@ -308,11 +289,9 @@ input.startup-sign-in {
   .description-container p {
     padding: 10px 20px 0 20px; }
 
-/*End of description section */
 #update-counter {
   background-image: url("images/backgrounds/counter-background.png"); }
 
-/*Beginning of about-us section */
 .about-us h1 {
   text-transform: uppercase;
   margin: 0 30px 50px 30px; }
@@ -337,8 +316,6 @@ input.startup-sign-in {
     max-height: 40px;
     margin: 10px 5px; }
 
-/*End of about-us section */
-/*Beginning of contact section */
 #contact {
   width: 100%;
   padding: 20px 0;
@@ -405,7 +382,6 @@ input.startup-sign-in {
 .copyright {
   text-align: center; }
 
-/*End of contact section */
 @media (min-width: 576px) {
   .menu ul {
     display: block; }
