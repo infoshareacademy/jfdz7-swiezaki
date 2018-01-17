@@ -1,7 +1,6 @@
 $(document).ready(function(){
-
-    var $navLinks = $('nav a, .startup-sign-in-short-pos a');
-    var animationScrollTime = 700;
+    var $navLinks = $('nav a');
+    var animationScrollTime = 1000;
     var $page = $('html, body');
 
     function scrollToSection(event) {

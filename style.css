@@ -1,3 +1,4 @@
+/* Beginning of global styling */
 body {
   font-family: Open Sans, Arial, Sans Serif;
   background-color: #171717; }
@@ -27,7 +28,7 @@ i {
   margin-right: 15px;
   color: #E8E8E8; }
 
-p, label, a {
+p {
   color: #E8E8E8;
   text-align: center; }
 
@@ -60,15 +61,13 @@ p, label, a {
 .shadow {
   text-shadow: 1px 2px #000000; }
 
+/* End of global styling */
+/* Beginning of header section */
 header {
   background: url("images/backgrounds/header-background.jpg") no-repeat center;
   background-size: cover;
   width: 100%;
-  height: 100vh;
   margin: 0 auto; }
-  header .header-text-container {
-    position: relative;
-    top: 25vh; }
   header h1 {
     padding: 70px 0 0;
     text-shadow: -1px -1px 0 #171717, 1px -1px 0 #171717, -1px 1px 0 #171717, 1px 1px 0 #171717; }
@@ -78,6 +77,8 @@ header {
   header h3:last-of-type {
     padding-top: 20px; }
 
+/* End of header and title section */
+/* Beginning of navigation section */
 .logo {
   position: absolute;
   top: -5px;
@@ -189,22 +190,32 @@ input.chkbox-menu {
 .menu-short input:checked ~ .menu-short-collapse {
   right: 0; }
 
+/* End of navigation section */
 main {
   width: 100%;
   margin: 0 auto; }
 
+/* Begining of startup-sign-in section */
 #startup-sign-in {
   background-image: url("images/backgrounds/sign-up-background.jpg"); }
 
 .startup-sign-in {
-  text-align: center; }
+  margin: auto;
+  text-align: center;
+  color: #E8E8E8;
+  text-shadow: 2px 2px 5px #171717;
+  font-size: 25px;
+  font-weight: bolder;
+  padding: 110px 0;
+  max-width: 1200px; }
   .startup-sign-in input[type=checkbox] {
     width: 15px;
     height: 15px;
     background: #171717; }
 
 .startup-sign-in-short a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #E8E8E8; }
 
 .startup-sign-in-short-pos {
   display: flex;
@@ -253,69 +264,77 @@ input.startup-sign-in {
     color: #E8E8E8;
     font-size: 15px; }
 
+/* End of startup-sign-in-section */
+/* Beginning of #icons section */
 .icons-container {
-  width: 100%;
-  margin: 10px; }
+  display: inline-block;
+  margin: 10px 20px; }
 
-.icons-container img {
-  display: block;
+.icons-images {
   height: 100px;
   width: 100px;
-  margin: auto;
   padding: 50px;
   background-color: #8C0000;
+  margin-bottom: 5px;
   border: 5px solid #E8E8E8;
   border-radius: 10%; }
 
-.icons-container h2 {
-  margin-top: 5px;
+#icons h2 {
   font-size: 18px;
   text-transform: uppercase; }
 
+/* End of #icons section */
+/*Beginning of description section */
+#description h2 {
+  font-size: 22px;
+  margin: 40px 10px 20px 10px;
+  background-color: #8C0000;
+  padding: 12px 0;
+  border-bottom: 5px solid #E8E8E8; }
+
 .description-container {
   display: block;
-  width: 90%;
-  margin: auto 20px;
+  max-width: 450px;
+  margin: 20px;
   color: #E8E8E8;
   font-size: 16px;
   text-align: center;
   line-height: 21px; }
-  .description-container h2 {
-    font-size: 22px;
-    margin: 40px 10px 20px 10px;
-    background-color: #8C0000;
-    padding: 12px 0;
-    border-bottom: 5px solid #E8E8E8; }
-  .description-container p {
-    padding: 10px 20px 0 20px; }
 
-#update-counter {
+.description-container-text {
+  padding: 10px 20px 0 20px; }
+
+/*End of description section */
+/* Update counter section */
+.update-counter {
   background-image: url("images/backgrounds/counter-background.png"); }
 
-.about-us h1 {
+/*Beginning of about-us section */
+#about-us h1 {
   text-transform: uppercase;
-  margin: 0 30px 50px 30px; }
+  margin-bottom: 50px; }
+#about-us h2 {
+  font-size: 22px;
+  text-transform: uppercase; }
+#about-us a > img {
+  max-width: 40px;
+  max-height: 40px;
+  margin: 10px 5px; }
 
 .about-us-container {
-  width: 100%;
-  margin-bottom: 10px; }
-  .about-us-container h2 {
-    margin-top: 10px;
-    font-size: 22px;
-    text-transform: uppercase; }
-  .about-us-container > img {
-    display: block;
-    height: 200px;
-    width: 200px;
-    margin: auto;
-    background-color: #E8E8E8;
-    padding: 5px;
-    border-radius: 100%; }
-  .about-us-container a > img {
-    max-width: 40px;
-    max-height: 40px;
-    margin: 10px 5px; }
+  display: inline-block;
+  margin: 10px 20px; }
 
+.about-us-images {
+  height: 200px;
+  width: 200px;
+  background-color: #E8E8E8;
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 100%; }
+
+/*End of about-us section */
+/*Beginning of contact section */
 #contact {
   width: 100%;
   padding: 20px 0;
@@ -345,13 +364,15 @@ input.startup-sign-in {
     font-weight: bold;
     font-size: 18px;
     text-transform: uppercase; }
+  .contact-form .contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
   .contact-form .form-group {
     display: inline-block;
     width: 49%;
     margin-right: 3px;
     margin-bottom: 10px; }
-  .contact-form .form-group:last-of-type {
-    margin-right: 0; }
   .contact-form .form-area {
     width: 98%;
     border: 2px solid #E8E8E8;
@@ -382,6 +403,7 @@ input.startup-sign-in {
 .copyright {
   text-align: center; }
 
+/*End of contact section */
 @media (min-width: 576px) {
   .menu ul {
     display: block; }
@@ -413,34 +435,5 @@ input.startup-sign-in {
 @media (min-width: 576px) {
   #description h2 {
     font-size: 27px; } }
-@media (min-width: 576px) {
-  .icons-container {
-    width: 40%; }
-
-  .description-container {
-    width: 75%; }
-
-  .about-us-container {
-    width: 39%;
-    margin: 0 20px 10px 20px; } }
-@media (min-width: 768px) {
-  .icons-container {
-    width: 32%; }
-
-  .description-container {
-    width: 65%; } }
-@media (min-width: 992px) {
-  .icons-container {
-    width: 22%; }
-
-  .description-container {
-    width: 45%;
-    min-height: 250px; }
-
-  .about-us-container {
-    width: 25%; } }
-@media (min-width: 1200px) {
-  .about-us-container {
-    width: 20%; } }
 
 /*# sourceMappingURL=style.css.map */
