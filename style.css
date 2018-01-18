@@ -31,6 +31,9 @@ p, label, a {
   color: #E8E8E8;
   text-align: center; }
 
+.active {
+  color: #8C0000; }
+
 .flex-container-center {
   display: flex;
   flex-flow: wrap;

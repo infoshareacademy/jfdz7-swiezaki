@@ -49,6 +49,10 @@ p, label, a {
   text-align: center;
 }
 
+.active {
+  color: $red;
+} // highlights active menu link while scrolling
+
 .flex-container-center {
   display: flex;
   flex-flow: wrap;
