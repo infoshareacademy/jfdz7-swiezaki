@@ -81,6 +81,21 @@ header {
   header h3:last-of-type {
     padding-top: 20px; }
 
+.return-to-top {
+  position: fixed;
+  bottom: 10px;
+  right: 15%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  background: #222222;
+  opacity: 0.8;
+  border: solid 3px #E8E8E8;
+  border-radius: 100%;
+  cursor: pointer; }
+
 .logo {
   position: absolute;
   top: -5px;

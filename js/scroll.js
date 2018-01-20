@@ -58,4 +58,23 @@ $(document).ready(function(){
 
     $(window).on('scroll', toggleActiveLink);
 
+    const $scrollToTopBtn = $('.return-to-top');
+
+    function showScrollToTopButton() {
+        const effectThreschold = 200;
+
+        $(window).scrollTop() > effectThreschold ?
+            $scrollToTopBtn.fadeIn(300).css('display', 'flex') :
+            $scrollToTopBtn.css('display', 'none');
+    }
+
+    function scrollToTop() {
+        const animationTime = 700;
+
+        $page.animate({ scrollTop: 0}, animationTime);
+    }
+
+    $(window).on('scroll', showScrollToTopButton);
+    $scrollToTopBtn.on('click', scrollToTop);
+
 });
