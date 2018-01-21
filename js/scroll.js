@@ -4,37 +4,37 @@ $(document).ready(function(){
     const animationScrollTime = 700;
     const $page = $('html, body');
 
-    //*************** SMOOTH SCROLL *******************
-
-    function scrollToSection(event) {
-        const anchor = $(this).attr('href');
-        event.preventDefault();
-
-        $page.animate({
-            scrollTop: anchor !== '' ? $(anchor).offset().top : 0
-        }, animationScrollTime, function() {
-            window.location.hash = anchor;
-        });
-    }
-
-    $navLinks.on('click', scrollToSection);
-
-    //*************** TOGGLE ACTIVE LINKS **********
-
     const $signInHeight = $('#startup-sign-in').offset().top - 200;
     const $descriptionHeight = $('#description').offset().top - 200;
     const $updateCounterHeight = $('#update-counter').offset().top;
     const $aboutUsHeight = $('#about-us').offset().top - 200;
     const $contactHeight = $('#contact').offset().top - 500;
 
-    // Works better with - 200 for each, otherwise class would switch too late
-    // -500 in contact because on desktops scroll can't reach #contact height
-
     const $topNavLinks = $('nav, a');
     const $signInLink = $('nav a').eq(1);
     const $descriptionLink = $('nav a').eq(2);
     const $aboutUsLink = $('nav a').eq(3);
     const $contactLink = $('nav a').eq(4);
+
+    const $scrollToTopBtn = $('.return-to-top');
+    const effectThreschold = 200;
+
+    const $logoContainerHeight = $('.logo');
+    const $menuContainerHeight = $('.menu');
+    const $logoImageHeight = $('.logo-img');
+    const $logoToggleTheme = $('.logo-toggle-theme');
+
+    function scrollToSection(event) {
+
+        const anchor = $(this).attr('href');
+        event.preventDefault();
+        $page.animate({
+            scrollTop: anchor !== '' ? $(anchor).offset().top : 0
+        }, animationScrollTime, function() {
+            window.location.hash = anchor;
+        });
+
+    }
 
     function toggleActiveLink() {
 
@@ -51,30 +51,50 @@ $(document).ready(function(){
             $topNavLinks.removeClass('active');
             $contactLink.addClass('active');
         } else {
-            $topNavLinks.removeClass('active');
-        }
 
+            $topNavLinks.removeClass('active');
+
+        }
     }
 
-    $(window).on('scroll', toggleActiveLink);
-
-    const $scrollToTopBtn = $('.return-to-top');
-
     function showScrollToTopButton() {
-        const effectThreschold = 200;
 
         $(window).scrollTop() > effectThreschold ?
             $scrollToTopBtn.fadeIn(300).css('display', 'flex') :
             $scrollToTopBtn.css('display', 'none');
+
     }
 
     function scrollToTop() {
-        const animationTime = 700;
 
+        const animationTime = 700;
         $page.animate({ scrollTop: 0}, animationTime);
+
     }
 
+    const $upperMenuHeightToggle = function () {
+
+        $(window).scrollTop() > effectThreschold ?
+            ($menuContainerHeight
+                .add($logoContainerHeight)
+                .add($logoImageHeight)
+                .css('height', 40)
+                .css('transition', 'all 0.5s ease-in-out'),
+             $logoToggleTheme
+                 .css('display', 'block')
+                 .css('transition', 'all 0.5s ease-in-out')) :
+            ($menuContainerHeight
+                .css('height', 80),
+             $logoContainerHeight
+                 .add($logoImageHeight)
+                 .css('height', 78),
+             $logoToggleTheme
+                 .css('display', 'none'))
+    }
+
+    $(window).on('scroll', toggleActiveLink);
     $(window).on('scroll', showScrollToTopButton);
     $scrollToTopBtn.on('click', scrollToTop);
-
+    $navLinks.on('click', scrollToSection);
+    $(window).on('scroll', $upperMenuHeightToggle);
 });

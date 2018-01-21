@@ -105,6 +105,7 @@ header {
   h1 { // Main title
     padding: 70px 0 0;
     text-shadow: -1px -1px 0 $black, 1px -1px 0 $black, -1px 1px 0 $black, 1px 1px 0 $black;
+    line-height: 80px;
   }
 
   h3 { // Slogan
@@ -122,7 +123,7 @@ header {
 .return-to-top {
   position: fixed;
   bottom: 10px;
-  right: 15%;
+  right: 5%;
   display: none;
   justify-content: center;
   align-items: center;
@@ -137,9 +138,9 @@ header {
 
 .logo { // logo
   position: absolute;
-  top: -5px; left: 15px;
-  background-color: $dark;
-  height: 120px;
+  top: 2px; left: 15px;
+  //background-color: $dark;
+  height: 78px;
   display: flex;
   align-items: center;
   padding: 0 10px;
@@ -148,6 +149,18 @@ header {
 .logo i:hover {
   color: $red;
   cursor: pointer;
+}
+
+.logo-img {
+  height: 78px;
+}
+
+.logo-toggle-theme {
+  display: none;
+  color: white;
+  font-weight: 700;
+  margin-left: 30px;
+  font-size: 18px;
 }
 
 nav {
@@ -160,7 +173,7 @@ nav {
 .menu
 {
   position: fixed;
-  height: 50px;
+  height: 80px;
   background-color: $black;
   width: 100%;
   display: flex;
