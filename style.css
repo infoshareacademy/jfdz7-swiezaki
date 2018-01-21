@@ -74,7 +74,8 @@ header {
     top: 25vh; }
   header h1 {
     padding: 70px 0 0;
-    text-shadow: -1px -1px 0 #171717, 1px -1px 0 #171717, -1px 1px 0 #171717, 1px 1px 0 #171717; }
+    text-shadow: -1px -1px 0 #171717, 1px -1px 0 #171717, -1px 1px 0 #171717, 1px 1px 0 #171717;
+    line-height: 80px; }
   header h3 {
     font-style: italic;
     padding-top: 50px; }
@@ -84,7 +85,7 @@ header {
 .return-to-top {
   position: fixed;
   bottom: 10px;
-  right: 15%;
+  right: 5%;
   display: none;
   justify-content: center;
   align-items: center;
@@ -98,10 +99,9 @@ header {
 
 .logo {
   position: absolute;
-  top: -5px;
+  top: 2px;
   left: 15px;
-  background-color: #000000;
-  height: 120px;
+  height: 78px;
   display: flex;
   align-items: center;
   padding: 0 10px; }
@@ -109,6 +109,16 @@ header {
 .logo i:hover {
   color: #8C0000;
   cursor: pointer; }
+
+.logo-img {
+  height: 78px; }
+
+.logo-toggle-theme {
+  display: none;
+  color: white;
+  font-weight: 700;
+  margin-left: 30px;
+  font-size: 18px; }
 
 nav {
   position: relative;
@@ -118,7 +128,7 @@ nav {
 
 .menu {
   position: fixed;
-  height: 50px;
+  height: 80px;
   background-color: #171717;
   width: 100%;
   display: flex;
