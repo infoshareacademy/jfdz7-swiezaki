@@ -90,7 +90,12 @@ $(document).ready(function(){
                  .css('height', 78),
              $logoToggleTheme
                  .css('display', 'none'))
-    }
+    };
+
+    AOS.init({
+        disable: window.innerWidth < 576,
+        once: true
+    });
 
     $(window).on('scroll', toggleActiveLink);
     $(window).on('scroll', showScrollToTopButton);
