@@ -317,8 +317,11 @@ input.startup-sign-in {
   .description-container p {
     padding: 10px 20px 0 20px; }
 
-#update-counter {
-  background-image: url("images/backgrounds/counter-background.png"); }
+#premiere-counter {
+  background-image: url("images/backgrounds/counter-background.jpg"); }
+  #premiere-counter p {
+    margin-top: 20px;
+    font-size: 35px; }
 
 .about-us h1 {
   text-transform: uppercase;
