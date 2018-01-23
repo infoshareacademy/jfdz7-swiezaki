@@ -413,10 +413,15 @@ input.startup-sign-in {
 
 }
 
-//UPDATE COUNTER
+//PREMIERE COUNTER
 
-#update-counter {
-  background-image: url("images/backgrounds/counter-background.png");
+#premiere-counter {
+  background-image: url("images/backgrounds/counter-background.jpg");
+
+  p {
+    margin-top: 20px;
+    font-size: 35px;
+  }
 }
 
 //ABOUT-US

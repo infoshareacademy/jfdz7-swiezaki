@@ -6,7 +6,7 @@ $(document).ready(function(){
 
     const $signInHeight = $('#startup-sign-in').offset().top - 200;
     const $descriptionHeight = $('#description').offset().top - 200;
-    const $updateCounterHeight = $('#update-counter').offset().top;
+    const $premiereCounterHeight = $('#premiere-counter').offset().top;
     const $aboutUsHeight = $('#about-us').offset().top - 200;
     const $contactHeight = $('#contact').offset().top - 500;
 
@@ -41,7 +41,7 @@ $(document).ready(function(){
         if (scrollY >= $signInHeight && scrollY < $descriptionHeight) {
             $topNavLinks.removeClass('active');
             $signInLink.addClass('active');
-        } else if (scrollY >= $descriptionHeight && scrollY < $updateCounterHeight) {
+        } else if (scrollY >= $descriptionHeight && scrollY < $premiereCounterHeight) {
             $topNavLinks.removeClass('active');
             $descriptionLink.addClass('active');
         } else if (scrollY >= $aboutUsHeight && scrollY < $contactHeight) {
@@ -90,7 +90,12 @@ $(document).ready(function(){
                  .css('height', 78),
              $logoToggleTheme
                  .css('display', 'none'))
-    }
+    };
+
+    AOS.init({
+        disable: window.innerWidth < 576,
+        once: true
+    });
 
     $(window).on('scroll', toggleActiveLink);
     $(window).on('scroll', showScrollToTopButton);
