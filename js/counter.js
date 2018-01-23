@@ -1,4 +1,4 @@
-const endDate = new Date("Apr 8, 2018 23:59:59").getTime(); // The date is set to the end of a final sprint
+const endDate = new Date("Apr 8, 2018 23:59:59").getTime();
 const $premiereCounterDisplay = $('#premiere-counter-display');
 
 const count = setInterval(function () {
@@ -13,8 +13,7 @@ const count = setInterval(function () {
     const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
     $premiereCounterDisplay.text(`${days}d ${hours}h ${minutes}m ${seconds}s`);
-
-    // After counter reaches 0:
+    
     if (timeLeft < 0) {
         clearInterval(count);
         $premiereCounterDisplay.text('0d 0h 0m 0s');
