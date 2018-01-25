@@ -95,7 +95,8 @@ header {
   opacity: 0.8;
   border: solid 3px #E8E8E8;
   border-radius: 100%;
-  cursor: pointer; }
+  cursor: pointer;
+  z-index: 2; }
 
 .logo {
   position: absolute;
@@ -196,7 +197,7 @@ input.chkbox-menu {
 .menu-short-collapse {
   position: fixed;
   right: -160px;
-  top: 49px;
+  top: 80px;
   width: 160px;
   color: #E8E8E8;
   background-color: #171717;
