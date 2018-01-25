@@ -134,6 +134,7 @@ header {
   border: solid 3px $white;
   border-radius: 100%;
   cursor: pointer;
+  z-index: 2;
 }
 
 .logo { // logo
@@ -249,7 +250,7 @@ input.chkbox-menu {
 .menu-short-collapse {
   position: fixed;
   right: -160px;
-  top: 49px;
+  top: 80px;
   width: 160px;
   color: $white;
   background-color: $black;

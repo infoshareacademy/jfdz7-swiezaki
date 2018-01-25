@@ -23,6 +23,10 @@ $(document).ready(function(){
     const $menuContainerHeight = $('.menu');
     const $logoImageHeight = $('.logo-img');
     const $logoToggleTheme = $('.logo-toggle-theme');
+    const $burgerMenuHeight = $('.menu-short-collapse');
+
+    const navEffectDisableValue = 992;
+    const aosLibraryDisableValue = 576;
 
     function scrollToSection(event) {
 
@@ -75,25 +79,38 @@ $(document).ready(function(){
     const $upperMenuHeightToggle = function () {
 
         $(window).scrollTop() > effectThreschold ?
+
             ($menuContainerHeight
-                .add($logoContainerHeight)
-                .add($logoImageHeight)
-                .css('height', 40)
-                .css('transition', 'all 0.5s ease-in-out'),
-             $logoToggleTheme
-                 .css('display', 'block')
+                 .add($logoContainerHeight)
+                 .add($logoImageHeight)
+                 .css('height', 40)
+                 .css('transition', 'all 0.5s ease-in-out'),
+            $burgerMenuHeight
+                 .css('top', 40)
                  .css('transition', 'all 0.5s ease-in-out')) :
+
             ($menuContainerHeight
-                .css('height', 80),
+                 .css('height', 80),
              $logoContainerHeight
                  .add($logoImageHeight)
                  .css('height', 78),
-             $logoToggleTheme
-                 .css('display', 'none'))
+             $burgerMenuHeight
+                 .css('top', 80))
+
+        $(window).scrollTop() > effectThreschold
+        && window.innerWidth > navEffectDisableValue ?
+
+            $logoToggleTheme
+                 .css('display', 'block')
+                 .css('transition', 'all 0.5s ease-in-out') :
+
+            $logoToggleTheme
+                 .css('display', 'none')
     };
 
+    // Animate On Scroll Library
     AOS.init({
-        disable: window.innerWidth < 576,
+        disable: window.innerWidth < aosLibraryDisableValue,
         once: true
     });
 
