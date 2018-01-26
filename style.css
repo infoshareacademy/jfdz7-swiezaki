@@ -240,7 +240,7 @@ main {
   justify-content: center;
   padding: 10px 0 100px; }
 
-input.startup-sign-in, .button {
+input.startup-sign-in, .button, .disabled {
   background-color: #E8E8E8;
   color: #8C0000;
   border: 1px solid #8C0000;
@@ -262,6 +262,10 @@ input.startup-sign-in, .button {
   border: 1px solid #222222;
   color: #E8E8E8;
   cursor: pointer; }
+
+.disabled {
+  background-color: #999;
+  color: #000000; }
 
 input.startup-sign-in {
   color: #222222;
