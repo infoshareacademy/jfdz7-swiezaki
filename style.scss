@@ -4,6 +4,7 @@ $white: #E8E8E8;
 $marker: yellow;
 $hover-black: #222222;
 $dark: #000000;
+$disabled: #999;
 $font-stack: Open Sans, Arial, Sans Serif;
 
 //GLOBAL CLASSES
@@ -315,7 +316,7 @@ main {
   padding: 10px 0 100px;
 }
 
-input.startup-sign-in, .button {
+input.startup-sign-in, .button, .disabled {
   background-color: $white;
   color: $red;
   border: 1px solid $red;
@@ -339,6 +340,11 @@ input.startup-sign-in, .button {
   border: 1px solid $hover-black;
   color: $white;
   cursor: pointer;
+}
+
+.disabled {
+  background-color: $disabled;
+  color: $dark;
 }
 
 input.startup-sign-in {
