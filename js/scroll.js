@@ -1,32 +1,40 @@
+const $navLinks = $('nav a, .startup-sign-in-short-pos a');
+const animationScrollTime = 700;
+const $page = $('html, body');
+
+const $signInHeight = $('#startup-sign-in').offset().top - 200;
+const $descriptionHeight = $('#description').offset().top - 200;
+const $premiereCounterHeight = $('#premiere-counter').offset().top;
+const $aboutUsHeight = $('#about-us').offset().top - 200;
+const $contactHeight = $('#contact').offset().top - 500;
+
+const $topNavLinks = $('nav, a');
+const $signInLink = $('nav a').eq(1);
+const $descriptionLink = $('nav a').eq(2);
+const $aboutUsLink = $('nav a').eq(3);
+const $contactLink = $('nav a').eq(4);
+
+const $scrollToTopBtn = $('.return-to-top');
+const effectThreschold = 200;
+
+const $logoContainerHeight = $('.logo');
+const $menuContainerHeight = $('.menu');
+const $logoImageHeight = $('.logo-img');
+const $logoToggleTheme = $('.logo-toggle-theme');
+const $burgerMenuHeight = $('.menu-short-collapse');
+
+const navEffectDisableValue = 992;
+const aosLibraryDisableValue = 576;
+
+
+// Animate On Scroll Library
+AOS.init({
+    disable: window.innerWidth < aosLibraryDisableValue,
+    once: true
+});
+
+
 $(document).ready(function(){
-
-    const $navLinks = $('nav a, .startup-sign-in-short-pos a');
-    const animationScrollTime = 700;
-    const $page = $('html, body');
-
-    const $signInHeight = $('#startup-sign-in').offset().top - 200;
-    const $descriptionHeight = $('#description').offset().top - 200;
-    const $premiereCounterHeight = $('#premiere-counter').offset().top;
-    const $aboutUsHeight = $('#about-us').offset().top - 200;
-    const $contactHeight = $('#contact').offset().top - 500;
-
-    const $topNavLinks = $('nav, a');
-    const $signInLink = $('nav a').eq(1);
-    const $descriptionLink = $('nav a').eq(2);
-    const $aboutUsLink = $('nav a').eq(3);
-    const $contactLink = $('nav a').eq(4);
-
-    const $scrollToTopBtn = $('.return-to-top');
-    const effectThreschold = 200;
-
-    const $logoContainerHeight = $('.logo');
-    const $menuContainerHeight = $('.menu');
-    const $logoImageHeight = $('.logo-img');
-    const $logoToggleTheme = $('.logo-toggle-theme');
-    const $burgerMenuHeight = $('.menu-short-collapse');
-
-    const navEffectDisableValue = 992;
-    const aosLibraryDisableValue = 576;
 
     function scrollToSection(event) {
 
@@ -107,12 +115,6 @@ $(document).ready(function(){
             $logoToggleTheme
                  .css('display', 'none')
     };
-
-    // Animate On Scroll Library
-    AOS.init({
-        disable: window.innerWidth < aosLibraryDisableValue,
-        once: true
-    });
 
     $(window).on('scroll', toggleActiveLink);
     $(window).on('scroll', showScrollToTopButton);
