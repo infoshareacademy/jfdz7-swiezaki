@@ -1,0 +1,19 @@
+body {
+  font-family: Luckiest Guy, Arial;
+  font-size: 60px;
+  background-color: #556b31;
+  letter-spacing: 2px; }
+
+header, footer {
+  color: white;
+  text-align: center;
+  margin: 30px 0; }
+
+footer {
+  margin: 100px 0; }
+
+#game-body {
+  margin: 0 auto;
+  width: 60%; }
+
+/*# sourceMappingURL=game.css.map */
