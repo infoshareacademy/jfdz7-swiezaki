@@ -1,9 +1,9 @@
 
-// setting up needed const and var
-const gameWidth = window.innerWidth*0.6;
+// setting up needed const and let
+const gameWidth = window.innerWidth*0.7;
 const gameHeight = gameWidth*0.34;
 const gameBackgroundImageOriginalWidth = 1958;
-const gameBackgroundImageOriginalHeight = 392;
+const gameBackgroundImageOriginalHeight = 492;
 const backgroundWidthRatio = gameWidth*2/gameBackgroundImageOriginalWidth;
 const backgroundHeightRatio = gameHeight/gameBackgroundImageOriginalHeight;
 
@@ -21,7 +21,7 @@ const game = new Phaser.Game(gameWidth, gameHeight, Phaser.AUTO, 'game-body', { 
 // preloading needed graphics, backgrounds, heroes, icons, etc.
 function preload() {
 
-   game.load.image('background', 'graphics/gameBackground.png');
+   game.load.image('background', 'graphics/gameBackground_1958_492.png');
    game.load.spritesheet('marian', 'graphics/spritesheet.png', 300, 393, 3); //300 and 393 are size of the frame, 3 is number of frames in the png file
 
 }
