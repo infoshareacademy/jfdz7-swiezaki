@@ -107,7 +107,7 @@ function create() {
     // generating special tools:
     specialTools = game.add.group();
     specialTools.enableBody = true;
-    game.time.events.loop(Phaser.Timer.SECOND * 2, spawnSpecialTools, this);
+    game.time.events.loop(Phaser.Timer.SECOND, spawnSpecialTools, this);
 
     // displaying player's score:
     gameScoreText = game.add.bitmapText(16, 16, 'carrier_command', 'score: 0', 20);
@@ -120,6 +120,7 @@ function update() {
 
     // collisions between player and game's objects:
     game.physics.arcade.overlap(player, tools, collectTools, null, this);
+    game.physics.arcade.overlap(player, specialTools, collectSpecialTools, null, this);
 
 
     // moving background image at the selected speed.
@@ -244,5 +245,13 @@ const spawnSpecialTools = () => {
         specialTool.body.velocity.x = -600;
 
     }
+
+};
+
+const collectSpecialTools = (player, specialTool) => {
+
+    specialTool.kill();
+    gameScore += 500;
+    gameScoreText.text = 'Score: ' + gameScore;
 
 };
