@@ -50,7 +50,6 @@ function create() {
     player = game.add.sprite(250, game.world.height - 110, 'marian');
     player.scale.setTo(0.2, 0.2); //resize sprite to fit the background
     game.physics.arcade.enable(player); //enable physics on marian
-    player.body.bounce.y = 0.3; // give marian slight bounce
     player.body.gravity.y = 800; //marian and his 'heaviness'
     player.body.collideWorldBounds = true; // prevents from falling off the ground
 
