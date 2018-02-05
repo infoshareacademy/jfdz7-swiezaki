@@ -20,8 +20,8 @@ let tires;
 let tire;
 let burn;
 // starting values for tires speed, they are increased during gameplay:
-let minTireSpeed = 700;
-let maxTireSpeed = 1000;
+let minTireSpeed = 600;
+let maxTireSpeed = 800;
 
 let tool;
 let tools;
@@ -78,18 +78,18 @@ function create() {
     // spawning crates every 2 seconds:
     crates = game.add.group();
     crates.enableBody = true;
-    game.time.events.loop(Phaser.Timer.SECOND * 1.5, spawnCrates, this);
+    game.time.events.loop(Phaser.Timer.SECOND * 2.5, spawnCrates, this);
 
     // increasing tires speed every 30 seconds:
-    const increaseMinTireSpeed = () => minTireSpeed += 100;
-    const increaseMaxTireSpeed = () => maxTireSpeed += 100;
+    const increaseMinTireSpeed = () => minTireSpeed += 50;
+    const increaseMaxTireSpeed = () => maxTireSpeed += 50;
     game.time.events.loop(Phaser.Timer.SECOND * 30, increaseMinTireSpeed, this);
     game.time.events.loop(Phaser.Timer.SECOND * 30, increaseMaxTireSpeed, this);
 
-    // spawning tires every 2 seconds:
+    // spawning tires every 4 seconds:
     tires = game.add.group();
     tires.enableBody = true;
-    game.time.events.loop(Phaser.Timer.SECOND * 2, spawnTires, this);
+    game.time.events.loop(Phaser.Timer.SECOND * 3, spawnTires, this);
 
     // generating normal tools:
     tools = game.add.group();
@@ -133,19 +133,19 @@ function render () {
 const addFirstCrate = () => {
     crate01 = crates.create(game.width, game.world.height - 65, 'crate');
     crate01.scale.setTo(0.15, 0.15);
-    crate01.body.velocity.x = -600;
+    crate01.body.velocity.x = -500;
 };
 
 const addSecondCrate = () => {
     crate02 = crates.create(game.width, game.world.height - 105, 'crate');
     crate02.scale.setTo(0.15, 0.15);
-    crate02.body.velocity.x = -600;
+    crate02.body.velocity.x = -500;
 };
 
 const addThirdCrate = () => {
     crate03 = crates.create(game.width, game.world.height - 145, 'crate');
     crate03.scale.setTo(0.15, 0.15);
-    crate03.body.velocity.x = -600;
+    crate03.body.velocity.x = -500;
 };
 
 // randomized spawning of crates (random intervals and height):
