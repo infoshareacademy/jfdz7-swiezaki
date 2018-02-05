@@ -13,6 +13,8 @@ let run;
 let spaceKey;
 let gameScore = 0;
 let gameScoreText;
+let playerLifes = 10;
+let playerLifesText;
 
 // obstacles:
 let crates;
@@ -109,8 +111,9 @@ function create() {
     specialTools.enableBody = true;
     game.time.events.loop(Phaser.Timer.SECOND, spawnSpecialTools, this);
 
-    // displaying player's score:
+    // displaying player's score and lifes:
     gameScoreText = game.add.bitmapText(16, 16, 'carrier_command', 'score: 0', 20);
+    playerLifesText = game.add.bitmapText(16, 40, 'carrier_command', 'lifes: 10', 20);
 
 
 }
@@ -189,7 +192,7 @@ const spawnCrates = () => {
 
 // function responsible for spawning tires, with randomized speed:
 
-function spawnTires() {
+const spawnTires = () => {
 
     const randomTireSpeed = Math.floor(Math.random() * (maxTireSpeed - minTireSpeed + 1)) + minTireSpeed;
 
