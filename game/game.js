@@ -18,9 +18,8 @@ let playerLifesText;
 
 // obstacles:
 let crates;
-let crate01;
-let crate02;
-let crate03;
+let crateTwoLevels;
+let crateThreeLevels;
 let tires;
 let tire;
 let burn;
@@ -45,7 +44,8 @@ function preload() {
    game.load.spritesheet('marian', 'graphics/spritesheet.png', 300, 393, 3); //300 and 393 are size of the frame, 3 is number of frames in the png file
 
     // OBSTACLES:
-    game.load.image('crate', 'graphics/crate.PNG');
+    game.load.image('crateTwoLevels', 'graphics/crate02.PNG');
+    game.load.image('crateThreeLevels', 'graphics/crate03.PNG');
     game.load.spritesheet('tire', 'graphics/spritesheet_tire.png', 126, 91, 2);
 
     // TOOLS:
@@ -113,7 +113,7 @@ function create() {
 
     // displaying player's score and lifes:
     gameScoreText = game.add.bitmapText(16, 16, 'carrier_command', 'score: 0', 20);
-    playerLifesText = game.add.bitmapText(16, 40, 'carrier_command', 'lifes: 10', 20);
+    playerLifesText = game.add.bitmapText(16, 40, 'carrier_command', playerLifes, 20);
 
 
 }
@@ -145,24 +145,18 @@ function render () {
 
 }
 
-// three functions used to create three levels of crates, used later in spawnCrates() function:
+// creating crates:
 
-const addFirstCrate = () => {
-    crate01 = crates.create(game.width, game.world.height - 65, 'crate');
-    crate01.scale.setTo(0.15, 0.15);
-    crate01.body.velocity.x = -500;
+const addTwoLevelsCrate = () => {
+    crateTwoLevels = crates.create(game.width, game.world.height - 100, 'crateTwoLevels');
+    crateTwoLevels.scale.setTo(0.35, 0.35);
+    crateTwoLevels.body.velocity.x = -500;
 };
 
-const addSecondCrate = () => {
-    crate02 = crates.create(game.width, game.world.height - 105, 'crate');
-    crate02.scale.setTo(0.15, 0.15);
-    crate02.body.velocity.x = -500;
-};
-
-const addThirdCrate = () => {
-    crate03 = crates.create(game.width, game.world.height - 145, 'crate');
-    crate03.scale.setTo(0.15, 0.15);
-    crate03.body.velocity.x = -500;
+const addThreeLevelsCrate = () => {
+    crateThreeLevels = crates.create(game.width, game.world.height - 150, 'crateThreeLevels');
+    crateThreeLevels.scale.setTo(0.35, 0.35);
+    crateThreeLevels.body.velocity.x = -500;
 };
 
 // randomized spawning of crates (random intervals and height):
@@ -170,25 +164,20 @@ const addThirdCrate = () => {
 const spawnCrates = () => {
 
     const randomNum = Math.floor(Math.random() * 4);
-
     if (randomNum === 1) {
         // if we get 1, two-level crate is spawned
-
-        addFirstCrate();
-        addSecondCrate();
-
+        addTwoLevelsCrate()
     } else if (randomNum === 2) {
         // if we get 2, three-level crate is spawned
-
-        addFirstCrate();
-        addSecondCrate();
-        addThirdCrate();
-
+        addThreeLevelsCrate()
     }
-
     // if we get 3 or 4, no crate will be spawned
 
 };
+
+
+
+
 
 // function responsible for spawning tires, with randomized speed:
 
@@ -212,8 +201,8 @@ const spawnTools = () => {
     const randomTool = toolsArray[Math.floor(Math.random() * toolsArray.length)];
 
     //randomizing height
-    const maxHeight = 250;
-    const minHeight = 210;
+    const maxHeight = 260;
+    const minHeight = 230;
     const randomHeight = Math.floor(Math.random() * (maxHeight - minHeight + 1)) + minHeight;
 
     //randomizing spawning interval
@@ -242,7 +231,7 @@ const spawnSpecialTools = () => {
     const randomNum = Math.floor(Math.random() * 10);
     if (randomNum === 1) {
 
-        specialTool = specialTools.create(game.width, game.world.height - 270, 'goldenWrench');
+        specialTool = specialTools.create(game.width, game.world.height - 280, 'goldenWrench');
         // height is hardcoded, so special tool doesn't overlap with normal tools (always will spawn above them)
         specialTool.scale.setTo(0.5, 0.5);
         specialTool.body.velocity.x = -600;
