@@ -11,7 +11,10 @@ let cityBoard;
 let player;
 let run;
 let spaceKey;
+let gameScore = 0;
+let gameScoreText;
 
+// obstacles:
 let crates;
 let crate01;
 let crate02;
@@ -19,10 +22,12 @@ let crate03;
 let tires;
 let tire;
 let burn;
+
 // starting values for tires speed, they are increased during gameplay:
 let minTireSpeed = 600;
-let maxTireSpeed = 800;
+let maxTireSpeed = 900;
 
+// tools:
 let tool;
 let tools;
 let specialTool;
@@ -51,6 +56,9 @@ function preload() {
     game.load.image('wrench01', 'graphics/wrench.PNG');
     game.load.image('wrench02', 'graphics/wrench2.PNG');
     game.load.image('goldenWrench', 'graphics/goldenWrench.PNG'); // texture for special (golden) tool
+
+    // FONT:
+    game.load.bitmapFont('carrier_command', 'fonts/carrier_command.png', 'fonts/carrier_command.xml');
 
 }
 
@@ -101,12 +109,17 @@ function create() {
     specialTools.enableBody = true;
     game.time.events.loop(Phaser.Timer.SECOND * 2, spawnSpecialTools, this);
 
+    // displaying player's score:
+    gameScoreText = game.add.bitmapText(16, 16, 'carrier_command', 'score: 0', 20);
 
 
 }
 
 // changing elements state
 function update() {
+
+    // collisions between player and game's objects:
+    game.physics.arcade.overlap(player, tools, collectTools, null, this);
 
 
     // moving background image at the selected speed.
@@ -208,6 +221,14 @@ const spawnTools = () => {
         tool.body.velocity.x = - 600;
 
     }
+
+};
+
+const collectTools = (player, tool) => {
+
+    tool.kill(); // tools disappear after collision
+    gameScore += Math.ceil(Math.random() * 10); // game score is increased by random number 1-10
+    gameScoreText.text = 'Score: ' + gameScore; // updated game score is displayed
 
 };
 
