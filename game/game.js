@@ -1,7 +1,7 @@
 
 // setting up needed const and let
 const gameWidth = window.innerWidth*0.7;
-const gameHeight = gameWidth*0.34;
+const gameHeight = gameWidth*0.5;
 const gameBackgroundImageOriginalWidth = 1958;
 const gameBackgroundImageOriginalHeight = 492;
 const backgroundWidthRatio = gameWidth*2/gameBackgroundImageOriginalWidth;
@@ -23,6 +23,9 @@ let burn;
 let minTireSpeed = 700;
 let maxTireSpeed = 1000;
 
+let tool;
+let tools;
+
 // setting up canvas size and placing it in selected div id 'game-body'
 const game = new Phaser.Game(gameWidth, gameHeight, Phaser.AUTO, 'game-body', { preload: preload, create: create, update: update });
 
@@ -35,6 +38,16 @@ function preload() {
     // OBSTACLES:
     game.load.image('crate', 'graphics/crate.PNG');
     game.load.spritesheet('tire', 'graphics/spritesheet_tire.png', 126, 91, 2);
+
+    // TOOLS:
+    game.load.image('drill', 'graphics/drill.PNG');
+    game.load.image('hammer', 'graphics/hammer.PNG');
+    game.load.image('pincers01', 'graphics/pincers.PNG');
+    game.load.image('pincers02', 'graphics/pincers2.PNG');
+    game.load.image('screwdriver01', 'graphics/screwdriver.PNG');
+    game.load.image('screwdriver02', 'graphics/screwdriver2.PNG');
+    game.load.image('wrench01', 'graphics/wrench.PNG');
+    game.load.image('wrench02', 'graphics/wrench2.PNG');
 
 }
 
@@ -74,6 +87,11 @@ function create() {
     tires = game.add.group();
     tires.enableBody = true;
     game.time.events.loop(Phaser.Timer.SECOND * 2, spawnTires, this);
+
+    // generating normal tools:
+    tools = game.add.group();
+    tools.enableBody = true;
+    game.time.events.loop(Phaser.Timer.SECOND * 0.3, spawnTools, this);
 
 
 
@@ -160,4 +178,27 @@ function spawnTires() {
     burn = tire.animations.add('burn');
     tire.animations.play('burn', 7, true);
 
-}
+};
+
+const spawnTools = () => {
+
+    //generating random tool texture
+    const toolsArray = ['drill', 'hammer', 'pincers01', 'pincers02', 'screwdriver01', 'screwdriver02', 'wrench01', 'wrench02'];
+    const randomTool = toolsArray[Math.floor(Math.random() * toolsArray.length)];
+
+    //randomizing height
+    const maxHeight = 300;
+    const minHeight = 200;
+    const randomHeight = Math.floor(Math.random() * (maxHeight - minHeight + 1)) + minHeight;
+
+    //randomizing spawning interval
+    const randomNum = Math.random() * 10;
+    if (randomNum >= 4) {
+
+        tool = tools.create(game.width, game.world.height - randomHeight, randomTool);
+        tool.scale.setTo(0.5, 0.5);
+        tool.body.velocity.x = - 600;
+
+    }
+
+};
