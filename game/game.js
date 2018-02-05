@@ -13,9 +13,9 @@ let run;
 let spaceKey;
 
 let crates;
-let crate;
-let crate2;
-let crate3;
+let crate01;
+let crate02;
+let crate03;
 let tires;
 let tire;
 let burn;
@@ -78,7 +78,7 @@ function create() {
     // spawning crates every 2 seconds:
     crates = game.add.group();
     crates.enableBody = true;
-    game.time.events.loop(Phaser.Timer.SECOND * 2, spawnCrates, this);
+    game.time.events.loop(Phaser.Timer.SECOND * 1.5, spawnCrates, this);
 
     // increasing tires speed every 30 seconds:
     const increaseMinTireSpeed = () => minTireSpeed += 100;
@@ -131,21 +131,21 @@ function render () {
 // three functions used to create three levels of crates, used later in spawnCrates() function:
 
 const addFirstCrate = () => {
-    crate = crates.create(800, game.world.height - 65, 'crate');
-    crate.scale.setTo(0.150, 0.150);
-    crate.body.velocity.x = -600;
+    crate01 = crates.create(game.width, game.world.height - 65, 'crate');
+    crate01.scale.setTo(0.15, 0.15);
+    crate01.body.velocity.x = -600;
 };
 
 const addSecondCrate = () => {
-    crate2 = crates.create(800, game.world.height - 105, 'crate');
-    crate2.scale.setTo(0.150, 0.150);
-    crate2.body.velocity.x = -600;
+    crate02 = crates.create(game.width, game.world.height - 105, 'crate');
+    crate02.scale.setTo(0.15, 0.15);
+    crate02.body.velocity.x = -600;
 };
 
 const addThirdCrate = () => {
-    crate3 = crates.create(800, game.world.height - 145, 'crate');
-    crate3.scale.setTo(0.150, 0.150);
-    crate3.body.velocity.x = -600;
+    crate03 = crates.create(game.width, game.world.height - 145, 'crate');
+    crate03.scale.setTo(0.15, 0.15);
+    crate03.body.velocity.x = -600;
 };
 
 // randomized spawning of crates (random intervals and height):
@@ -179,9 +179,9 @@ function spawnTires() {
 
     const randomTireSpeed = Math.floor(Math.random() * (maxTireSpeed - minTireSpeed + 1)) + minTireSpeed;
 
-    tire = game.add.sprite(800, game.world.height - 75, 'tire');
+    tire = game.add.sprite(game.width, game.world.height - 75, 'tire');
     tires.add(tire);
-    tire.scale.setTo(0.750, 0.750);
+    tire.scale.setTo(0.75, 0.75);
     tire.body.velocity.x = - randomTireSpeed;
     burn = tire.animations.add('burn');
     tire.animations.play('burn', 7, true);
@@ -196,7 +196,7 @@ const spawnTools = () => {
 
     //randomizing height
     const maxHeight = 250;
-    const minHeight = 200;
+    const minHeight = 210;
     const randomHeight = Math.floor(Math.random() * (maxHeight - minHeight + 1)) + minHeight;
 
     //randomizing spawning interval
@@ -218,7 +218,7 @@ const spawnSpecialTools = () => {
     if (randomNum === 1) {
 
         specialTool = specialTools.create(game.width, game.world.height - 270, 'goldenWrench');
-        // height is hardcoded, so special tool doesn't overlap with normal tools (always will spawn above tools)
+        // height is hardcoded, so special tool doesn't overlap with normal tools (always will spawn above them)
         specialTool.scale.setTo(0.5, 0.5);
         specialTool.body.velocity.x = -600;
 
