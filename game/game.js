@@ -1,7 +1,7 @@
 
 // setting up needed const and let
 const gameWidth = window.innerWidth*0.7;
-const gameHeight = gameWidth*0.5;
+const gameHeight = gameWidth*0.4;
 const gameBackgroundImageOriginalWidth = 1958;
 const gameBackgroundImageOriginalHeight = 492;
 const backgroundWidthRatio = gameWidth*2/gameBackgroundImageOriginalWidth;
@@ -25,6 +25,8 @@ let maxTireSpeed = 1000;
 
 let tool;
 let tools;
+let specialTool;
+let specialTools;
 
 // setting up canvas size and placing it in selected div id 'game-body'
 const game = new Phaser.Game(gameWidth, gameHeight, Phaser.AUTO, 'game-body', { preload: preload, create: create, update: update });
@@ -48,6 +50,7 @@ function preload() {
     game.load.image('screwdriver02', 'graphics/screwdriver2.PNG');
     game.load.image('wrench01', 'graphics/wrench.PNG');
     game.load.image('wrench02', 'graphics/wrench2.PNG');
+    game.load.image('goldenWrench', 'graphics/goldenWrench.PNG'); // texture for special (golden) tool
 
 }
 
@@ -93,6 +96,11 @@ function create() {
     tools.enableBody = true;
     game.time.events.loop(Phaser.Timer.SECOND * 0.3, spawnTools, this);
 
+    // generating special tools:
+    specialTools = game.add.group();
+    specialTools.enableBody = true;
+    game.time.events.loop(Phaser.Timer.SECOND * 2, spawnSpecialTools, this);
+
 
 
 }
@@ -108,7 +116,7 @@ function update() {
     // player can jump only while touching the ground (&& player.body.blocked.down)
     if (spaceKey.isDown && player.body.blocked.down) {
 
-        player.body.velocity.y = - 550;
+        player.body.velocity.y = - 570;
 
     };
 
@@ -187,7 +195,7 @@ const spawnTools = () => {
     const randomTool = toolsArray[Math.floor(Math.random() * toolsArray.length)];
 
     //randomizing height
-    const maxHeight = 300;
+    const maxHeight = 250;
     const minHeight = 200;
     const randomHeight = Math.floor(Math.random() * (maxHeight - minHeight + 1)) + minHeight;
 
@@ -198,6 +206,21 @@ const spawnTools = () => {
         tool = tools.create(game.width, game.world.height - randomHeight, randomTool);
         tool.scale.setTo(0.5, 0.5);
         tool.body.velocity.x = - 600;
+
+    }
+
+};
+
+const spawnSpecialTools = () => {
+
+    // randomizing spawning interval
+    const randomNum = Math.floor(Math.random() * 10);
+    if (randomNum === 1) {
+
+        specialTool = specialTools.create(game.width, game.world.height - 270, 'goldenWrench');
+        // height is hardcoded, so special tool doesn't overlap with normal tools (always will spawn above tools)
+        specialTool.scale.setTo(0.5, 0.5);
+        specialTool.body.velocity.x = -600;
 
     }
 
