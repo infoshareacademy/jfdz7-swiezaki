@@ -126,6 +126,7 @@ function update() {
     game.physics.arcade.overlap(player, specialTools, collectSpecialTools, null, this);
     game.physics.arcade.overlap(player, crates, collideWithTwoLevelsCrate, null, this);
     game.physics.arcade.overlap(player, crates, collideWithThreeLevelsCrate, null, this);
+    game.physics.arcade.overlap(player, tires, collideWithTires, null, this);
 
 
     // moving background image at the selected speed.
@@ -193,8 +194,7 @@ const collideWithThreeLevelsCrate = (player, crateThreeLevels) => {
 };
 
 
-
-// function responsible for spawning tires, with randomized speed:
+// spawning tires with randomized speed:
 
 const spawnTires = () => {
 
@@ -208,6 +208,18 @@ const spawnTires = () => {
     tire.animations.play('burn', 7, true);
 
 };
+
+// collision with tires:
+
+const collideWithTires = (player, tire) => {
+
+    tire.kill();
+    playerLifes -= 1;
+    playerLifesText.text = playerLifes;
+
+};
+
+// generating normal tools:
 
 const spawnTools = () => {
 
@@ -239,6 +251,8 @@ const collectTools = (player, tool) => {
     gameScoreText.text = 'Score: ' + gameScore; // updated game score is displayed
 
 };
+
+// generating special (golden) tools:
 
 const spawnSpecialTools = () => {
 
