@@ -13,8 +13,9 @@ let run;
 let spaceKey;
 let gameScore = 0;
 let gameScoreText;
-let playerLifes = 10;
-let playerLifesText;
+let playerLives = 10;
+let playerLivesText;
+let gameOver;
 
 // obstacles:
 let crates;
@@ -112,8 +113,8 @@ function create() {
     game.time.events.loop(Phaser.Timer.SECOND, spawnSpecialTools, this);
 
     // displaying player's score and lifes:
-    gameScoreText = game.add.bitmapText(16, 16, 'carrier_command', 'score: 0', 20);
-    playerLifesText = game.add.bitmapText(16, 40, 'carrier_command', playerLifes, 20);
+    gameScoreText = game.add.bitmapText(16, 16, 'carrier_command', `Score: ${gameScore}`, 20);
+    playerLivesText = game.add.bitmapText(16, 40, 'carrier_command', `Lives: ${playerLives}`, 20);
 
 
 }
@@ -140,6 +141,18 @@ function update() {
 
     };
 
+    // after player loses all lives, it's game over:
+    playerLives > 0 ? gameOver = false : gameOver = true;
+
+    if (gameOver) {
+
+        player.kill(); // player is removed from the game board
+        // for some reason game starts to lag a few seconds after player is killed, but that shouldn't be a problem
+
+        // other gameOver conditions, like displaying end screen (high scores) should be added here
+
+    };
+
 }
 
 // function will be needed in future planning. If not - might be deleted. Must be deleted also in const = game!
@@ -147,6 +160,12 @@ function update() {
 function render () {
 
 }
+
+
+
+
+// Other functions, used in update() and create():
+
 
 // creating crates:
 
@@ -174,7 +193,7 @@ const spawnCrates = () => {
         // if we get 2, three-level crate is spawned
         addThreeLevelsCrate()
     }
-    // if we get 3 or 4, no crate will be spawned
+    // if we get 3 or 4, no crate will be spawned, so overall we get 50% chance of spawning a crate
 
 };
 
@@ -182,15 +201,15 @@ const spawnCrates = () => {
 
 const collideWithTwoLevelsCrate = (player, crateTwoLevels) => {
     crateTwoLevels.kill();
-    // crate has to be 'killed' on collision, otherwise player will constantly lose lifes while passing the crate
-    playerLifes -= 1; // player lose one life
-    playerLifesText.text = playerLifes; // player's lifes are updated on screen
+    // crate has to be 'killed' on collision, otherwise player will constantly lose lives while passing the crate
+    playerLives -= 1; // player lose one life
+    playerLivesText.text = `Lives: ${playerLives}`; // player's lives are updated on screen
 };
 
 const collideWithThreeLevelsCrate = (player, crateThreeLevels) => {
     crateThreeLevels.kill();
-    playerLifes -= 1;
-    playerLifesText.text = playerLifes;
+    playerLives -= 1;
+    playerLivesText.text = `Lives: ${playerLives}`;
 };
 
 
@@ -204,6 +223,8 @@ const spawnTires = () => {
     tires.add(tire);
     tire.scale.setTo(0.75, 0.75);
     tire.body.velocity.x = - randomTireSpeed;
+
+    // adding burning animation to tires:
     burn = tire.animations.add('burn');
     tire.animations.play('burn', 7, true);
 
@@ -214,8 +235,9 @@ const spawnTires = () => {
 const collideWithTires = (player, tire) => {
 
     tire.kill();
-    playerLifes -= 1;
-    playerLifesText.text = playerLifes;
+    // same problem as with crates, tire has to be killed on collision or the player will lose more lives
+    playerLives -= 1;
+    playerLivesText.text = `Lives: ${playerLives}`;
 
 };
 
@@ -227,14 +249,14 @@ const spawnTools = () => {
     const toolsArray = ['drill', 'hammer', 'pincers01', 'pincers02', 'screwdriver01', 'screwdriver02', 'wrench01', 'wrench02'];
     const randomTool = toolsArray[Math.floor(Math.random() * toolsArray.length)];
 
-    //randomizing height
+    //randomizing height at which tools appear
     const maxHeight = 260;
     const minHeight = 230;
     const randomHeight = Math.floor(Math.random() * (maxHeight - minHeight + 1)) + minHeight;
 
     //randomizing spawning interval
     const randomNum = Math.random() * 10;
-    if (randomNum >= 4) {
+    if (randomNum >= 4) { // 40% chance of spawning a tool
 
         tool = tools.create(game.width, game.world.height - randomHeight, randomTool);
         tool.scale.setTo(0.5, 0.5);
@@ -244,11 +266,13 @@ const spawnTools = () => {
 
 };
 
+// collecting normal tools and increasing the score:
+
 const collectTools = (player, tool) => {
 
     tool.kill(); // tools disappear after collision
     gameScore += Math.ceil(Math.random() * 10); // game score is increased by random number 1-10
-    gameScoreText.text = 'Score: ' + gameScore; // updated game score is displayed
+    gameScoreText.text = `Score: ${gameScore}`; // updated game score is displayed
 
 };
 
@@ -269,10 +293,12 @@ const spawnSpecialTools = () => {
 
 };
 
+// collecting special tools and increasing the score:
+
 const collectSpecialTools = (player, specialTool) => {
 
     specialTool.kill();
     gameScore += 500;
-    gameScoreText.text = 'Score: ' + gameScore;
+    gameScoreText.text = `Score: ${gameScore}`;
 
 };
