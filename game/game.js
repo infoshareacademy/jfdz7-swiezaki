@@ -124,6 +124,8 @@ function update() {
     // collisions between player and game's objects:
     game.physics.arcade.overlap(player, tools, collectTools, null, this);
     game.physics.arcade.overlap(player, specialTools, collectSpecialTools, null, this);
+    game.physics.arcade.overlap(player, crates, collideWithTwoLevelsCrate, null, this);
+    game.physics.arcade.overlap(player, crates, collideWithThreeLevelsCrate, null, this);
 
 
     // moving background image at the selected speed.
@@ -175,7 +177,20 @@ const spawnCrates = () => {
 
 };
 
+// collision with crates:
 
+const collideWithTwoLevelsCrate = (player, crateTwoLevels) => {
+    crateTwoLevels.kill();
+    // crate has to be 'killed' on collision, otherwise player will constantly lose lifes while passing the crate
+    playerLifes -= 1; // player lose one life
+    playerLifesText.text = playerLifes; // player's lifes are updated on screen
+};
+
+const collideWithThreeLevelsCrate = (player, crateThreeLevels) => {
+    crateThreeLevels.kill();
+    playerLifes -= 1;
+    playerLifesText.text = playerLifes;
+};
 
 
 
