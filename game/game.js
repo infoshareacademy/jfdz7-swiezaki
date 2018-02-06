@@ -89,10 +89,10 @@ function create() {
     spaceKey = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR); //register spacebar key
     game.input.keyboard.addKeyCapture([ Phaser.Keyboard.SPACEBAR ]); //block-out spacebar of doing default things on the browser
 
-    // spawning crates every 2 seconds:
+    // spawning crates every 3 seconds:
     crates = game.add.group();
     crates.enableBody = true;
-    game.time.events.loop(Phaser.Timer.SECOND * 2.5, spawnCrates, this);
+    game.time.events.loop(Phaser.Timer.SECOND * 3, spawnCrates, this);
 
     // increasing tires speed every 30 seconds:
     const increaseMinTireSpeed = () => minTireSpeed += 50;
@@ -100,10 +100,10 @@ function create() {
     game.time.events.loop(Phaser.Timer.SECOND * 30, increaseMinTireSpeed, this);
     game.time.events.loop(Phaser.Timer.SECOND * 30, increaseMaxTireSpeed, this);
 
-    // spawning tires every 4 seconds:
+    // spawning tires every 4.5 seconds:
     tires = game.add.group();
     tires.enableBody = true;
-    game.time.events.loop(Phaser.Timer.SECOND * 3, spawnTires, this);
+    game.time.events.loop(Phaser.Timer.SECOND * 4.5, spawnTires, this);
 
     // generating normal tools:
     tools = game.add.group();
@@ -277,7 +277,7 @@ const spawnTools = () => {
 
     //randomizing spawning interval
     const randomNum = Math.random() * 10;
-    if (randomNum >= 4) { // 40% chance of spawning a tool
+    if (randomNum >= 4) { // 60% chance of spawning a tool
 
         tool = tools.create(game.width, game.world.height - randomHeight, randomTool);
         tool.scale.setTo(0.5, 0.5);
@@ -303,7 +303,7 @@ const spawnSpecialTools = () => {
 
     // randomizing spawning interval
     const randomNum = Math.floor(Math.random() * 10);
-    if (randomNum === 1) {
+    if (randomNum === 1) { // 10% chance of spawning special tool
 
         specialTool = specialTools.create(game.width, game.world.height - 280, 'goldenWrench');
         // height is hardcoded, so special tool doesn't overlap with normal tools (always will spawn above them)
