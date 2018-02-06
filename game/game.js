@@ -15,6 +15,8 @@ let gameScore = 0;
 let gameScoreText;
 let playerLives = 10;
 let playerLivesText;
+let playerLivesHearts;
+let playerLivesHeart;
 let gameOver;
 
 // obstacles:
@@ -43,6 +45,7 @@ function preload() {
 
    game.load.image('background', 'graphics/gameBackground_1958_492.png');
    game.load.spritesheet('marian', 'graphics/spritesheet.png', 300, 393, 3); //300 and 393 are size of the frame, 3 is number of frames in the png file
+    game.load.image('heart', 'graphics/heart.PNG');
 
     // OBSTACLES:
     game.load.image('crateTwoLevels', 'graphics/crate02.PNG');
@@ -112,6 +115,10 @@ function create() {
     specialTools.enableBody = true;
     game.time.events.loop(Phaser.Timer.SECOND, spawnSpecialTools, this);
 
+    // generating heart which appear after losing life:
+    playerLivesHearts = game.add.group();
+    playerLivesHearts.enableBody = true;
+
     // displaying player's score and lifes:
     gameScoreText = game.add.bitmapText(16, 16, 'carrier_command', `Score: ${gameScore}`, 20);
     playerLivesText = game.add.bitmapText(16, 40, 'carrier_command', `Lives: ${playerLives}`, 20);
@@ -167,6 +174,17 @@ function render () {
 // Other functions, used in update() and create():
 
 
+// launching hearts after losing life:
+
+const launchLifeHeart = () => {
+
+    playerLivesHeart = playerLivesHearts.create(250, game.world.height, 'heart');
+    // heart appears right below player
+    playerLivesHeart.scale.setTo(0.1, 0.1);
+    playerLivesHeart.body.velocity.y = - 400; // heart flies to the top
+
+};
+
 // creating crates:
 
 const addTwoLevelsCrate = () => {
@@ -204,12 +222,14 @@ const collideWithTwoLevelsCrate = (player, crateTwoLevels) => {
     // crate has to be 'killed' on collision, otherwise player will constantly lose lives while passing the crate
     playerLives -= 1; // player lose one life
     playerLivesText.text = `Lives: ${playerLives}`; // player's lives are updated on screen
+    launchLifeHeart(); // heart flies to the top of the screen
 };
 
 const collideWithThreeLevelsCrate = (player, crateThreeLevels) => {
     crateThreeLevels.kill();
     playerLives -= 1;
     playerLivesText.text = `Lives: ${playerLives}`;
+    launchLifeHeart(); // heart flies to the top of the screen
 };
 
 
@@ -238,6 +258,7 @@ const collideWithTires = (player, tire) => {
     // same problem as with crates, tire has to be killed on collision or the player will lose more lives
     playerLives -= 1;
     playerLivesText.text = `Lives: ${playerLives}`;
+    launchLifeHeart(); // heart flies to the top of the screen
 
 };
 
