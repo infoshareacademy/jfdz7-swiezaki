@@ -15,6 +15,8 @@ let gameScore = 0;
 let gameScoreText;
 let playerLives = 10;
 let playerLivesText;
+let playerLivesHearts;
+let playerLivesHeart;
 let gameOver;
 
 // obstacles:
@@ -43,6 +45,7 @@ function preload() {
 
    game.load.image('background', 'graphics/gameBackground_1958_492.png');
    game.load.spritesheet('marian', 'graphics/spritesheet.png', 300, 393, 3); //300 and 393 are size of the frame, 3 is number of frames in the png file
+    game.load.image('heart', 'graphics/heart.PNG');
 
     // OBSTACLES:
     game.load.image('crateTwoLevels', 'graphics/crate02.PNG');
@@ -86,10 +89,10 @@ function create() {
     spaceKey = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR); //register spacebar key
     game.input.keyboard.addKeyCapture([ Phaser.Keyboard.SPACEBAR ]); //block-out spacebar of doing default things on the browser
 
-    // spawning crates every 2 seconds:
+    // spawning crates every 3 seconds:
     crates = game.add.group();
     crates.enableBody = true;
-    game.time.events.loop(Phaser.Timer.SECOND * 2.5, spawnCrates, this);
+    game.time.events.loop(Phaser.Timer.SECOND * 3, spawnCrates, this);
 
     // increasing tires speed every 30 seconds:
     const increaseMinTireSpeed = () => minTireSpeed += 50;
@@ -97,10 +100,10 @@ function create() {
     game.time.events.loop(Phaser.Timer.SECOND * 30, increaseMinTireSpeed, this);
     game.time.events.loop(Phaser.Timer.SECOND * 30, increaseMaxTireSpeed, this);
 
-    // spawning tires every 4 seconds:
+    // spawning tires every 4.5 seconds:
     tires = game.add.group();
     tires.enableBody = true;
-    game.time.events.loop(Phaser.Timer.SECOND * 3, spawnTires, this);
+    game.time.events.loop(Phaser.Timer.SECOND * 4.5, spawnTires, this);
 
     // generating normal tools:
     tools = game.add.group();
@@ -111,6 +114,10 @@ function create() {
     specialTools = game.add.group();
     specialTools.enableBody = true;
     game.time.events.loop(Phaser.Timer.SECOND, spawnSpecialTools, this);
+
+    // generating heart which appear after losing life:
+    playerLivesHearts = game.add.group();
+    playerLivesHearts.enableBody = true;
 
     // displaying player's score and lifes:
     gameScoreText = game.add.bitmapText(16, 16, 'carrier_command', `Score: ${gameScore}`, 20);
@@ -167,6 +174,17 @@ function render () {
 // Other functions, used in update() and create():
 
 
+// launching hearts after losing life:
+
+const launchLifeHeart = () => {
+
+    playerLivesHeart = playerLivesHearts.create(250, game.world.height, 'heart');
+    // heart appears right below player
+    playerLivesHeart.scale.setTo(0.1, 0.1);
+    playerLivesHeart.body.velocity.y = - 400; // heart flies to the top
+
+};
+
 // creating crates:
 
 const addTwoLevelsCrate = () => {
@@ -204,12 +222,14 @@ const collideWithTwoLevelsCrate = (player, crateTwoLevels) => {
     // crate has to be 'killed' on collision, otherwise player will constantly lose lives while passing the crate
     playerLives -= 1; // player lose one life
     playerLivesText.text = `Lives: ${playerLives}`; // player's lives are updated on screen
+    launchLifeHeart(); // heart flies to the top of the screen
 };
 
 const collideWithThreeLevelsCrate = (player, crateThreeLevels) => {
     crateThreeLevels.kill();
     playerLives -= 1;
     playerLivesText.text = `Lives: ${playerLives}`;
+    launchLifeHeart(); // heart flies to the top of the screen
 };
 
 
@@ -238,6 +258,7 @@ const collideWithTires = (player, tire) => {
     // same problem as with crates, tire has to be killed on collision or the player will lose more lives
     playerLives -= 1;
     playerLivesText.text = `Lives: ${playerLives}`;
+    launchLifeHeart(); // heart flies to the top of the screen
 
 };
 
@@ -256,7 +277,7 @@ const spawnTools = () => {
 
     //randomizing spawning interval
     const randomNum = Math.random() * 10;
-    if (randomNum >= 4) { // 40% chance of spawning a tool
+    if (randomNum >= 4) { // 60% chance of spawning a tool
 
         tool = tools.create(game.width, game.world.height - randomHeight, randomTool);
         tool.scale.setTo(0.5, 0.5);
@@ -282,7 +303,7 @@ const spawnSpecialTools = () => {
 
     // randomizing spawning interval
     const randomNum = Math.floor(Math.random() * 10);
-    if (randomNum === 1) {
+    if (randomNum === 1) { // 10% chance of spawning special tool
 
         specialTool = specialTools.create(game.width, game.world.height - 280, 'goldenWrench');
         // height is hardcoded, so special tool doesn't overlap with normal tools (always will spawn above them)
