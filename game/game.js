@@ -277,7 +277,7 @@ const spawnTools = () => {
 
     //randomizing spawning interval
     const randomNum = Math.random() * 10;
-    if (randomNum >= 4) { // 60% chance of spawning a tool
+    if (randomNum <= 3) { // 30% chance of spawning a tool
 
         tool = tools.create(game.width, game.world.height - randomHeight, randomTool);
         tool.scale.setTo(0.5, 0.5);
@@ -302,8 +302,8 @@ const collectTools = (player, tool) => {
 const spawnSpecialTools = () => {
 
     // randomizing spawning interval
-    const randomNum = Math.floor(Math.random() * 10);
-    if (randomNum === 1) { // 10% chance of spawning special tool
+    const randomNum = Math.floor(Math.random() * 20);
+    if (randomNum === 1) { // 5% chance of spawning special tool
 
         specialTool = specialTools.create(game.width, game.world.height - 280, 'goldenWrench');
         // height is hardcoded, so special tool doesn't overlap with normal tools (always will spawn above them)
@@ -319,7 +319,7 @@ const spawnSpecialTools = () => {
 const collectSpecialTools = (player, specialTool) => {
 
     specialTool.kill();
-    gameScore += 500;
+    gameScore += 100;
     gameScoreText.text = `Score: ${gameScore}`;
 
 };
