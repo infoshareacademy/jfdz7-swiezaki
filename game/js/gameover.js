@@ -70,7 +70,7 @@ const endState = {
     restart: () => {
 
         game.state.start('menu');
-        playerLives = 1; // resets player lives to start number
+        playerLives = 10; // resets player lives to start number
         gameScore = 0; // resets gameScore to 0
 
     }

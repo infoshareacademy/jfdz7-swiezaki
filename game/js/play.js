@@ -11,7 +11,7 @@ let run;
 let spaceKey;
 let gameScore = 0;
 let gameScoreText;
-let playerLives = 1;
+let playerLives = 10;
 let playerLivesText;
 let playerLivesHearts;
 let playerLivesHeart;
