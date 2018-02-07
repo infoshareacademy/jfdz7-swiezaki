@@ -71,8 +71,6 @@ function preload() {
 // creating game environment using preloaded images
 function create() {
 
-    game.physics.startSystem(Phaser.Physics.ARCADE);
-
     // placing preloaded background image into game board and fixing size to current view
     cityBoard = game.add.tileSprite(0, 0, gameWidth, gameHeight, 'background');
     cityBoard.tileScale = new Phaser.Point(backgroundWidthRatio, backgroundHeightRatio);
