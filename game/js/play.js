@@ -11,7 +11,7 @@ let run;
 let spaceKey;
 let gameScore = 0;
 let gameScoreText;
-let playerLives = 10;
+let playerLives = 1;
 let playerLivesText;
 let playerLivesHearts;
 let playerLivesHeart;
@@ -184,10 +184,11 @@ let specialTools;
  };
 
 
+// GAME HEART - SUMMONED AFTER PRESSING GAME START BUTTON
 const playState = {
 
     // creating game environment using preloaded images in load state
-    create: function() {
+    create: () => {
 
 
         // placing preloaded background image into game board and fixing size to current view
@@ -243,7 +244,7 @@ const playState = {
     },
 
     // changing elements state
-    update: function() {
+    update: () => {
 
         // collisions between player and game's objects:
         game.physics.arcade.overlap(player, tools, collectTools, null, this);
@@ -272,7 +273,7 @@ const playState = {
             player.kill(); // player is removed from the game board
             // for some reason game starts to lag a few seconds after player is killed, but that shouldn't be a problem
 
-            // other gameOver conditions, like displaying end screen (high scores) should be added here
+            game.state.start('gameover');
 
         }
 

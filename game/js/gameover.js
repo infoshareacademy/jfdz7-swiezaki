@@ -40,7 +40,7 @@ const endState = {
         }
         // const startLabel = game.add.text(30, game.world.height-80, 'Press the "W" key to restart',
         //                                { font: '20px Arial', fill: '#00FF00' });
-        const buttonRestart = game.add.button(game.world.centerX - 95, 400, 'buttonRestart', this.restart, this, 2, 1, 0);
+        const buttonRestart = game.add.button(30, 200, 'buttonRestart', this.restart, this, 2, 1, 0);
 
         // let wkey = game.input.keyboard.addKey(Phaser.Keyboard.W);
         // wkey.onDown.addOnce(this.restart, this);
