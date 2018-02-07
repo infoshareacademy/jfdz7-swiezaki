@@ -7,7 +7,6 @@ const menuState = {
 
         const titleFontSize = currentGameHeight/26.85;
         const textFontSize = currentGameHeight/33.56;
-        const textLineSpacing = currentGameHeight/10;
         const instructionTitleVerticalSpace = currentGameHeight/13.42;
         const instructionTextVerticalSpace = currentGameHeight/6.72;
         const gameControlsTitleVerticalSpace = currentGameHeight/1.49;
@@ -19,8 +18,6 @@ const menuState = {
         menuBackGround = game.add.tileSprite(0, 0, gameWidth, gameHeight, 'background');
         menuBackGround.tileScale = new Phaser.Point(backgroundWidthRatio, backgroundHeightRatio);
         menuBackGround.alpha = 0.35;
-
-        console.log(game.world.width, game.world.height);
 
         instructionTitle = game.add.bitmapText(30, instructionTitleVerticalSpace, 'carrier_command', 'INSTRUCTION', titleFontSize);
         instructionText = game.add.bitmapText(30, instructionTextVerticalSpace, 'carrier_command',

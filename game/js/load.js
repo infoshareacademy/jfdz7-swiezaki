@@ -11,6 +11,7 @@ const loadState = {
         // OPERATION BUTTONS
 
         game.load.image('buttonStart', 'graphics/startGameButton_mouseOver.png');
+        game.load.image('buttonRestart', 'graphics/restartGameButton_mouseOver.png');
 
         // HERO:
         game.load.spritesheet('marian', 'graphics/spritesheet.png', 300, 393, 3); //300 and 393 are size of the frame, 3 is number of frames in the png file
