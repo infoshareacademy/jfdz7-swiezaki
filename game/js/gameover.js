@@ -1,8 +1,7 @@
 const endState = {
 
-    create: function() {
+    create: () => {
 
-        let currentScore = (this.game.time.totalElapsedSeconds()).toFixed(2);
         const names = ['Radek', 'Jarek', 'Kamila', 'Ania', 'Stefan'];
         const randomName = names[Math.floor(Math.random() * names.length)];
         let highScore = localStorage.getItem('highscore-DWAMT-game');
@@ -17,14 +16,18 @@ const endState = {
             console.log(highScore);
         }
 
-        highScore.push({ name: randomName, score: currentScore });
+        highScore.push({ name: randomName, score: gameScore });
         localStorage.setItem('highscore-DWAMT-game', JSON.stringify(highScore));
 
-        highScore.sort(function(a, b) { return a.score - b.score});
+        highScore.sort(function(a, b) { return b.score - a.score});
         highScore = highScore.slice(0,5);
 
-        const winLabel = game.add.text(30, 80, 'YOU WON! time: ' + currentScore,
+        const gameOverLabel = game.add.text(30, 80, 'GAME OVER',
             { font: '30px Arial', fill: '#00FF00' });
+
+        const gameOverScore = game.add.text(30, 120, 'Your score: ' + gameScore,
+            { font: '30px Arial', fill: '#00FF00' });
+
         const highLabel = game.add.text(30, 150, 'Highscores: ',
             { font: '30px Arial', fill: '#00FF00' });
 
@@ -38,17 +41,17 @@ const endState = {
                 + highScore[i].name + ': ' + highScore[i].score,
                 { font: '20px Arial', fill: '#00FF00' });
         }
-        // const startLabel = game.add.text(30, game.world.height-80, 'Press the "W" key to restart',
-        //                                { font: '20px Arial', fill: '#00FF00' });
-        const buttonRestart = game.add.button(30, 200, 'buttonRestart', this.restart, this, 2, 1, 0);
 
-        // let wkey = game.input.keyboard.addKey(Phaser.Keyboard.W);
-        // wkey.onDown.addOnce(this.restart, this);
+        const buttonRestart = game.add.button(30, 200, 'buttonRestart',
+                                              endState.restart, endState, 2, 1, 0);
+
     },
 
     restart: () => {
 
         game.state.start('menu');
+        playerLives = 1; // resets player lives to start number
+        gameScore = 0; // resets gameScore to 0
 
     }
 };

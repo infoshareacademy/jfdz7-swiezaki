@@ -270,9 +270,6 @@ const playState = {
 
         if (gameOver) {
 
-            player.kill(); // player is removed from the game board
-            // for some reason game starts to lag a few seconds after player is killed, but that shouldn't be a problem
-
             game.state.start('gameover');
 
         }
