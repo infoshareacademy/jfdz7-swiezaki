@@ -3,7 +3,7 @@ const loadState = {
     preload: () => {
 
         // loading text visible until this state is done.
-        const loadingLabel = game.add.text(80, 150, 'loading...',
+        const loadingLabel = game.add.text(80, 150, 'loading... please wait...',
                              { font: '30px Courier', fill: '#ffffff' });
         // BACKGROUND:
         game.load.image('background', 'graphics/gameBackground_1958_492.png');
