@@ -3,10 +3,18 @@ const menuState = {
     create: () => {
 
         const currentGameHeight = game.world.height;
+        const currentGameWidth = game.world.width;
 
         const titleFontSize = currentGameHeight/26.85;
         const textFontSize = currentGameHeight/33.56;
         const textLineSpacing = currentGameHeight/10;
+        const instructionTitleVerticalSpace = currentGameHeight/13.42;
+        const instructionTextVerticalSpace = currentGameHeight/6.72;
+        const gameControlsTitleVerticalSpace = currentGameHeight/1.49;
+        const gameControlsTextVerticalSpace = currentGameHeight/1.34;
+        const buttonStartVerticalSpace = currentGameHeight/1.19;
+        const buttonSizeRatio = currentGameWidth/1344;
+
 
         menuBackGround = game.add.tileSprite(0, 0, gameWidth, gameHeight, 'background');
         menuBackGround.tileScale = new Phaser.Point(backgroundWidthRatio, backgroundHeightRatio);
@@ -14,8 +22,8 @@ const menuState = {
 
         console.log(game.world.width, game.world.height);
 
-        instructionTitle = game.add.bitmapText(30, 40, 'carrier_command', 'INSTRUCTION', titleFontSize);
-        instructionText = game.add.bitmapText(30, 80, 'carrier_command',
+        instructionTitle = game.add.bitmapText(30, instructionTitleVerticalSpace, 'carrier_command', 'INSTRUCTION', titleFontSize);
+        instructionText = game.add.bitmapText(30, instructionTextVerticalSpace, 'carrier_command',
                                                 'The main purpose of the game is to collect tools.\n\n' +
                                                 'They are randomly showing up - to reach them ' +
                                                 'you need to jump.\n\nYou also need to jump to avoid' +
@@ -25,12 +33,13 @@ const menuState = {
                                                 'the game will end.\n\nthere is a special "golden" tool' +
                                                 ' which gives you an extra points.\n\nLook for it! Good luck!',
                                                 textFontSize);
-        gameControlsTitle = game.add.bitmapText(30, 360, 'carrier_command', 'GAME CONTROLS', titleFontSize);
-        gameControlsText = game.add.bitmapText(30, 400, 'carrier_command',
+        gameControlsTitle = game.add.bitmapText(30, gameControlsTitleVerticalSpace, 'carrier_command', 'GAME CONTROLS', titleFontSize);
+        gameControlsText = game.add.bitmapText(30, gameControlsTextVerticalSpace, 'carrier_command',
                                                 '[SPACEBAR] - JUMP (collect tools/avoid obstacles)', textFontSize)
 
-        const buttonStart = game.add.button(30, 450, 'buttonStart',
+        buttonStart = game.add.button(30, buttonStartVerticalSpace, 'buttonStart',
                           menuState.start, menuState, 2, 1, 0); // start button
+        buttonStart.scale.setTo(buttonSizeRatio, buttonSizeRatio);
     },
 
     start: () => {
