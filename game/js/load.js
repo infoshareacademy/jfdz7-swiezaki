@@ -8,6 +8,10 @@ const loadState = {
         // BACKGROUND:
         game.load.image('background', 'graphics/gameBackground_1958_492.png');
 
+        // OPERATION BUTTONS
+
+        game.load.image('buttonStart', 'graphics/startGameButton_mouseOver.png');
+
         // HERO:
         game.load.spritesheet('marian', 'graphics/spritesheet.png', 300, 393, 3); //300 and 393 are size of the frame, 3 is number of frames in the png file
 
