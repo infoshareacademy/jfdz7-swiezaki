@@ -44,7 +44,14 @@ const endState = {
         highScore = highScore.slice(0,5);
 
         gameOverLabel = game.add.bitmapText(30, gameOverTitleVerticalSpace, 'carrier_command', 'GAME OVER', titleFontSize);
-        gameOverScore = game.add.bitmapText(30, gameOverTextVerticalSpace, 'carrier_command', `Your score: ${gameScore} pts`, textFontSize);
+
+        gameScore>=highScore[0].score ?
+            gameOverScore = game.add.bitmapText(30, gameOverTextVerticalSpace,
+                'carrier_command', `Your score: ${gameScore} pts *** NEW RECORD!!! ***`,
+                textFontSize) :
+            gameOverScore = game.add.bitmapText(30, gameOverTextVerticalSpace,
+                'carrier_command', `Your score: ${gameScore} pts`, textFontSize);
+
         highScoreLabel = game.add.bitmapText(30, highScoreTitleVerticalSpace, 'carrier_command', 'Highscores: ', titleFontSize);
 
         let playerResultYPosition  = highScoreTextVerticalSpace;
