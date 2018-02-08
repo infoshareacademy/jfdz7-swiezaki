@@ -4,7 +4,7 @@ const gameHeight = gameWidth*0.4; // height of the game canvas
 // setting up canvas size and placing it in selected div id 'game-body'
 const game = new Phaser.Game(gameWidth, gameHeight, Phaser.AUTO, 'game-body');
 
-window.localStorage.clear(); // clearing local window storage of any storaged data
+// window.localStorage.clear(); // clearing local window storage of any storaged data
 
 // creating states for game loading
 game.state.add('boot', bootState);
