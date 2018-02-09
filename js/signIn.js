@@ -18,6 +18,24 @@ const toggleSubmitBtnDisability = () => {
 };
 
 const actionOnFormSubmit = () => {
+
+    let emailStorage = localStorage.getItem('submittedEmails');
+
+    if (emailStorage === null) {
+
+        emailStorage = [];
+
+    } else {
+
+        emailStorage = JSON.parse(emailStorage);
+
+    }
+
+    emailStorage.push({ email: $emailAddress.val() });
+    localStorage.setItem('submittedEmails', JSON.stringify(emailStorage));
+
+    console.log(emailStorage);
+
     $startUpForm
         .attr('target','_blank')
         .attr('action','http://www.swiezaki.jfdz7.is-academy.pl/game')
