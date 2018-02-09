@@ -34,7 +34,7 @@ const actionOnFormSubmit = () => {
     emailStorage.push({ email: $emailAddress.val() });
     localStorage.setItem('submittedEmails', JSON.stringify(emailStorage));
 
-    console.log(emailStorage);
+    // console.log(emailStorage); // left commented for future email list check
 
     $startUpForm
         .attr('target','_blank')
