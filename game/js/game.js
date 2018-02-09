@@ -1,5 +1,5 @@
-const gameWidth = window.innerWidth*0.7; // width of the game canvas
-const gameHeight = gameWidth*0.4; // height of the game canvas
+let gameWidth = window.innerWidth*0.7; // width of the game canvas
+let gameHeight = gameWidth*0.4; // height of the game canvas
 
 // setting up canvas size and placing it in selected div id 'game-body'
 const game = new Phaser.Game(gameWidth, gameHeight, Phaser.AUTO, 'game-body');
