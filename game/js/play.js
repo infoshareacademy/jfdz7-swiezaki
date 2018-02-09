@@ -5,6 +5,8 @@ const gameBackgroundImageOriginalHeight = 492;
 const backgroundWidthRatio = gameWidth * 2 / gameBackgroundImageOriginalWidth;
 const backgroundHeightRatio = gameHeight / gameBackgroundImageOriginalHeight;
 
+const gameElementScaleRatio = gameWidth/1087;
+
 let cityBoard;
 let player;
 let run;
@@ -195,8 +197,10 @@ const playState = {
         cityBoard = game.add.tileSprite(0, 0, gameWidth, gameHeight, 'background');
         cityBoard.tileScale = new Phaser.Point(backgroundWidthRatio, backgroundHeightRatio);
 
+        console.log(gameElementScaleRatio);
+
         player = game.add.sprite(250, game.world.height - 110, 'marian');
-        player.scale.setTo(0.2, 0.2); //resize sprite to fit the background
+        player.scale.setTo(gameElementScaleRatio*0.2, gameElementScaleRatio*0.2); //resize sprite to fit the background
         game.physics.arcade.enable(player); //enable physics on marian
         player.body.gravity.y = 800; //marian and his 'heaviness'
         player.body.collideWorldBounds = true; // prevents from falling off the ground
