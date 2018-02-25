@@ -1,6 +1,7 @@
 const $navLinks = $('nav a, .startup-sign-in-short-pos a');
 const animationScrollTime = 700;
 const $page = $('html, body');
+const $title = $('title');
 
 const $signInHeight = $('#startup-sign-in').offset().top - 200;
 const $descriptionHeight = $('#description').offset().top - 200;
@@ -53,18 +54,23 @@ $(document).ready(function(){
         if (scrollY >= $signInHeight && scrollY < $descriptionHeight) {
             $topNavLinks.removeClass('active');
             $signInLink.addClass('active');
+            $title.text('Wyszukiwarka | Zapis na premierę');
         } else if (scrollY >= $descriptionHeight && scrollY < $premiereCounterHeight) {
             $topNavLinks.removeClass('active');
             $descriptionLink.addClass('active');
+            $title.text('Wyszukiwarka | Opis funkcjonalności');
         } else if (scrollY >= $aboutUsHeight && scrollY < $contactHeight) {
             $topNavLinks.removeClass('active');
             $aboutUsLink.addClass('active');
+            $title.text('Wyszukiwarka | Nasz zespół');
         } else if (scrollY >= $contactHeight) {
             $topNavLinks.removeClass('active');
             $contactLink.addClass('active');
+            $title.text('Wyszukiwarka | Kontakt');
         } else {
 
             $topNavLinks.removeClass('active');
+            $title.text('Wyszukiwarka Części Samochodowych')
 
         }
     }
