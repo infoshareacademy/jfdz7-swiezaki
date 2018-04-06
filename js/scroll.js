@@ -5,7 +5,6 @@ const $title = $('title');
 
 const $signInHeight = $('#startup-sign-in').offset().top - 200;
 const $descriptionHeight = $('#description').offset().top - 200;
-const $premiereCounterHeight = $('#premiere-counter').offset().top;
 const $aboutUsHeight = $('#about-us').offset().top - 200;
 const $contactHeight = $('#contact').offset().top - 500;
 
@@ -55,7 +54,7 @@ $(document).ready(function(){
             $topNavLinks.removeClass('active');
             $signInLink.addClass('active');
             $title.text('Wyszukiwarka | Zapis na premierę');
-        } else if (scrollY >= $descriptionHeight && scrollY < $premiereCounterHeight) {
+        } else if (scrollY >= $descriptionHeight && scrollY < $aboutUsHeight) {
             $topNavLinks.removeClass('active');
             $descriptionLink.addClass('active');
             $title.text('Wyszukiwarka | Opis funkcjonalności');
