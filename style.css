@@ -240,6 +240,11 @@ main {
   justify-content: center;
   padding: 10px 0 100px; }
 
+.app-redirect-short-pos {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0; }
+
 input.startup-sign-in, .button, .disabled {
   background-color: #E8E8E8;
   color: #8C0000;

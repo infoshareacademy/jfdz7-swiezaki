@@ -30,7 +30,7 @@
                 </div>
             </div>
             <ul>
-                <li><a href="#startup-sign-in">PREMIERA</a></li>
+                <li><a href="#startup-sign-in">NOWOŚCI</a></li>
                 <li><a href="#description">OPIS</a></li>
                 <li><a href="#about-us">ZESPÓŁ</a></li>
                 <li><a href="#contact">KONTAKT</a></li>
@@ -42,7 +42,7 @@
                 <div class="chkbox-menu">
                     <input type="checkbox" class="chkbox-menu" title="menu">
                     <div class="menu-short-collapse">
-                        <span class="menu-short-list"><a href="#startup-sign-in">PREMIERA</a></span>
+                        <span class="menu-short-list"><a href="#startup-sign-in">NOWOŚCI</a></span>
                         <span class="menu-short-list"><a href="#description">OPIS</a></span>
                         <span class="menu-short-list"><a href="#about-us">ZESPÓŁ</a></span>
                         <span class="menu-short-list"><a href="#contact">KONTAKT</a></span>
@@ -57,11 +57,21 @@
         <h2 class="shadow">CZĘŚCI SAMOCHODOWYCH</h2>
         <h3 class="shadow">Pomożemy Ci znaleźć <a class="marker">każdą część</a> do Twojego samochodu,<br/>a jako <a class="marker">BONUS</a> zachowamy ją dla
              Ciebie w Ulubionych!</h3>
-        <h3 class="shadow">Startujemy już wkrótce!</h3>
+
+        <div class="app-redirect-short-pos">
+            <div class="startup-sign-in-short button">
+                <a href="http://app.swiezaki.jfdz7.is-academy.pl/"
+                        target="_blank">
+                    Przejdź do aplikacji
+                </a>
+            </div>
+        </div>
+
+        <h3 class="shadow">Chcesz być na bieżąco?</h3>
 
         <div class="startup-sign-in-short-pos">
             <div class="startup-sign-in-short button"><a href="#startup-sign-in">
-            <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Zapisz się na premierę
+            <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Zapisz się na newsletter
             </a></div>
         </div>
     </div>
@@ -100,12 +110,12 @@
     <section id="startup-sign-in" class="parallax">
         <div class="startup-sign-in flex-container-center parallax-text">
             <form id="startup-sign-in-form">
-                <label for="sign-in-info">Zapisz się na premierę:</label>
+                <label for="sign-in-info">Zapisz się na newsletter:</label>
                 <input type="text" size="20" placeholder="Wpisz swój adres e-mail"
                        class="startup-sign-in" name="email" id="sign-in-info">
                 <input type="submit" value="Wyślij" class="disabled" disabled id="send-btn">
-                <p class="startup-sign-in-info">Otrzymasz dokładnie jedną wiadomość mailową
-                w momencie uruchomienia pełnej funkcjonalności strony.</p>
+                <p class="startup-sign-in-info">Będziemy na bieżąco informować Ciebie o nowych
+                    funkcjonalnościach i zmianach w aplikacji. Nie wysyłamy spamu.</p>
                 <p class="startup-sign-in-agreement">
                 <input type="checkbox" name="agreed" value="yes" id="sign-in-agreement">
                 <label for="sign-in-agreement"><a class="marker">Wyrażam zgodę *</a><br>na wykorzystanie i przetwarzanie
@@ -181,14 +191,7 @@
         </div>
 
     </section>
-
-    <section id="premiere-counter" class="parallax">
-        <div class="parallax-text">
-            <h2>Do premiery aplikacji pozostało:</h2>
-            <p id="premiere-counter-display"></p>
-        </div>
-    </section>
-
+    
     <section id="about-us" class="about-us section">
         <h1 data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1000">Poznaj nasz zespół!</h1>
         <div class="flex-container-center">
@@ -289,7 +292,6 @@
 <script src="external/AOS_Animations_Library/aos.js"></script>
 <script src="external/jquery-3.2.1.min.js"></script>
 <script src="js/scroll.js"></script>
-<script src="js/counter.js"></script>
 <script src="js/signIn.js"></script>
 </body>
 </html>
